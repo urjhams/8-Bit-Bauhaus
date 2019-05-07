@@ -26,17 +26,25 @@ public class Room1MouseControl : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (currentHover.Equals("lamp"))
+        switch (currentHover)
         {
-            foreach (SpriteRenderer spriteRenderer in allEffect)
-            {
-                if (spriteRenderer.sprite.name.Equals("lamp_light"))
-                {
-                    spriteRenderer.enabled = !spriteRenderer.enabled;
-                }
-            }
+            case "lamp":
+                onOffEffect("lamp", "light");
+                break;
+            default:
+                break;
         }
     }
 
-
+    private void onOffEffect(string obj, string effect)
+    {
+        foreach (SpriteRenderer spriteRenderer in allEffect)
+        {
+            string spriteName = spriteRenderer.sprite.name;
+            if (spriteName.Equals(obj + "_" + effect))
+            {
+                spriteRenderer.enabled = !spriteRenderer.enabled;
+            }
+        }
+    }
 }
