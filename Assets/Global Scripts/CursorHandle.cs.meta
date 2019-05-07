@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 97fda4f40e393459fb7cc62d1448761b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - freeMouse: {fileID: 21300000, guid: 038e1078b0e7f4f479fbd4fb0df66063, type: 3}
+  - grabMouse: {fileID: 21300000, guid: 99a5950711fba4ed6aeb67b4be8261a9, type: 3}
+  - clickMouse: {fileID: 21300000, guid: 722d8f96dca8141b78e56ccb90e44b4c, type: 3}
+  - inspectMouse: {fileID: 21300000, guid: 328cc3ce6b88140529bea0cc156443cc, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
