@@ -3,19 +3,21 @@ using UnityEngine;
 public class Room1MouseControl : GlobalMouseControl
 {
     [SerializeField] GameObject ladder;
+    [SerializeField] GameObject interactContainer;
+    [SerializeField] GameObject dialogBox;
+
     void Start()
     {
         this.setUpContext();
-       
     }
 
     void Update()
     {
-        //ladder.SetActive(ladderAppear);
     }
 
     private void setUpContext()
     {
+        inDetail = false;
         //disable bowl without box
         var bowlWithoutBox = Helper.getSpriteRendererOf("bowl without box");
         bowlWithoutBox.enabled = false;
@@ -27,43 +29,72 @@ public class Room1MouseControl : GlobalMouseControl
 
         // hide the ladder
         if (ladder != null)
-        {
-            ladder.active = false;
-        }
+            ladder.SetActive(false);
+
+        if (interactContainer != null)
+            interactContainer.SetActive(false);
+        
+        if (dialogBox != null)
+            dialogBox.SetActive(false);
     }
 
    
     private void OnMouseDown()
     {
-        switch (currentHover)
+        print(inDetail);
+        if (!inDetail)
         {
-            case "lamp_interact":
-                onOffEffect("lamp_light");
-                break;
-            case "statues_discover":
-                //TODO
-                break;
-            case "rooftop door_interact":
-                //TODO
-                break;
-            case "ladder_discover":
-                //TODO
-                break;
-            case "painting_discover":
-                //TODO:
-                break;
-            default:
-                break;
+            switch (currentHover)
+            {
+                case "lamp_interact":
+                    onOffEffect("lamp_light");
+                    break;
+                case "statues_discover":
+                    //TODO
+                    break;
+                case "rooftop door_interact":
+                    //TODO
+                    break;
+                case "ladder_discover":
+                    //TODO
+                    break;
+                case "painting_discover":
+                    paintingInteraction();
+                    break;
+                case "":
+
+                    break;
+                default:
+                    break;
+            }
+        }
+        else
+        {
+            inDetail = false;
+            interactContainer.SetActive(false);
+            dialogBox.SetActive(false);
+
         }
 
         // show the ladder
         //if (ladder != null)
-            //ladder.active = !ladder.active;
+        //ladder.active = !ladder.active;
     }
 
     private void onOffEffect(string obj)
     {
         Helper.getSpriteRendererOf(obj).enabled = !Helper.getSpriteRendererOf(obj).enabled;
         //ladder.active = true;
+    }
+
+    private void paintingInteraction()
+    {
+
+        //if (interactContainer.name.Equals("InteractContainer_paint"))
+        {
+            interactContainer.SetActive(true);
+        }
+        dialogBox.SetActive(true);
+        inDetail = true;
     }
 }

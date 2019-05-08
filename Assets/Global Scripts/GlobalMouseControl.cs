@@ -5,6 +5,7 @@ public class GlobalMouseControl : MonoBehaviour
 {
     public Collider2D col;
     [HideInInspector] public string currentHover = "None";
+    [HideInInspector] public bool inDetail = false;
 
     void Start()
     {
@@ -22,11 +23,13 @@ public class GlobalMouseControl : MonoBehaviour
         currentHover = col.name;
         if (currentHover.Contains("interact"))
         {
-            Helper.setMouseStatus(MouseStatus.Click);
+            if (!inDetail)
+                Helper.setMouseStatus(MouseStatus.Click);
         } 
         else if (currentHover.Contains("discover"))
         {
-            Helper.setMouseStatus(MouseStatus.Inspect);
+            if (!inDetail)
+                Helper.setMouseStatus(MouseStatus.Inspect);
         } 
         else if(currentHover.Contains("grab"))
         {
