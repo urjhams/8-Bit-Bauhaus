@@ -11,8 +11,6 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
-    UnityEditor.TestRunner.dll:
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -54,21 +52,21 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9350}
+      Script: {instanceID: 9352}
     - Class: 114
-      Script: {instanceID: 9356}
+      Script: {instanceID: 9358}
     - Class: 114
-      Script: {instanceID: 9362}
-    - Class: 114
-      Script: {instanceID: 9406}
+      Script: {instanceID: 9364}
     - Class: 114
       Script: {instanceID: 9408}
     - Class: 114
-      Script: {instanceID: 9760}
+      Script: {instanceID: 9410}
     - Class: 114
-      Script: {instanceID: 10100}
+      Script: {instanceID: 9762}
     - Class: 114
-      Script: {instanceID: 10658}
+      Script: {instanceID: 10102}
+    - Class: 114
+      Script: {instanceID: 10660}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -107,17 +105,17 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9774}
+      Script: {instanceID: 9274}
     - Class: 114
-      Script: {instanceID: 10118}
+      Script: {instanceID: 9776}
     - Class: 114
-      Script: {instanceID: 10128}
+      Script: {instanceID: 10120}
     - Class: 114
-      Script: {instanceID: 10534}
+      Script: {instanceID: 10130}
     - Class: 114
-      Script: {instanceID: 10612}
+      Script: {instanceID: 10536}
     - Class: 114
-      Script: {instanceID: 14870}
+      Script: {instanceID: 10614}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -153,6 +151,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GlobalMouseControl
+  - hash:
+      serializedVersion: 2
+      Hash: c5f302a8a1c713b0ee2a0956751d69f3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: IntroManager
   - hash:
       serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
@@ -993,12 +997,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: c5f302a8a1c713b0ee2a0956751d69f3
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: IntroManager
   platform: 2
   scenePathNames:
   - Assets/Scenes/Intro/Intro.unity

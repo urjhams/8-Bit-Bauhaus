@@ -17,7 +17,6 @@ public class Room1MouseControl : GlobalMouseControl
 
     private void setUpContext()
     {
-        inDetail = false;
         //disable bowl without box
         var bowlWithoutBox = Helper.getSpriteRendererOf("bowl without box");
         bowlWithoutBox.enabled = false;
@@ -27,21 +26,20 @@ public class Room1MouseControl : GlobalMouseControl
         Helper.getSpriteRendererOf("left arm 2").enabled = false;
         Helper.getSpriteRendererOf("right arm 1").enabled = false;
 
-        // hide the ladder
-        if (ladder != null)
-            ladder.SetActive(false);
+        //// hide the ladder
+        //if (ladder != null)
+        //    ladder.SetActive(false);
 
-        if (interactContainer != null)
-            interactContainer.SetActive(false);
+        //if (interactContainer != null)
+        //    interactContainer.SetActive(false);
         
-        if (dialogBox != null)
-            dialogBox.SetActive(false);
+        //if (dialogBox != null)
+            //dialogBox.SetActive(false);
     }
 
    
     private void OnMouseDown()
     {
-        print(inDetail);
         if (!inDetail)
         {
             switch (currentHover)
@@ -61,9 +59,6 @@ public class Room1MouseControl : GlobalMouseControl
                 case "painting_discover":
                     paintingInteraction();
                     break;
-                case "":
-
-                    break;
                 default:
                     break;
             }
@@ -75,8 +70,7 @@ public class Room1MouseControl : GlobalMouseControl
             dialogBox.SetActive(false);
 
         }
-
-        // show the ladder
+        //// show the ladder
         //if (ladder != null)
         //ladder.active = !ladder.active;
     }
@@ -89,8 +83,8 @@ public class Room1MouseControl : GlobalMouseControl
 
     private void paintingInteraction()
     {
-
-        //if (interactContainer.name.Equals("InteractContainer_paint"))
+        print(interactContainer.name);
+        if (interactContainer.name.Equals("InteractContainer_paint"))
         {
             interactContainer.SetActive(true);
         }

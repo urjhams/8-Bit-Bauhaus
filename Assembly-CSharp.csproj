@@ -63,11 +63,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Global Scripts\CursorHandle.cs" />
-    <Compile Include="Assets\Global Scripts\DialogManager.cs" />
-    <Compile Include="Assets\Global Scripts\DialogTrigger.cs" />
     <Compile Include="Assets\Global Scripts\GlobalMouseControl.cs" />
     <Compile Include="Assets\Global Scripts\Helper.cs" />
-    <Compile Include="Assets\Global Scripts\ObjectDialog.cs" />
     <Compile Include="Assets\Scenes\1\scripts\Room1MouseControl.cs" />
     <Compile Include="Assets\Scenes\Intro\IntroManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
