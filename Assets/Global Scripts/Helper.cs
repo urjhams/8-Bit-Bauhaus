@@ -1,19 +1,30 @@
-﻿using System;
-namespace Helper
+﻿using UnityEngine;
+
+public class Helper
 {
-    public class Global
+    public static MouseStatus mouseStatus = MouseStatus.Free;
+
+    public static void setMouseStatus(MouseStatus status)
     {
-        public static MouseStatus mouseStatus = MouseStatus.Free;
-        public static void setMouseStatus(MouseStatus status)
-        {
-            mouseStatus = status;
-        }
+        mouseStatus = status;
     }
-    public enum MouseStatus
+
+    public static SpriteRenderer getSpriteRendererOf(string objectName)
     {
-        Free,
-        Click,
-        Grap,
-        Inspect
+        return GameObject.Find(objectName).GetComponent(typeof(SpriteRenderer)) as SpriteRenderer;
     }
+
+    public static SpriteRenderer[] getSpriteRenderersOf(string objectName)
+    {
+        return GameObject.Find(objectName).GetComponentsInChildren<SpriteRenderer>();
+    }
+
+}
+
+public enum MouseStatus
+{
+    Free,
+    Click,
+    Grap,
+    Inspect
 }

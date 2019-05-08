@@ -6,6 +6,7 @@ public class CursorHandle : MonoBehaviour
     public Sprite grabMouse;
     public Sprite clickMouse;
     public Sprite inspectMouse;
+
     private SpriteRenderer spriteRenderer;
     private void Start()
     {
@@ -18,18 +19,18 @@ public class CursorHandle : MonoBehaviour
         Vector2 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = cursorPosition;
 
-        switch (Helper.Global.mouseStatus)
+        switch (Helper.mouseStatus)
         {
-            case Helper.MouseStatus.Click:
+            case MouseStatus.Click:
                 updateSprite(clickMouse);
                 break;
-            case Helper.MouseStatus.Free:
+            case MouseStatus.Free:
                 updateSprite(freeMouse);
                 break;
-            case Helper.MouseStatus.Grap:
+            case MouseStatus.Grap:
                 updateSprite(grabMouse);
                 break;
-            case Helper.MouseStatus.Inspect:
+            case MouseStatus.Inspect:
                 updateSprite(inspectMouse);
                 break;
         }

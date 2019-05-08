@@ -1,50 +1,69 @@
 using UnityEngine;
 
-public class Room1MouseControl : MonoBehaviour
+public class Room1MouseControl : GlobalMouseControl
 {
-    public Collider2D col;
-    string currentHover = "None";
-    SpriteRenderer[] allEffect;
-
-    private void Start()
+    [SerializeField] GameObject ladder;
+    void Start()
     {
-        allEffect = GameObject.Find("Effect").GetComponentsInChildren<SpriteRenderer>();
+        this.setUpContext();
+       
     }
 
-    private void OnMouseEnter()
+    void Update()
     {
-        print(col.name);
-        currentHover = col.name;
-        Helper.Global.setMouseStatus(Helper.MouseStatus.Inspect);
+        //ladder.SetActive(ladderAppear);
     }
 
-    private void OnMouseExit()
+    private void setUpContext()
     {
-        Helper.Global.setMouseStatus(Helper.MouseStatus.Free);
-        currentHover = "None";
+        //disable bowl without box
+        var bowlWithoutBox = Helper.getSpriteRendererOf("bowl without box");
+        bowlWithoutBox.enabled = false;
+
+        //disable another arm
+        Helper.getSpriteRendererOf("left arm 4").enabled = false;
+        Helper.getSpriteRendererOf("left arm 2").enabled = false;
+        Helper.getSpriteRendererOf("right arm 1").enabled = false;
+
+        // hide the ladder
+        if (ladder != null)
+        {
+            ladder.active = false;
+        }
     }
 
+   
     private void OnMouseDown()
     {
         switch (currentHover)
         {
-            case "lamp":
-                onOffEffect("lamp", "light");
+            case "lamp_interact":
+                onOffEffect("lamp_light");
+                break;
+            case "statues_discover":
+                //TODO
+                break;
+            case "rooftop door_interact":
+                //TODO
+                break;
+            case "ladder_discover":
+                //TODO
+                break;
+            case "painting_discover":
+                //TODO:
                 break;
             default:
                 break;
         }
+
+        // show the ladder
+        //if (ladder != null)
+            //ladder.active = !ladder.active;
     }
 
-    private void onOffEffect(string obj, string effect)
+    private void onOffEffect(string obj)
     {
-        foreach (SpriteRenderer spriteRenderer in allEffect)
-        {
-            string spriteName = spriteRenderer.sprite.name;
-            if (spriteName.Equals(obj + "_" + effect))
-            {
-                spriteRenderer.enabled = !spriteRenderer.enabled;
-            }
-        }
+        Helper.getSpriteRendererOf(obj).enabled = !Helper.getSpriteRendererOf(obj).enabled;
+        //ladder.active = true;
     }
 }

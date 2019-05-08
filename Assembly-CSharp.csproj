@@ -63,7 +63,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Global Scripts\CursorHandle.cs" />
+    <Compile Include="Assets\Global Scripts\GlobalMouseControl.cs" />
     <Compile Include="Assets\Global Scripts\Helper.cs" />
+    <Compile Include="Assets\Room1Init.cs" />
     <Compile Include="Assets\Scenes\1\scripts\Room1MouseControl.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/quandinh/Desktop/8 Bit/8-Bit-Bauhaus/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
