@@ -1,10 +1,13 @@
 ﻿<Properties StartupConfiguration="{19567410-B466-F1F0-4613-6A58E4B22D2A}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/1/scripts/Room1MouseControl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Global Scripts/DialogTrigger.cs">
     <Files>
-      <File FileName="Assets/Scenes/1/scripts/Room1MouseControl.cs" Line="8" Column="6" />
+      <File FileName="Assets/Scenes/1/scripts/Room1MouseControl.cs" Line="48" Column="23" />
+      <File FileName="Assets/Global Scripts/DialogManager.cs" Line="7" Column="24" />
       <File FileName="Assets/Global Scripts/Helper.cs" Line="4" Column="2" NotebookId="1" />
       <File FileName="Assets/Global Scripts/CursorHandle.cs" Line="13" Column="32" NotebookId="1" />
-      <File FileName="Assets/Global Scripts/GlobalMouseControl.cs" Line="5" Column="2" NotebookId="1" />
+      <File FileName="Assets/Global Scripts/GlobalMouseControl.cs" Line="2" Column="1" NotebookId="1" />
+      <File FileName="Assets/Global Scripts/ObjectDialog.cs" Line="5" Column="21" NotebookId="1" />
+      <File FileName="Assets/Global Scripts/DialogTrigger.cs" Line="5" Column="27" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

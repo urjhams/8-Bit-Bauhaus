@@ -53,6 +53,9 @@ TagManager:
   - name: frontObject
     uniqueID: 919845393
     locked: 0
+  - name: frontground background
+    uniqueID: 2730031925
+    locked: 0
   - name: frontground
     uniqueID: 4058756147
     locked: 0
