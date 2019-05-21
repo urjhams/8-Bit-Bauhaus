@@ -25,16 +25,6 @@ public class Room1MouseControl : GlobalMouseControl
         Helper.getSpriteRendererOf("left arm 4").enabled = false;
         Helper.getSpriteRendererOf("left arm 2").enabled = false;
         Helper.getSpriteRendererOf("right arm 1").enabled = false;
-
-        //// hide the ladder
-        //if (ladder != null)
-        //    ladder.SetActive(false);
-
-        //if (interactContainer != null)
-        //    interactContainer.SetActive(false);
-        
-        //if (dialogBox != null)
-            //dialogBox.SetActive(false);
     }
 
    
@@ -62,6 +52,7 @@ public class Room1MouseControl : GlobalMouseControl
                 default:
                     break;
             }
+            Helper.setMouseStatus(MouseStatus.Free);
         }
         else
         {

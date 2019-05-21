@@ -30,6 +30,8 @@ public class GlobalMouseControl : MonoBehaviour
         {
             if (!inDetail)
                 Helper.setMouseStatus(MouseStatus.Inspect);
+            else
+                Helper.setMouseStatus(MouseStatus.Free);
         } 
         else if(currentHover.Contains("grab"))
         {
@@ -39,11 +41,5 @@ public class GlobalMouseControl : MonoBehaviour
         {
             Helper.setMouseStatus(MouseStatus.Free);
         }
-    }
-
-    private void OnMouseExit()
-    {
-        Helper.setMouseStatus(MouseStatus.Free);
-        currentHover = "None";
     }
 }

@@ -14,6 +14,11 @@ public class IntroManager : MonoBehaviour
         length = player.clip.length;
     }
 
+    private void Awake()
+    {
+        Screen.SetResolution(1366, 720, false);
+    }
+
     // Update is called once per frame
     void Update()
     {
