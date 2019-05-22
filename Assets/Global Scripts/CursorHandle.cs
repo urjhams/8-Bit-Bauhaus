@@ -9,10 +9,14 @@ public class CursorHandle : MonoBehaviour
 
     private void Start()
     {
-        TextureScale.Bilinear(freeMouse, freeMouse.width / 2, freeMouse.height / 2);
-        TextureScale.Bilinear(grabMouse, grabMouse.width / 2, grabMouse.height / 2);
-        TextureScale.Bilinear(clickMouse, clickMouse.width / 2, clickMouse.height / 2);
-        TextureScale.Bilinear(inspectMouse, inspectMouse.width / 2, inspectMouse.height / 2);
+        if (freeMouse.height == 32)
+            TextureScale.Bilinear(freeMouse, 14, 21);
+        if (grabMouse.height == 32)
+            TextureScale.Bilinear(grabMouse, 17, 21);
+        if (clickMouse.height == 32)
+            TextureScale.Bilinear(clickMouse, 15, 21);
+        if (inspectMouse.height == 32)
+            TextureScale.Bilinear(inspectMouse, 21, 21);
     }
 
     void Update()

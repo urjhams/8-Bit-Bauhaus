@@ -37,6 +37,7 @@ public class GlobalMouseControl : MonoBehaviour
     private void OnMouseExit()
     {
         Helper.setMouseStatus(MouseStatus.Free);
+        Tooltip.hideToolTip_Static();
     }
 
     public virtual void toolTipHandle()

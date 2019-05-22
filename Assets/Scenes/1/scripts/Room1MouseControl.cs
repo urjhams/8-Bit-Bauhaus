@@ -7,10 +7,13 @@ public class Room1MouseControl : GlobalMouseControl
     [SerializeField] GameObject interactContainer;
     [SerializeField] Text dialogBox;
     [SerializeField] Text nameBox;
+    string[] rightArm = {"right arm 4", "right arm 1"};
+    string[] leftArm = {"left arm 4", "left arm 3", "left arm 2"};
 
     void Start()
     {
         this.setUpContext();
+        Tooltip.hideToolTip_Static();
     }
 
     private void setUpContext()
@@ -90,6 +93,22 @@ public class Room1MouseControl : GlobalMouseControl
             Helper.getSpriteRendererOf("interact_left arm 4").enabled = false;
             Helper.getSpriteRendererOf("interact_left arm 2").enabled = false;
             Helper.getSpriteRendererOf("interact_right arm 1").enabled = false;
+        }
+    }
+
+    public override void toolTipHandle()
+    {
+        base.toolTipHandle();
+        if (base.currentHover.Contains("interact"))
+        {
+            Tooltip.showTooltip_Static("Interact");
+        } else if (base.currentHover.Contains("discover"))
+        {
+            Tooltip.showTooltip_Static("Discover");
+        }
+        else
+        {
+            Tooltip.hideToolTip_Static();
         }
     }
 }
