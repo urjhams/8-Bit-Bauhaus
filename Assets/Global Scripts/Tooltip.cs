@@ -5,7 +5,7 @@ public class Tooltip : MonoBehaviour
 {
     private static Tooltip instance;
     [SerializeField]
-    private Camera uiCamera;
+    private Camera uiCamera = null;
     private Text tooltipText;
     private RectTransform backgroundRectTransform;
 
@@ -43,11 +43,13 @@ public class Tooltip : MonoBehaviour
 
     public static void showTooltip_Static(string tooltipString)
     {
-        instance.ShowToolTip(tooltipString);
+        if (instance != null)
+            instance.ShowToolTip(tooltipString);
     }
 
     public static void hideToolTip_Static()
     {
-        instance.HideToolTip();
+        if (instance != null)
+            instance.HideToolTip();
     }
 }

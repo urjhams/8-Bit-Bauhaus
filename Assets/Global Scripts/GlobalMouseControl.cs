@@ -13,8 +13,7 @@ public class GlobalMouseControl : MonoBehaviour
         currentHover = col.name;
         if (currentHover.Contains("interact"))
         {
-            if (!inDetail)
-                Helper.setMouseStatus(MouseStatus.Click);
+            Helper.setMouseStatus(MouseStatus.Click);
         }
         else if (currentHover.Contains("discover"))
         {

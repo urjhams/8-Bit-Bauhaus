@@ -9,6 +9,7 @@ public class CursorHandle : MonoBehaviour
 
     private void Start()
     {
+        Tooltip.hideToolTip_Static();
         if (freeMouse.height == 32)
             TextureScale.Bilinear(freeMouse, 14, 21);
         if (grabMouse.height == 32)
