@@ -6,6 +6,11 @@ public class Fader : MonoBehaviour
 {
     public CanvasGroup[] uiElement;
 
+    private void Awake()
+    {
+        Screen.SetResolution(1366, 720, false);
+    }
+
     private void Start()
     {
         foreach (CanvasGroup element in uiElement)

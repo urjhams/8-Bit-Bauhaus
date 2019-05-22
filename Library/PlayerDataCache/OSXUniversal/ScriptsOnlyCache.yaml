@@ -5,7 +5,9 @@ ScriptsOnlyBuild:
     - Fader
     - IntroManager
     - MenuButtonController
+    - Room1BasementMouseControl
     - Room1MouseControl
+    - Tooltip
     Unity.TextMeshPro.dll:
     - TMPro.TMP_ColorGradient
     - TMPro.TMP_FontAsset
@@ -23,6 +25,55 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   sceneClasses:
+    Assets/Scenes/1/Room 1 basement.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9356}
+    - Class: 114
+      Script: {instanceID: 9368}
+    - Class: 114
+      Script: {instanceID: 9376}
+    - Class: 114
+      Script: {instanceID: 9414}
+    - Class: 114
+      Script: {instanceID: 9452}
+    - Class: 114
+      Script: {instanceID: 9768}
+    - Class: 114
+      Script: {instanceID: 10052}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
     Assets/Scenes/1/Room 1.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -45,19 +96,23 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 9356}
+    - Class: 114
+      Script: {instanceID: 9362}
+    - Class: 114
       Script: {instanceID: 9368}
     - Class: 114
-      Script: {instanceID: 9374}
+      Script: {instanceID: 9376}
     - Class: 114
-      Script: {instanceID: 9380}
+      Script: {instanceID: 9412}
     - Class: 114
-      Script: {instanceID: 9424}
+      Script: {instanceID: 9414}
     - Class: 114
-      Script: {instanceID: 9426}
+      Script: {instanceID: 9452}
     - Class: 114
-      Script: {instanceID: 9778}
+      Script: {instanceID: 9768}
     - Class: 114
-      Script: {instanceID: 10118}
+      Script: {instanceID: 10110}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -88,7 +143,7 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9290}
+      Script: {instanceID: 9278}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -129,33 +184,33 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9284}
+      Script: {instanceID: 9272}
     - Class: 114
-      Script: {instanceID: 9366}
+      Script: {instanceID: 9354}
+    - Class: 114
+      Script: {instanceID: 9356}
+    - Class: 114
+      Script: {instanceID: 9362}
     - Class: 114
       Script: {instanceID: 9368}
     - Class: 114
-      Script: {instanceID: 9374}
+      Script: {instanceID: 9376}
     - Class: 114
-      Script: {instanceID: 9380}
+      Script: {instanceID: 9412}
     - Class: 114
-      Script: {instanceID: 9388}
+      Script: {instanceID: 9414}
     - Class: 114
-      Script: {instanceID: 9424}
+      Script: {instanceID: 9782}
     - Class: 114
-      Script: {instanceID: 9426}
+      Script: {instanceID: 10128}
     - Class: 114
-      Script: {instanceID: 9792}
+      Script: {instanceID: 10138}
     - Class: 114
-      Script: {instanceID: 10136}
+      Script: {instanceID: 10232}
     - Class: 114
-      Script: {instanceID: 10146}
+      Script: {instanceID: 10546}
     - Class: 114
-      Script: {instanceID: 10240}
-    - Class: 114
-      Script: {instanceID: 10552}
-    - Class: 114
-      Script: {instanceID: 10630}
+      Script: {instanceID: 10624}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -433,6 +488,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_InputField
+  - hash:
+      serializedVersion: 2
+      Hash: 8b7ab3e01e398137620c0bc31ff095be
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Tooltip
   - hash:
       serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
@@ -771,13 +832,19 @@ ScriptsOnlyBuild:
     className: TMP_ExampleScript_01
   - hash:
       serializedVersion: 2
+      Hash: 7a5831ab51a0fe881fdf5d563b59d236
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Room1BasementMouseControl
+  - hash:
+      serializedVersion: 2
       Hash: 11319334e5365797f8056694f9b5dae4
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
     className: ObjectSpin
   - hash:
       serializedVersion: 2
-      Hash: 69e77ef5cfcb65acc68a3fd3d196aacc
+      Hash: cc02be6732b70aabca16dbf32a49865e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Room1MouseControl
@@ -1050,4 +1117,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Menu/Menu.unity
   - Assets/Scenes/Intro/Intro.unity
   - Assets/Scenes/1/Room 1.unity
+  - Assets/Scenes/1/Room 1 basement.unity
   playerPath: /Users/quandinh/Desktop/prototype.app

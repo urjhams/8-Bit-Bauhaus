@@ -1,13 +1,14 @@
 ﻿<Properties StartupConfiguration="{19567410-B466-F1F0-4613-6A58E4B22D2A}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Global Scripts/Tooltip.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Global Scripts/Fader.cs">
     <Files>
       <File FileName="Assets/Scenes/Intro/IntroManager.cs" Line="17" Column="6" />
-      <File FileName="Assets/Global Scripts/CursorHandle.cs" Line="12" Column="38" />
-      <File FileName="Assets/Global Scripts/Helper.cs" Line="15" Column="25" />
+      <File FileName="Assets/Global Scripts/CursorHandle.cs" Line="10" Column="25" />
+      <File FileName="Assets/Global Scripts/Helper.cs" Line="17" Column="1" />
       <File FileName="Assets/Global Scripts/GlobalMouseControl.cs" Line="4" Column="48" />
-      <File FileName="Assets/Scenes/1/scripts/Room1MouseControl.cs" Line="88" Column="11" />
-      <File FileName="Assets/Scenes/1/scripts/Room1BasementMouseControl.cs" Line="24" Column="6" />
-      <File FileName="Assets/Global Scripts/Tooltip.cs" Line="29" Column="31" />
+      <File FileName="Assets/Scenes/1/scripts/Room1MouseControl.cs" Line="114" Column="27" />
+      <File FileName="Assets/Scenes/1/scripts/Room1BasementMouseControl.cs" Line="11" Column="26" />
+      <File FileName="Assets/Global Scripts/Tooltip.cs" Line="29" Column="30" />
+      <File FileName="Assets/Global Scripts/Fader.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
