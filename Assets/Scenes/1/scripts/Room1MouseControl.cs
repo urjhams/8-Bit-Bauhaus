@@ -1,28 +1,24 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Room1MouseControl : GlobalMouseControl
 {
     [SerializeField] GameObject ladder;
     [SerializeField] GameObject interactContainer;
-    [SerializeField] GameObject dialogBox;
-    [SerializeField] GameObject nameBox;
+    [SerializeField] Text dialogBox;
+    [SerializeField] Text nameBox;
 
     void Start()
     {
         this.setUpContext();
     }
 
-    void Update()
-    {
-    }
-
     private void setUpContext()
     {
         //disable bowl without box
-        var bowlWithoutBox = Helper.getSpriteRendererOf("bowl without box");
-        bowlWithoutBox.enabled = false;
+        Helper.getSpriteRendererOf("bowl without box").enabled = false;
 
-        //disable another arm
+        //disable another arms
         Helper.getSpriteRendererOf("left arm 4").enabled = false;
         Helper.getSpriteRendererOf("left arm 2").enabled = false;
         Helper.getSpriteRendererOf("right arm 1").enabled = false;
@@ -31,37 +27,27 @@ public class Room1MouseControl : GlobalMouseControl
    
     private void OnMouseDown()
     {
-        if (!inDetail)
+        switch (currentHover)
         {
-            switch (currentHover)
-            {
-                case "lamp_interact":
-                    onOffEffect("lamp_light");
-                    break;
-                case "statues_discover":
-                    //TODO
-                    break;
-                case "rooftop door_interact":
-                    //TODO
-                    break;
-                case "ladder_discover":
-                    //TODO
-                    break;
-                case "painting_discover":
-                    paintingInteraction();
-                    break;
-                default:
-                    break;
-            }
-            Helper.setMouseStatus(MouseStatus.Free);
+            case "lamp_interact":
+                onOffEffect("lamp_light");
+                break;
+            case "statues_discover":
+                detailInteraction("InteractContainer_statues", "Schmitz", "This statues... is that the same one in the picture?");
+                break;
+            case "rooftop door_interact":
+                //TODO
+                break;
+            case "ladder_discover":
+                //TODO
+                break;
+            case "painting_discover":
+                detailInteraction("InteractContainer_paint", "Schmitz", "Hmm... this picture look nice...");
+                break;
+            default:
+                break;
         }
-        else
-        {
-            inDetail = false;
-            interactContainer.SetActive(false);
-            dialogBox.SetActive(false);
-            nameBox.SetActive(false);
-        }
+
         //// show the ladder
         //if (ladder != null)
         //ladder.active = !ladder.active;
@@ -73,15 +59,37 @@ public class Room1MouseControl : GlobalMouseControl
         //ladder.active = true;
     }
 
-    private void paintingInteraction()
+    private void detailInteraction(string name, string nameText, string contentText)
     {
-        print(interactContainer.name);
-        if (interactContainer.name.Equals("InteractContainer_paint"))
+        if (!interactContainer.name.Equals(name))
+            return;
+
+        if (inDetail)
+        {
+            inDetail = false;
+            interactContainer.SetActive(false);
+            dialogBox.enabled = false;
+            nameBox.enabled = false;
+        }
+        else
         {
             interactContainer.SetActive(true);
+            dialogBox.text = contentText;
+            nameBox.text = nameText;
+            dialogBox.enabled = true;
+            nameBox.enabled = true;
+            inDetail = true;
+            Helper.setMouseStatus(MouseStatus.Free);
+            this.subDetail(name);
         }
-        dialogBox.SetActive(true);
-        nameBox.SetActive(true);
-        inDetail = true;
+    }
+    private void subDetail(string name)
+    {
+        if (name.Equals("InteractContainer_statues"))
+        {
+            Helper.getSpriteRendererOf("interact_left arm 4").enabled = false;
+            Helper.getSpriteRendererOf("interact_left arm 2").enabled = false;
+            Helper.getSpriteRendererOf("interact_right arm 1").enabled = false;
+        }
     }
 }

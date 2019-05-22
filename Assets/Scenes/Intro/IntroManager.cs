@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine.Video;
+﻿using UnityEngine.Video;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,7 +7,7 @@ public class IntroManager : MonoBehaviour
     public VideoPlayer player;
     double length;
     double currentTime;
-    // Start is called before the first frame update
+
     void Start()
     {
         length = player.clip.length;
@@ -19,7 +18,6 @@ public class IntroManager : MonoBehaviour
         Screen.SetResolution(1366, 720, false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         checkOver();

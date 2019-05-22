@@ -15,15 +15,15 @@ public class GlobalMouseControl : MonoBehaviour
         {
             if (!inDetail)
                 Helper.setMouseStatus(MouseStatus.Click);
-        } 
+        }
         else if (currentHover.Contains("discover"))
         {
             if (!inDetail)
                 Helper.setMouseStatus(MouseStatus.Inspect);
             else
                 Helper.setMouseStatus(MouseStatus.Free);
-        } 
-        else if(currentHover.Contains("grab"))
+        }
+        else if (currentHover.Contains("grab"))
         {
             Helper.setMouseStatus(MouseStatus.Grap);
         }
@@ -31,10 +31,16 @@ public class GlobalMouseControl : MonoBehaviour
         {
             Helper.setMouseStatus(MouseStatus.Free);
         }
+        this.toolTipHandle();
     }
 
     private void OnMouseExit()
     {
         Helper.setMouseStatus(MouseStatus.Free);
+    }
+
+    public virtual void toolTipHandle()
+    {
+        
     }
 }
