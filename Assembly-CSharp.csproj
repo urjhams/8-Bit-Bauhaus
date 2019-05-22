@@ -63,10 +63,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Global Scripts\CursorHandle.cs" />
+    <Compile Include="Assets\Global Scripts\Fader.cs" />
     <Compile Include="Assets\Global Scripts\GlobalMouseControl.cs" />
     <Compile Include="Assets\Global Scripts\Helper.cs" />
     <Compile Include="Assets\Scenes\1\scripts\Room1MouseControl.cs" />
     <Compile Include="Assets\Scenes\Intro\IntroManager.cs" />
+    <Compile Include="Assets\Scenes\Menu\MenuButtonController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -104,6 +106,7 @@
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\Scenes\Menu\blur.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
