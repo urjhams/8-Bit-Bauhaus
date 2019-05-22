@@ -2,18 +2,11 @@
 
 public class CursorHandle : MonoBehaviour
 {
-    public Sprite freeMouse;
-    public Sprite grabMouse;
-    public Sprite clickMouse;
-    public Sprite inspectMouse;
+    public Texture2D freeMouse;
+    public Texture2D grabMouse;
+    public Texture2D clickMouse;
+    public Texture2D inspectMouse;
 
-    private SpriteRenderer spriteRenderer;
-    private void Start()
-    {
-        Cursor.visible = false;
-        spriteRenderer = GetComponent<SpriteRenderer>();
-    }
-    // Update is called once per frame
     void Update()
     {
         Vector2 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -35,9 +28,8 @@ public class CursorHandle : MonoBehaviour
                 break;
         }
     }
-    private void updateSprite(Sprite sprite)
+    private void updateSprite(Texture2D texture)
     {
-        //print(message: spriteRenderer.sprite.name);
-        spriteRenderer.sprite = sprite;
+        Cursor.SetCursor(texture, Vector2.zero, CursorMode.Auto);
     }
 }

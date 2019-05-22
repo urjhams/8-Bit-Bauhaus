@@ -5,6 +5,7 @@ public class Room1MouseControl : GlobalMouseControl
     [SerializeField] GameObject ladder;
     [SerializeField] GameObject interactContainer;
     [SerializeField] GameObject dialogBox;
+    [SerializeField] GameObject nameBox;
 
     void Start()
     {
@@ -59,7 +60,7 @@ public class Room1MouseControl : GlobalMouseControl
             inDetail = false;
             interactContainer.SetActive(false);
             dialogBox.SetActive(false);
-
+            nameBox.SetActive(false);
         }
         //// show the ladder
         //if (ladder != null)
@@ -80,6 +81,7 @@ public class Room1MouseControl : GlobalMouseControl
             interactContainer.SetActive(true);
         }
         dialogBox.SetActive(true);
+        nameBox.SetActive(true);
         inDetail = true;
     }
 }

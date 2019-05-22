@@ -7,16 +7,6 @@ public class GlobalMouseControl : MonoBehaviour
     [HideInInspector] public string currentHover = "None";
     [HideInInspector] public bool inDetail = false;
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
     private void OnMouseEnter()
     {
         print(col.name);
@@ -41,5 +31,10 @@ public class GlobalMouseControl : MonoBehaviour
         {
             Helper.setMouseStatus(MouseStatus.Free);
         }
+    }
+
+    private void OnMouseExit()
+    {
+        Helper.setMouseStatus(MouseStatus.Free);
     }
 }
