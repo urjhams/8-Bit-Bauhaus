@@ -40,7 +40,6 @@ public class Room1MouseControl : GlobalMouseControl
         checkStatues();
     }
 
-   
     private void OnMouseDown()
     {
         switch (currentHover)
