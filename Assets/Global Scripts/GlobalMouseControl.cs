@@ -1,8 +1,12 @@
-﻿
+﻿using UnityEngine.UI;
 using UnityEngine;
 
 public class GlobalMouseControl : MonoBehaviour
 {
+    [SerializeField] public GameObject ladder;
+    [SerializeField] public GameObject interactContainer;
+    [SerializeField] public Text dialogBox;
+    [SerializeField] public Text nameBox;
     public Collider2D col;
     [HideInInspector] public string currentHover = "None";
     [HideInInspector] public bool inDetail = false;

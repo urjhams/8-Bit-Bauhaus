@@ -1,18 +1,14 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Room1MouseControl : GlobalMouseControl
 {
-    [SerializeField] GameObject ladder;
-    [SerializeField] GameObject interactContainer;
-    [SerializeField] Text dialogBox;
-    [SerializeField] Text nameBox;
-    string[] rightArm = {"right arm 4", "right arm 1"};
-    string[] leftArm = {"left arm 4", "left arm 3", "left arm 2"};
-    string[] rightArmDetail = { "interact_right arm 4", "interact_right arm 1" };
-    string[] leftArmDetail = { "interact_left arm 4", "interact_left arm 3", "interact_left arm 2" };
-    public static Room1MouseControl instace;
+    static string[] rightArm = { "right arm 4", "right arm 1" };
+    static string[] leftArm = { "left arm 4", "left arm 3", "left arm 2" };
+    static string[] rightArmDetail = { "interact_right arm 4", "interact_right arm 1" };
+    static string[] leftArmDetail = { "interact_left arm 4", "interact_left arm 3", "interact_left arm 2" };
 
     void Start()
     {
@@ -22,7 +18,6 @@ public class Room1MouseControl : GlobalMouseControl
     private void Awake()
     {
         this.setUpContext();
-        instace = this;
     }
 
     private void Update()
@@ -81,17 +76,24 @@ public class Room1MouseControl : GlobalMouseControl
         checkStatues();
     }
 
-    private void updateArm()
+    public static void updateArm()
     {
-        for (int i = 0; i < leftArm.Length; i++)
+        try
         {
-            Helper.getSpriteRendererOf(leftArm[i]).enabled = (i == Helper.room1_LeftArm);
-            Helper.getSpriteRendererOf(leftArmDetail[i]).enabled = (i == Helper.room1_LeftArm);
+            for (int i = 0; i < leftArm.Length; i++)
+            {
+                Helper.getSpriteRendererOf(leftArm[i]).enabled = (i == Helper.room1_LeftArm);
+                Helper.getSpriteRendererOf(leftArmDetail[i]).enabled = (i == Helper.room1_LeftArm);
+            }
+            for (int i = 0; i < rightArm.Length; i++)
+            {
+                Helper.getSpriteRendererOf(rightArm[i]).enabled = (i == Helper.room1_RightArm);
+                Helper.getSpriteRendererOf(rightArmDetail[i]).enabled = (i == Helper.room1_RightArm);
+            }
         }
-        for (int i = 0; i < rightArm.Length; i++)
+        catch (NullReferenceException e)
         {
-            Helper.getSpriteRendererOf(rightArm[i]).enabled = (i == Helper.room1_RightArm);
-            Helper.getSpriteRendererOf(rightArmDetail[i]).enabled = (i == Helper.room1_RightArm);
+
         }
 
     }
@@ -106,13 +108,6 @@ public class Room1MouseControl : GlobalMouseControl
                 dialogBox.text = "Wow The basement's door suddenly open.";
             }
         }
-    }
-
-    public static void getStatusState()
-    {
-        print("Instance");
-        instace.updateArm();
-        instace.checkStatues();
     }
 
     private void onOffEffect(string obj)
