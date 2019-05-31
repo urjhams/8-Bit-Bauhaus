@@ -250,7 +250,7 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
-      Hash: 7a5831ab51a0fe881fdf5d563b59d236
+      Hash: ce0874c65c2cf7bc307e10a417499b69
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GlobalMouseControl
@@ -832,7 +832,7 @@ ScriptsOnlyBuild:
     className: TMP_ExampleScript_01
   - hash:
       serializedVersion: 2
-      Hash: 7a5831ab51a0fe881fdf5d563b59d236
+      Hash: ce0874c65c2cf7bc307e10a417499b69
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Room1BasementMouseControl
@@ -844,7 +844,7 @@ ScriptsOnlyBuild:
     className: ObjectSpin
   - hash:
       serializedVersion: 2
-      Hash: cc02be6732b70aabca16dbf32a49865e
+      Hash: 45ffc4b7bb00099ed1d32a3d8da31759
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Room1MouseControl
