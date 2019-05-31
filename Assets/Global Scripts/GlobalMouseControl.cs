@@ -1,14 +1,12 @@
-﻿using UnityEngine.UI;
+﻿
 using UnityEngine;
 
 public class GlobalMouseControl : MonoBehaviour
 {
-    [SerializeField] public GameObject ladder;
-    [SerializeField]public  GameObject interactContainer;
-    [SerializeField]public Text dialogBox;
-    [SerializeField]public Text nameBox;
     public Collider2D col;
     [HideInInspector] public string currentHover = "None";
+    [HideInInspector] public bool inDetail = false;
+
     private void OnMouseEnter()
     {
         print(col.name);
@@ -19,7 +17,7 @@ public class GlobalMouseControl : MonoBehaviour
         }
         else if (currentHover.Contains("discover"))
         {
-            if (!Helper.inDetail)
+            if (!inDetail)
                 Helper.setMouseStatus(MouseStatus.Inspect);
             else
                 Helper.setMouseStatus(MouseStatus.Free);
@@ -43,16 +41,6 @@ public class GlobalMouseControl : MonoBehaviour
 
     public virtual void toolTipHandle()
     {
-        if (currentHover.Contains("discover"))
-        {
-            if (currentHover.Equals("ladder_discover"))
-                Tooltip.showTooltip_Static("Get upstair to take a look");
-            else
-                Tooltip.showTooltip_Static("Discover");
-        }
-        else
-        {
-            Tooltip.hideToolTip_Static();
-        }
+        
     }
 }

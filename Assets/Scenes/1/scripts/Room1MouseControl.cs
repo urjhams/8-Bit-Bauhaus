@@ -4,6 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class Room1MouseControl : GlobalMouseControl
 {
+    [SerializeField] GameObject ladder;
+    [SerializeField] GameObject interactContainer;
+    [SerializeField] Text dialogBox;
+    [SerializeField] Text nameBox;
     string[] rightArm = {"right arm 4", "right arm 1"};
     string[] leftArm = {"left arm 4", "left arm 3", "left arm 2"};
     string[] rightArmDetail = { "interact_right arm 4", "interact_right arm 1" };
@@ -117,10 +121,44 @@ public class Room1MouseControl : GlobalMouseControl
         //ladder.active = true;
     }
 
-    public override void detailInteraction(string name, string nameText, string contentText) {
-        base.detailInteraction(name, nameText, contentText);
-        if (!Helper.inDetail) {
+    private void detailInteraction(string name, string nameText, string contentText)
+    {
+        if (!interactContainer.name.Equals(name))
+            return;
+
+        if (inDetail)
+        {
+            inDetail = false;
+            interactContainer.SetActive(false);
+            dialogBox.enabled = false;
+            nameBox.enabled = false;
+        }
+        else
+        {
+            interactContainer.SetActive(true);
+            dialogBox.text = contentText;
+            nameBox.text = nameText;
+            dialogBox.enabled = true;
+            nameBox.enabled = true;
+            inDetail = true;
+            Helper.setMouseStatus(MouseStatus.Free);
             updateArm();
+        }
+    }
+
+    public override void toolTipHandle()
+    {
+        base.toolTipHandle();
+        if (base.currentHover.Contains("discover"))
+        {
+            if (base.currentHover.Equals("ladder_discover"))
+                Tooltip.showTooltip_Static("Get upstair to take a look");
+            else
+                Tooltip.showTooltip_Static("Discover");
+        }
+        else
+        {
+            Tooltip.hideToolTip_Static();
         }
     }
 }
