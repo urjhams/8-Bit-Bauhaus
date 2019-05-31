@@ -55,28 +55,4 @@ public class GlobalMouseControl : MonoBehaviour
             Tooltip.hideToolTip_Static();
         }
     }
-
-    public virtual void detailInteraction(string name, string nameText, string contentText)
-    {
-        if (!interactContainer.name.Equals(name))
-            return;
-
-        if (Helper.inDetail)
-        {
-            Helper.inDetail = false;
-            interactContainer.SetActive(false);
-            dialogBox.enabled = false;
-            nameBox.enabled = false;
-        }
-        else
-        {
-            interactContainer.SetActive(true);
-            dialogBox.text = contentText;
-            nameBox.text = nameText;
-            dialogBox.enabled = true;
-            nameBox.enabled = true;
-            Helper.inDetail = true;
-            Helper.setMouseStatus(MouseStatus.Free);
-        }
-    }
 }

@@ -43,9 +43,39 @@ public class CursorHandle : MonoBehaviour
                 updateCursor(inspectMouse);
                 break;
         }
+        // if (Helper.inDetail)
+        // {
+        //     foreach (GameObject obj in GameObject.FindGameObjectsWithTag("detailContainer"))
+        //     {
+        //         obj.SetActive(false);
+        //     }
+        //     foreach (Text text in GameObject.FindGameObjectWithTag("dialog").GetComponents<Text>())
+        //     {
+        //         text.enabled = false;
+        //     }
+        // }
+        // else
+        // {
+
+        // }
     }
     private void updateCursor(Texture2D texture)
     {
         Cursor.SetCursor(texture, Vector2.zero, CursorMode.ForceSoftware);
+    }
+
+    /// <summary>
+    /// OnMouseDown is called when the user has pressed the mouse button while
+    /// over the GUIElement or Collider.
+    /// </summary>
+    void OnMouseDown()
+    {
+        // if (Helper.inDetail)
+        // {
+        //     if (Helper.mouseStatus == MouseStatus.Free)
+        //     {
+        //         Helper.inDetail = false;
+        //     }
+        // }
     }
 }

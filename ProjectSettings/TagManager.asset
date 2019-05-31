@@ -6,8 +6,6 @@ TagManager:
   tags:
   - object
   - object_detailMode
-  - detailContainer
-  - dialog
   layers:
   - Default
   - TransparentFX
