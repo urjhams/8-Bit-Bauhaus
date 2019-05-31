@@ -26,7 +26,7 @@ public class Tooltip : MonoBehaviour
 
     private void ShowToolTip(string tooltipString)
     {
-        if (!gameObject.active)
+        if (!gameObject.activeSelf)
             gameObject.SetActive(true);
 
         tooltipText.text = tooltipString;
@@ -37,7 +37,7 @@ public class Tooltip : MonoBehaviour
 
     private void HideToolTip()
     {
-        if (gameObject.active)
+        if (gameObject.activeSelf)
             gameObject.SetActive(false);
     }
 

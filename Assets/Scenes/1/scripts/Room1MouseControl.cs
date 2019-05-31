@@ -5,15 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class Room1MouseControl : GlobalMouseControl
 {
-    static string[] rightArm = { "right arm 4", "right arm 1" };
-    static string[] leftArm = { "left arm 4", "left arm 3", "left arm 2" };
-    static string[] rightArmDetail = { "interact_right arm 4", "interact_right arm 1" };
-    static string[] leftArmDetail = { "interact_left arm 4", "interact_left arm 3", "interact_left arm 2" };
-
-    void Start()
-    {
-        //this.setUpContext();
-    }
+    [SerializeField] public GameObject ladder;
+    string[] rightArm = { "right arm 4", "right arm 1" };
+    string[] leftArm = { "left arm 4", "left arm 3", "left arm 2" };
+    string[] rightArmDetail = { "interact_right arm 4", "interact_right arm 1" };
+    string[] leftArmDetail = { "interact_left arm 4", "interact_left arm 3", "interact_left arm 2" };
 
     private void Awake()
     {
@@ -30,9 +26,6 @@ public class Room1MouseControl : GlobalMouseControl
     {
         //disable bowl without box
         Helper.getSpriteRendererOf("bowl without box").enabled = false;
-
-        updateArm();
-        checkStatues();
     }
 
     private void OnMouseDown()
@@ -72,11 +65,10 @@ public class Room1MouseControl : GlobalMouseControl
             Helper.room1_RightArm = (Helper.room1_RightArm == rightArm.Length - 1) ? 0 : Helper.room1_RightArm + 1;
             print(Helper.room1_RightArm);
         }
-        updateArm();
         checkStatues();
     }
 
-    public static void updateArm()
+    public void updateArm()
     {
         try
         {
@@ -95,7 +87,6 @@ public class Room1MouseControl : GlobalMouseControl
         {
 
         }
-
     }
 
     private void checkStatues()
@@ -105,7 +96,8 @@ public class Room1MouseControl : GlobalMouseControl
             if (ladder != null)
             {
                 ladder.SetActive(true);
-                dialogBox.text = "Wow The basement's door suddenly open.";
+                if (interactContainer.name.Equals("InteractContainer_statues") && interactContainer.activeSelf)
+                    dialogBox.text = "Wow The basement's door suddenly open.";
             }
         }
     }
@@ -113,32 +105,6 @@ public class Room1MouseControl : GlobalMouseControl
     private void onOffEffect(string obj)
     {
         Helper.getSpriteRendererOf(obj).enabled = !Helper.getSpriteRendererOf(obj).enabled;
-        //ladder.active = true;
-    }
-
-    private void detailInteraction(string name, string nameText, string contentText)
-    {
-        if (!interactContainer.name.Equals(name))
-            return;
-
-        if (inDetail)
-        {
-            inDetail = false;
-            interactContainer.SetActive(false);
-            dialogBox.enabled = false;
-            nameBox.enabled = false;
-        }
-        else
-        {
-            interactContainer.SetActive(true);
-            dialogBox.text = contentText;
-            nameBox.text = nameText;
-            dialogBox.enabled = true;
-            nameBox.enabled = true;
-            inDetail = true;
-            Helper.setMouseStatus(MouseStatus.Free);
-            updateArm();
-        }
     }
 
     public override void toolTipHandle()

@@ -3,13 +3,11 @@ using UnityEngine;
 
 public class GlobalMouseControl : MonoBehaviour
 {
-    [SerializeField] public GameObject ladder;
     [SerializeField] public GameObject interactContainer;
     [SerializeField] public Text dialogBox;
     [SerializeField] public Text nameBox;
     public Collider2D col;
     [HideInInspector] public string currentHover = "None";
-    [HideInInspector] public bool inDetail = false;
 
     private void OnMouseEnter()
     {
@@ -21,7 +19,7 @@ public class GlobalMouseControl : MonoBehaviour
         }
         else if (currentHover.Contains("discover"))
         {
-            if (!inDetail)
+            if (!Helper.inDetail)
                 Helper.setMouseStatus(MouseStatus.Inspect);
             else
                 Helper.setMouseStatus(MouseStatus.Free);
@@ -45,6 +43,30 @@ public class GlobalMouseControl : MonoBehaviour
 
     public virtual void toolTipHandle()
     {
-        
+
+    }
+
+    public void detailInteraction(string name, string nameText, string contentText)
+    {
+        if (!interactContainer.name.Equals(name))
+            return;
+
+        if (Helper.inDetail)
+        {
+            Helper.inDetail = false;
+            interactContainer.SetActive(false);
+            dialogBox.enabled = false;
+            nameBox.enabled = false;
+        }
+        else
+        {
+            interactContainer.SetActive(true);
+            dialogBox.text = contentText;
+            nameBox.text = nameText;
+            dialogBox.enabled = true;
+            nameBox.enabled = true;
+            Helper.inDetail = true;
+            Helper.setMouseStatus(MouseStatus.Free);
+        }
     }
 }

@@ -111,10 +111,10 @@ MonoBehaviour:
     y: 30
     width: 1440
     height: 805
-  m_MinSize: {x: 683, y: 494}
-  m_MaxSize: {x: 14004, y: 14044}
+  m_MinSize: {x: 679, y: 494}
+  m_MaxSize: {x: 14002, y: 14044}
   vertical: 0
-  controlID: 63
+  controlID: 117
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -136,10 +136,10 @@ MonoBehaviour:
     y: 0
     width: 1151
     height: 805
-  m_MinSize: {x: 406, y: 494}
+  m_MinSize: {x: 404, y: 494}
   m_MaxSize: {x: 10002, y: 14044}
   vertical: 1
-  controlID: 64
+  controlID: 118
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -161,10 +161,10 @@ MonoBehaviour:
     y: 0
     width: 1151
     height: 530
-  m_MinSize: {x: 406, y: 222}
-  m_MaxSize: {x: 8006, y: 4022}
+  m_MinSize: {x: 404, y: 222}
+  m_MaxSize: {x: 8004, y: 4022}
   vertical: 0
-  controlID: 65
+  controlID: 119
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -184,8 +184,8 @@ MonoBehaviour:
     y: 0
     width: 286
     height: 530
-  m_MinSize: {x: 202, y: 222}
-  m_MaxSize: {x: 4002, y: 4022}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -265,8 +265,8 @@ MonoBehaviour:
     y: 0
     width: 289
     height: 805
-  m_MinSize: {x: 277, y: 72}
-  m_MaxSize: {x: 4002, y: 4022}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -399,9 +399,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 508a0000
-      m_LastClickedID: 35408
-      m_ExpandedIDs: cab8ffffdae4ffff14e5ffffece5ffffb2f8ffffbaf8ffff66f9ffff78fbffff84300000c4320000e232000080330000b8330000f2330000063400000a4b00006c4c0000424d0000444d00007a4d00007c4d0000ec8a0000268b0000
+      m_SelectedIDs: e0310000
+      m_LastClickedID: 12768
+      m_ExpandedIDs: 8efbffff8a310000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -570,20 +570,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes/1/scripts
+    - Assets/Global Scripts
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Scenes/1/scripts
+  - Assets/Global Scripts
   m_LastFoldersGridSize: 96
   m_LastProjectPath: /Users/quandinh/Documents/GitHub/8-Bit-Bauhaus
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 73.15106}
-    m_SelectedIDs: b22c0000
-    m_LastClickedID: 11442
-    m_ExpandedIDs: 00000000d8290000922a00009a2a0000b62a0000ee2a0000102b0000b02c0000b22c0000aa2d0000e42e00002e320000
+    scrollPos: {x: 0, y: 64.39679}
+    m_SelectedIDs: f82e0000
+    m_LastClickedID: 12024
+    m_ExpandedIDs: 00000000de290000982a0000a02a0000bc2a0000f42a0000162b0000b62c0000b82c0000b02d0000ea2e000082320000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -611,7 +611,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d8290000922a00009a2a0000b62a0000ee2a0000102b0000b02c0000b22c0000aa2d0000e42e00002e320000
+    m_ExpandedIDs: 00000000de290000982a0000a02a0000bc2a0000f42a0000162b0000b62c0000b82c0000b02d0000ea2e000082320000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

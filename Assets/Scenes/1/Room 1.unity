@@ -551,13 +551,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ea2cb0aef0de4441ad6587241f99b8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col: {fileID: 210665859}
-  currentHover: None
-  inDetail: 0
-  ladder: {fileID: 984931150}
   interactContainer: {fileID: 0}
   dialogBox: {fileID: 1305841131}
   nameBox: {fileID: 713618916}
+  col: {fileID: 210665859}
+  currentHover: None
+  ladder: {fileID: 984931150}
 --- !u!1 &316872837
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,13 +693,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ea2cb0aef0de4441ad6587241f99b8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col: {fileID: 316872840}
-  currentHover: None
-  inDetail: 0
-  ladder: {fileID: 0}
   interactContainer: {fileID: 1870236814}
   dialogBox: {fileID: 1305841131}
   nameBox: {fileID: 713618916}
+  col: {fileID: 316872840}
+  currentHover: None
+  ladder: {fileID: 0}
 --- !u!1 &324693731
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,13 +897,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ea2cb0aef0de4441ad6587241f99b8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col: {fileID: 403574702}
-  currentHover: None
-  inDetail: 0
-  ladder: {fileID: 0}
   interactContainer: {fileID: 1870236814}
   dialogBox: {fileID: 0}
   nameBox: {fileID: 0}
+  col: {fileID: 403574702}
+  currentHover: None
+  ladder: {fileID: 0}
 --- !u!1 &407540025
 GameObject:
   m_ObjectHideFlags: 0
@@ -1223,13 +1220,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ea2cb0aef0de4441ad6587241f99b8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col: {fileID: 471079475}
-  currentHover: None
-  inDetail: 0
-  ladder: {fileID: 984931150}
   interactContainer: {fileID: 0}
   dialogBox: {fileID: 1305841131}
   nameBox: {fileID: 713618916}
+  col: {fileID: 471079475}
+  currentHover: None
+  ladder: {fileID: 984931150}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1588,13 +1584,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ea2cb0aef0de4441ad6587241f99b8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col: {fileID: 783511667}
-  currentHover: None
-  inDetail: 0
-  ladder: {fileID: 0}
   interactContainer: {fileID: 716707890}
   dialogBox: {fileID: 1305841131}
   nameBox: {fileID: 713618916}
+  col: {fileID: 783511667}
+  currentHover: None
+  ladder: {fileID: 0}
 --- !u!61 &783511667
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1859,13 +1854,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ea2cb0aef0de4441ad6587241f99b8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col: {fileID: 887140177}
-  currentHover: None
-  inDetail: 0
-  ladder: {fileID: 984931150}
   interactContainer: {fileID: 0}
   dialogBox: {fileID: 1305841131}
   nameBox: {fileID: 713618916}
+  col: {fileID: 887140177}
+  currentHover: None
+  ladder: {fileID: 984931150}
 --- !u!1 &891525602
 GameObject:
   m_ObjectHideFlags: 0
@@ -2227,13 +2221,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ea2cb0aef0de4441ad6587241f99b8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col: {fileID: 984931153}
-  currentHover: None
-  inDetail: 0
-  ladder: {fileID: 0}
   interactContainer: {fileID: 0}
   dialogBox: {fileID: 0}
   nameBox: {fileID: 0}
+  col: {fileID: 984931153}
+  currentHover: None
+  ladder: {fileID: 0}
 --- !u!1 &1004690982
 GameObject:
   m_ObjectHideFlags: 0
@@ -2472,13 +2465,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ea2cb0aef0de4441ad6587241f99b8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col: {fileID: 1053408939}
-  currentHover: None
-  inDetail: 0
-  ladder: {fileID: 984931150}
   interactContainer: {fileID: 0}
   dialogBox: {fileID: 1305841131}
   nameBox: {fileID: 713618916}
+  col: {fileID: 1053408939}
+  currentHover: None
+  ladder: {fileID: 984931150}
 --- !u!1 &1066517898
 GameObject:
   m_ObjectHideFlags: 0
@@ -2773,13 +2765,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ea2cb0aef0de4441ad6587241f99b8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col: {fileID: 1176011306}
-  currentHover: None
-  inDetail: 0
-  ladder: {fileID: 984931150}
   interactContainer: {fileID: 0}
   dialogBox: {fileID: 1305841131}
   nameBox: {fileID: 713618916}
+  col: {fileID: 1176011306}
+  currentHover: None
+  ladder: {fileID: 984931150}
 --- !u!1 &1234822997
 GameObject:
   m_ObjectHideFlags: 0
@@ -3420,13 +3411,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ea2cb0aef0de4441ad6587241f99b8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col: {fileID: 1466734094}
-  currentHover: None
-  inDetail: 0
-  ladder: {fileID: 984931150}
   interactContainer: {fileID: 1388333658}
   dialogBox: {fileID: 1305841131}
   nameBox: {fileID: 713618916}
+  col: {fileID: 1466734094}
+  currentHover: None
+  ladder: {fileID: 984931150}
 --- !u!1001 &1482519543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3760,13 +3750,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ea2cb0aef0de4441ad6587241f99b8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col: {fileID: 1622057575}
-  currentHover: None
-  inDetail: 0
-  ladder: {fileID: 0}
   interactContainer: {fileID: 0}
   dialogBox: {fileID: 0}
   nameBox: {fileID: 0}
+  col: {fileID: 1622057575}
+  currentHover: None
+  ladder: {fileID: 0}
 --- !u!60 &1622057575
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3902,13 +3891,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ea2cb0aef0de4441ad6587241f99b8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col: {fileID: 1717903811}
-  currentHover: None
-  inDetail: 0
-  ladder: {fileID: 0}
   interactContainer: {fileID: 0}
   dialogBox: {fileID: 0}
   nameBox: {fileID: 0}
+  col: {fileID: 1717903811}
+  currentHover: None
+  ladder: {fileID: 0}
 --- !u!60 &1717903811
 PolygonCollider2D:
   m_ObjectHideFlags: 0
