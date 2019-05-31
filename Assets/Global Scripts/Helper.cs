@@ -7,6 +7,8 @@ public class Helper
     public static int room1_LeftArm = 1;
     public static bool room1_ladder = false;
 
+    public static bool inDetail = false;
+
     public static void setMouseStatus(MouseStatus status)
     {
         mouseStatus = status;

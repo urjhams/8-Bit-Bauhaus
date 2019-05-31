@@ -59,6 +59,7 @@
      <Compile Include="Assets\Global Scripts\Fader.cs" />
      <Compile Include="Assets\Global Scripts\GlobalMouseControl.cs" />
      <Compile Include="Assets\Global Scripts\Helper.cs" />
+     <Compile Include="Assets\Global Scripts\InteractableObject.cs" />
      <Compile Include="Assets\Global Scripts\TextureScale.cs" />
      <Compile Include="Assets\Global Scripts\Tooltip.cs" />
      <Compile Include="Assets\Scenes\1\scripts\Room1BasementMouseControl.cs" />
