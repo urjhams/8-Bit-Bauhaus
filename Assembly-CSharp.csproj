@@ -59,10 +59,10 @@
      <Compile Include="Assets\Global Scripts\Fader.cs" />
      <Compile Include="Assets\Global Scripts\GlobalMouseControl.cs" />
      <Compile Include="Assets\Global Scripts\Helper.cs" />
-     <Compile Include="Assets\Global Scripts\InteractableObject.cs" />
      <Compile Include="Assets\Global Scripts\TextureScale.cs" />
      <Compile Include="Assets\Global Scripts\Tooltip.cs" />
      <Compile Include="Assets\Scenes\1\scripts\Room1BasementMouseControl.cs" />
+     <Compile Include="Assets\Scenes\1\scripts\Room1Manager.cs" />
      <Compile Include="Assets\Scenes\1\scripts\Room1MouseControl.cs" />
      <Compile Include="Assets\Scenes\Intro\IntroManager.cs" />
      <Compile Include="Assets\Scenes\Menu\MenuButtonController.cs" />
