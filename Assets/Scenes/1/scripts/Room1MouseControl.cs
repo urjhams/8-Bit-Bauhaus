@@ -78,7 +78,7 @@ public class Room1MouseControl : GlobalMouseControl
         }
         catch (NullReferenceException e)
         {
-
+            
         }
     }
 

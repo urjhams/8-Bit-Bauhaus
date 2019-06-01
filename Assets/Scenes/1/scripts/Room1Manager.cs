@@ -27,7 +27,7 @@ public class Room1Manager : CursorHandle
         }
         catch (NullReferenceException e)
         {
-
+            
         }
     }
 }
