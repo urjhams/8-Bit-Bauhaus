@@ -50,7 +50,6 @@ public class GlobalMouseControl : MonoBehaviour
     {
         if (!interactContainer.name.Equals(name))
             return;
-
         if (Helper.inDetail)
         {
             Helper.inDetail = false;
@@ -67,6 +66,29 @@ public class GlobalMouseControl : MonoBehaviour
             nameBox.enabled = true;
             Helper.inDetail = true;
             Helper.setMouseStatus(MouseStatus.Free);
+        }
+        disableGameObjectList(new string[] {"background group", "enviroment group", "interactable group", "effect group"});
+    }
+
+    private void disableGameObjectList(string[] names) {
+        foreach (var name in names)
+        {   
+            GameObject[] objArray = GameObject.FindGameObjectsWithTag(name);
+            foreach (var obj in objArray)
+            {
+                obj.SetActive(false);
+            }
+        }
+    }
+
+    private void enableGameObjectList(string[] names) {
+        foreach (var name in names)
+        {   
+            GameObject[] objArray = GameObject.FindGameObjectsWithTag(name);
+            foreach (var obj in objArray)
+            {
+                obj.SetActive(true);
+            }
         }
     }
 }

@@ -4,8 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - object
-  - object_detailMode
+  - detail container
+  - background group
+  - enviroment group
+  - interactable group
+  - effect group
   layers:
   - Default
   - TransparentFX
