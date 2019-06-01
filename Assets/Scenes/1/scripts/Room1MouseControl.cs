@@ -84,7 +84,7 @@ public class Room1MouseControl : GlobalMouseControl
 
     private void checkStatues()
     {
-        if (Helper.room1_LeftArm == 0 && Helper.room1_RightArm == 0)
+        if (Helper.room1_LeftArm == 0 && Helper.room1_RightArm == 1)
         {
             if (ladder != null)
             {
