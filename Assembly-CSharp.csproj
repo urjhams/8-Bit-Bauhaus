@@ -62,6 +62,7 @@
      <Compile Include="Assets\Global Scripts\TextureScale.cs" />
      <Compile Include="Assets\Global Scripts\Tooltip.cs" />
      <Compile Include="Assets\Scenes\1\scripts\Room1BasementMouseControl.cs" />
+     <Compile Include="Assets\Scenes\1\scripts\Room1Manager.cs" />
      <Compile Include="Assets\Scenes\1\scripts\Room1MouseControl.cs" />
      <Compile Include="Assets\Scenes\Intro\IntroManager.cs" />
      <Compile Include="Assets\Scenes\Menu\MenuButtonController.cs" />

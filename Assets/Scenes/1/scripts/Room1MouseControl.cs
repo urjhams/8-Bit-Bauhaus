@@ -6,11 +6,6 @@ using UnityEngine.SceneManagement;
 public class Room1MouseControl : GlobalMouseControl
 {
     [SerializeField] public GameObject ladder;
-    string[] rightArm = { "right arm 4", "right arm 1" };
-    string[] leftArm = { "left arm 4", "left arm 3", "left arm 2" };
-    string[] rightArmDetail = { "interact_right arm 4", "interact_right arm 1" };
-    string[] leftArmDetail = { "interact_left arm 4", "interact_left arm 3", "interact_left arm 2" };
-
     private void Awake()
     {
         this.setUpContext();
@@ -18,7 +13,7 @@ public class Room1MouseControl : GlobalMouseControl
 
     private void Update()
     {
-        updateArm();
+        updateStatueDetailArm();
         checkStatues();
     }
 
@@ -56,31 +51,29 @@ public class Room1MouseControl : GlobalMouseControl
 
         if (currentHover.Contains("left arm"))
         {
-            Helper.room1_LeftArm = (Helper.room1_LeftArm == leftArm.Length - 1) ? 0 : Helper.room1_LeftArm + 1;
+            Helper.room1_LeftArm = (Helper.room1_LeftArm == Helper.leftArm.Length - 1) ? 0 : Helper.room1_LeftArm + 1;
             print(Helper.room1_LeftArm);
         }
 
         if (currentHover.Contains("right arm"))
         {
-            Helper.room1_RightArm = (Helper.room1_RightArm == rightArm.Length - 1) ? 0 : Helper.room1_RightArm + 1;
+            Helper.room1_RightArm = (Helper.room1_RightArm == Helper.rightArm.Length - 1) ? 0 : Helper.room1_RightArm + 1;
             print(Helper.room1_RightArm);
         }
         checkStatues();
     }
 
-    public void updateArm()
+    public void updateStatueDetailArm()
     {
         try
         {
-            for (int i = 0; i < leftArm.Length; i++)
+            for (int i = 0; i < Helper.leftArm.Length; i++)
             {
-                Helper.getSpriteRendererOf(leftArm[i]).enabled = (i == Helper.room1_LeftArm);
-                Helper.getSpriteRendererOf(leftArmDetail[i]).enabled = (i == Helper.room1_LeftArm);
+                Helper.getSpriteRendererOf(Helper.leftArmDetail[i]).enabled = (i == Helper.room1_LeftArm);
             }
-            for (int i = 0; i < rightArm.Length; i++)
+            for (int i = 0; i < Helper.rightArm.Length; i++)
             {
-                Helper.getSpriteRendererOf(rightArm[i]).enabled = (i == Helper.room1_RightArm);
-                Helper.getSpriteRendererOf(rightArmDetail[i]).enabled = (i == Helper.room1_RightArm);
+                Helper.getSpriteRendererOf(Helper.rightArmDetail[i]).enabled = (i == Helper.room1_RightArm);
             }
         }
         catch (NullReferenceException e)
@@ -96,7 +89,9 @@ public class Room1MouseControl : GlobalMouseControl
             if (ladder != null)
             {
                 ladder.SetActive(true);
-                if (interactContainer.name.Equals("InteractContainer_statues") && interactContainer.activeSelf)
+                if (interactContainer != null && 
+                interactContainer.name.Equals("InteractContainer_statues") && 
+                interactContainer.activeSelf)
                     dialogBox.text = "Wow The basement's door suddenly open.";
             }
         }

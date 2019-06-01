@@ -20,7 +20,7 @@ public class CursorHandle : MonoBehaviour
             TextureScale.Bilinear(inspectMouse, 21, 21);
     }
 
-    void Update()
+    protected virtual void Update()
     {
         Vector2 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = cursorPosition;
@@ -41,6 +41,7 @@ public class CursorHandle : MonoBehaviour
                 break;
         }
     }
+
     private void updateCursor(Texture2D texture)
     {
         Cursor.SetCursor(texture, Vector2.zero, CursorMode.ForceSoftware);
