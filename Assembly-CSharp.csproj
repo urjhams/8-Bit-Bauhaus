@@ -56,7 +56,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Global Scripts\CursorHandle.cs" />
-     <Compile Include="Assets\Global Scripts\Fader.cs" />
+     <Compile Include="Assets\Global Scripts\FadeInScript.cs" />
+     <Compile Include="Assets\Global Scripts\FadeOutScript.cs" />
+     <Compile Include="Assets\Global Scripts\GlobalEffectControl.cs" />
      <Compile Include="Assets\Global Scripts\GlobalMouseControl.cs" />
      <Compile Include="Assets\Global Scripts\Helper.cs" />
      <Compile Include="Assets\Global Scripts\TextureScale.cs" />
@@ -66,6 +68,7 @@
      <Compile Include="Assets\Scenes\1\scripts\Room1MouseControl.cs" />
      <Compile Include="Assets\Scenes\Intro\IntroManager.cs" />
      <Compile Include="Assets\Scenes\Menu\MenuButtonController.cs" />
+     <Compile Include="Assets\Scenes\Menu\MenuFader.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />

@@ -16,13 +16,13 @@ public class Room1Manager : CursorHandle
         {
             for (int i = 0; i < Helper.leftArm.Length; i++)
             {
-                Helper.getSpriteRendererOf(Helper.leftArm[i]).enabled = (i == Helper.room1_LeftArm);
-                print(i);
+                Helper.getSpriteRendererOf(Helper.leftArm[i]).enabled = 
+                (i == Helper.room1_LeftArm);
             }
             for (int i = 0; i < Helper.rightArm.Length; i++)
             {
-                Helper.getSpriteRendererOf(Helper.rightArm[i]).enabled = (i == Helper.room1_RightArm);
-                print(i);
+                Helper.getSpriteRendererOf(Helper.rightArm[i]).enabled = 
+                (i == Helper.room1_RightArm);
             }
         }
         catch (NullReferenceException e)

@@ -1,7 +1,7 @@
 ﻿using UnityEngine.UI;
 using UnityEngine;
 
-public class GlobalMouseControl : MonoBehaviour
+public class GlobalMouseControl : GlobalEffectControl
 {
     [SerializeField] public GameObject interactContainer;
     [SerializeField] public Text dialogBox;
@@ -41,17 +41,14 @@ public class GlobalMouseControl : MonoBehaviour
         Tooltip.hideToolTip_Static();
     }
 
-    public virtual void toolTipHandle()
-    {
-
-    }
+    public virtual void toolTipHandle() {}
 
     public void detailInteraction(string name, string nameText, string contentText)
     {
         if (!interactContainer.name.Equals(name))
             return;
         if (Helper.inDetail)
-        {
+        {   //TODO: add fade in, fade out
             Helper.inDetail = false;
             interactContainer.SetActive(false);
             dialogBox.enabled = false;
@@ -67,12 +64,16 @@ public class GlobalMouseControl : MonoBehaviour
             Helper.inDetail = true;
             Helper.setMouseStatus(MouseStatus.Free);
         }
-        disableGameObjectList(new string[] {"background group", "enviroment group", "interactable group", "effect group"});
+        disableGameObjectList(new string[] {
+            "background group", 
+            "enviroment group", 
+            "interactable group", 
+            "effect group"});
     }
 
     private void disableGameObjectList(string[] names) {
         foreach (var name in names)
-        {   
+        {
             GameObject[] objArray = GameObject.FindGameObjectsWithTag(name);
             foreach (var obj in objArray)
             {
@@ -83,7 +84,7 @@ public class GlobalMouseControl : MonoBehaviour
 
     private void enableGameObjectList(string[] names) {
         foreach (var name in names)
-        {   
+        {
             GameObject[] objArray = GameObject.FindGameObjectsWithTag(name);
             foreach (var obj in objArray)
             {

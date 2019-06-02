@@ -1,37 +1,20 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-
-public class Fader : MonoBehaviour
+public class GlobalEffectControl : MonoBehaviour
 {
-    public CanvasGroup[] uiElement;
-
-    private void Awake()
-    {
-        Screen.SetResolution(1366, 720, false);
-    }
-
-    private void Start()
-    {
-        foreach (CanvasGroup element in uiElement)
-        {
-            element.alpha = 0;
-        }
-        this.FadeIn();
-    }
-
-    public void FadeIn()
+    public void FadeIn(CanvasGroup[] uiElement)
     {
         foreach (CanvasGroup element in uiElement)
             StartCoroutine(FadeCanvasGroup(element, element.alpha, 1));
     }
 
-    public void FadeOut()
+    public void FadeOut(CanvasGroup[] uiElement)
     {
         foreach (CanvasGroup element in uiElement)
             StartCoroutine(FadeCanvasGroup(element, element.alpha, 0));
     }
-
+    //TODO: add a fade in, fade out function for game
     public IEnumerator FadeCanvasGroup(CanvasGroup cg, float start, float end, float lerpTime = 0.5f)
     {
         float timeStartedLerping = Time.time;
