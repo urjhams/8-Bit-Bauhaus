@@ -22,7 +22,7 @@ public class Room1MouseControl : GlobalMouseControl
         //disable bowl without box
         Helper.getSpriteRendererOf("bowl without box").enabled = false;
     }
-
+    
     private void OnMouseDown()
     {
         switch (currentHover)
@@ -105,6 +105,9 @@ public class Room1MouseControl : GlobalMouseControl
     public override void toolTipHandle()
     {
         base.toolTipHandle();
+        // if (Helper.inDetail) {
+        //     return;
+        // }
         if (base.currentHover.Contains("discover"))
         {
             if (base.currentHover.Equals("ladder_discover"))

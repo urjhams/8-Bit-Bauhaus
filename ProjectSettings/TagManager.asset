@@ -64,3 +64,6 @@ TagManager:
   - name: frontground
     uniqueID: 4058756147
     locked: 0
+  - name: UI
+    uniqueID: 1336323591
+    locked: 0
