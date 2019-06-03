@@ -38,6 +38,7 @@ public class Room1MouseControl : GlobalMouseControl
                 break;
             case "ladder_discover":
                 SceneManager.LoadScene("Room 1 basement");
+                Helper.setMouseStatus(MouseStatus.Free);
                 break;
             case "painting_discover":
                 detailInteraction("InteractContainer_paint", "Schmitz", "Hmm... this picture look nice...");
