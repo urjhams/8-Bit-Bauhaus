@@ -77,10 +77,7 @@ public class Room1MouseControl : GlobalMouseControl
                 Helper.getSpriteRendererOf(Helper.rightArmDetail[i]).enabled = (i == Helper.room1_RightArm);
             }
         }
-        catch (NullReferenceException e)
-        {
-            
-        }
+        catch {}
     }
 
     private void checkStatues()

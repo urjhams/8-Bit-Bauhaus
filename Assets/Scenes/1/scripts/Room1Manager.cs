@@ -25,9 +25,6 @@ public class Room1Manager : CursorHandle
                 (i == Helper.room1_RightArm);
             }
         }
-        catch (NullReferenceException e)
-        {
-            
-        }
+        catch {}
     }
 }
