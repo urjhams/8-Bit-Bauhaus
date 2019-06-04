@@ -61,14 +61,14 @@ public class Room1MouseControl : GlobalMouseControl
 
         if (currentHover.Contains("left arm"))
         {
-            Helper.room1_LeftArm = (Helper.room1_LeftArm == Helper.leftArm.Length - 1) ? 0 : Helper.room1_LeftArm + 1;
-            print(Helper.room1_LeftArm);
+            GameManager.Room1.currentLeftArm = (GameManager.Room1.currentLeftArm == GameManager.Room1.leftArm.Length - 1) ? 0 : GameManager.Room1.currentLeftArm + 1;
+            print(GameManager.Room1.currentLeftArm);
         }
 
         if (currentHover.Contains("right arm"))
         {
-            Helper.room1_RightArm = (Helper.room1_RightArm == Helper.rightArm.Length - 1) ? 0 : Helper.room1_RightArm + 1;
-            print(Helper.room1_RightArm);
+            GameManager.Room1.currentRightArm = (GameManager.Room1.currentRightArm == GameManager.Room1.rightArm.Length - 1) ? 0 : GameManager.Room1.currentRightArm + 1;
+            print(GameManager.Room1.currentRightArm);
         }
         checkStatues();
     }
@@ -77,13 +77,13 @@ public class Room1MouseControl : GlobalMouseControl
     {
         try
         {
-            for (int i = 0; i < Helper.leftArm.Length; i++)
+            for (int i = 0; i < GameManager.Room1.leftArm.Length; i++)
             {
-                Helper.getSpriteRendererOf(Helper.leftArmDetail[i]).enabled = (i == Helper.room1_LeftArm);
+                Helper.getSpriteRendererOf(GameManager.Room1.leftArmDetail[i]).enabled = (i == GameManager.Room1.currentLeftArm);
             }
-            for (int i = 0; i < Helper.rightArm.Length; i++)
+            for (int i = 0; i < GameManager.Room1.rightArm.Length; i++)
             {
-                Helper.getSpriteRendererOf(Helper.rightArmDetail[i]).enabled = (i == Helper.room1_RightArm);
+                Helper.getSpriteRendererOf(GameManager.Room1.rightArmDetail[i]).enabled = (i == GameManager.Room1.currentRightArm);
             }
         }
         catch { }
@@ -91,7 +91,7 @@ public class Room1MouseControl : GlobalMouseControl
 
     private void checkStatues()
     {
-        if (Helper.room1_LeftArm == 0 && Helper.room1_RightArm == 1)
+        if (GameManager.Room1.currentLeftArm == 0 && GameManager.Room1.currentRightArm == 1)
         {
             if (ladder != null)
             {

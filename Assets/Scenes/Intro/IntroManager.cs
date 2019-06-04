@@ -29,7 +29,6 @@ public class IntroManager : MonoBehaviour
         print(length);
         if (currentTime >= length - 0.05)
         {
-            print("end");
             SceneManager.LoadScene("Room 1");
         }
     }
