@@ -17,5 +17,6 @@ public class GameManager
         public static string[] leftArmDetail = {
         "interact_left arm 4", "interact_left arm 3", "interact_left arm 2" };
         public static bool statuesDone = false;
+        public static bool ladderDone = false;
     }
 }

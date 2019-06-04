@@ -55,7 +55,7 @@ public class GlobalMouseControl : GlobalEffectControl
         Tooltip.hideToolTip_Static();
     }
 
-    public virtual void toolTipHandle() { }
+    public virtual void toolTipHandle() {}
 
     public void detailInteraction(string name, string nameText, string contentText)
     {
@@ -78,11 +78,28 @@ public class GlobalMouseControl : GlobalEffectControl
         Tooltip.hideToolTip_Static();
     }
 
-    void endDetailView()
+    public void endDetailView()
     {
         Helper.inDetail = false;
         if (interactContainer != null)
             interactContainer.SetActive(false);
+        if (dialogCanvas != null)
+            dialogCanvas.enabled = false;
+        Helper.setMouseStatus(MouseStatus.Free);
+        Tooltip.hideToolTip_Static();
+    }
+
+    public void startDialogView(string nameText, string contentText) {
+        Helper.inDetail = true;
+        dialogBox.text = contentText;
+        nameBox.text = nameText;
+        dialogCanvas.enabled = true;
+        Helper.setMouseStatus(MouseStatus.Free);
+        Tooltip.hideToolTip_Static();
+    }
+
+    public void endDialogView() {
+        Helper.inDetail = false;
         if (dialogCanvas != null)
             dialogCanvas.enabled = false;
         Helper.setMouseStatus(MouseStatus.Free);

@@ -10,19 +10,21 @@ public class Room1MouseControl : GlobalMouseControl
     {
         this.setUpContext();
     }
-
     private void Update()
     {
         updateStatueDetailArm();
         checkStatues();
+        if (GameManager.Room1.statuesDone)
+        {
+            var collider = GameObject.Find("statues_discover").GetComponent<Collider2D>();
+            collider.enabled = false;
+        }
     }
-
     private void setUpContext()
     {
         //disable bowl without box
         Helper.getSpriteRendererOf("bowl without box").enabled = false;
     }
-
     private void OnMouseDown()
     {
         switch (currentHover)
@@ -31,13 +33,14 @@ public class Room1MouseControl : GlobalMouseControl
                 onOffEffect("lamp_light");
                 break;
             case "statues_discover":
-                detailInteraction(
+                if (!GameManager.Room1.statuesDone)
+                    detailInteraction(
                     "InteractContainer_statues",
                     "Schmitz",
                     "This statues... is that the same one in the picture?");
                 break;
             case "rooftop door_interact":
-                //TODO
+                rooftopDoorInteract();
                 break;
             case "ladder_discover":
                 if (!Helper.inDetail)
@@ -58,56 +61,87 @@ public class Room1MouseControl : GlobalMouseControl
             default:
                 break;
         }
-        if (Helper.inDetail)
+        if (Helper.inDetail && !GameManager.Room1.statuesDone)
         {
             if (currentHover.Contains("left arm"))
-                GameManager.Room1.currentLeftArm = (GameManager.Room1.currentLeftArm == GameManager.Room1.leftArm.Length - 1) ? 0 : GameManager.Room1.currentLeftArm + 1;
+                GameManager.Room1.currentLeftArm =
+                (GameManager.Room1.currentLeftArm == GameManager.Room1.leftArm.Length - 1) ?
+                0 :
+                GameManager.Room1.currentLeftArm + 1;
 
             if (currentHover.Contains("right arm"))
-                GameManager.Room1.currentRightArm = (GameManager.Room1.currentRightArm == GameManager.Room1.rightArm.Length - 1) ? 0 : GameManager.Room1.currentRightArm + 1;
+                GameManager.Room1.currentRightArm =
+                (GameManager.Room1.currentRightArm == GameManager.Room1.rightArm.Length - 1) ?
+                0 :
+                GameManager.Room1.currentRightArm + 1;
+
             checkStatues();
         }
     }
-
     public void updateStatueDetailArm()
     {
         try
         {
             for (int i = 0; i < GameManager.Room1.leftArm.Length; i++)
             {
-                Helper.getSpriteRendererOf(GameManager.Room1.leftArmDetail[i]).enabled = (i == GameManager.Room1.currentLeftArm);
+                Helper.getSpriteRendererOf(GameManager.Room1.leftArmDetail[i]).enabled =
+                (i == GameManager.Room1.currentLeftArm);
             }
             for (int i = 0; i < GameManager.Room1.rightArm.Length; i++)
             {
-                Helper.getSpriteRendererOf(GameManager.Room1.rightArmDetail[i]).enabled = (i == GameManager.Room1.currentRightArm);
+                Helper.getSpriteRendererOf(GameManager.Room1.rightArmDetail[i]).enabled =
+                (i == GameManager.Room1.currentRightArm);
             }
         }
         catch { }
     }
-
     private void checkStatues()
     {
         if (GameManager.Room1.currentLeftArm == 0 && GameManager.Room1.currentRightArm == 1)
         {
             if (ladder != null)
             {
-                ladder.SetActive(true);
+                GameManager.Room1.ladderDone = true;
                 if (interactContainer != null &&
                 interactContainer.name.Equals("InteractContainer_statues") &&
                 interactContainer.activeSelf)
-                    dialogBox.text = "Wow The basement's door suddenly open.";
+                {
+                    GameManager.Room1.statuesDone = true;
+                    endDetailView();
+                    startDialogView("Schmitz", "I just hear somthing on the roof top door, should I check it?");
+                }
             }
         }
     }
-
+    private void rooftopDoorInteract()
+    {
+        if (GameManager.Room1.ladderDone)
+        {
+            ladder.SetActive(true);
+            try
+            {
+                var door = GameObject.Find("rooftop door_interact");
+                door.SetActive(false);
+                startDialogView("Schmitz", "the roof top door is open! there is a ladder show up!");
+            }
+            catch { }
+        }
+        else
+        {
+            startDialogView("Schmitz", "Hmm, is it locked?");
+        }
+    }
     private void onOffEffect(string obj)
     {
         Helper.getSpriteRendererOf(obj).enabled = !Helper.getSpriteRendererOf(obj).enabled;
     }
-
     public override void toolTipHandle()
     {
-        base.toolTipHandle();
+        if (Helper.inDetail)
+        {
+            Tooltip.hideToolTip_Static();
+            return;
+        }
         if (base.currentHover.Contains("discover"))
         {
             if (base.currentHover.Equals("ladder_discover"))
