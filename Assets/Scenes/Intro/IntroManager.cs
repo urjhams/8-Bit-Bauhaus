@@ -15,7 +15,7 @@ public class IntroManager : MonoBehaviour
 
     private void Awake()
     {
-        Screen.SetResolution(1366, 720, false);
+        Screen.SetResolution(1280, 720, false);
     }
 
     void Update()
