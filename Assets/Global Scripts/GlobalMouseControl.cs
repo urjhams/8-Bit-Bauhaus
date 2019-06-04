@@ -13,19 +13,12 @@ public class GlobalMouseControl : GlobalEffectControl
 
     private Button closeDialogButton;
 
-    /// <summary>
-    /// Start is called on the frame when a script is enabled just before
-    /// any of the Update methods is called the first time.
-    /// </summary>
     void Start()
     {
         closeDialogButton = GameObject.Find("dialog close").GetComponent<Button>();
         closeDialogButton.onClick.AddListener(() => this.endDetailView());
     }
 
-    /// <summary>
-    /// This function is called when the MonoBehaviour will be destroyed.
-    /// </summary>
     void OnDestroy()
     {
         closeDialogButton.onClick.RemoveListener(() => this.endDetailView());

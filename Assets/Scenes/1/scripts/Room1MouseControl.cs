@@ -58,19 +58,15 @@ public class Room1MouseControl : GlobalMouseControl
             default:
                 break;
         }
-
-        if (currentHover.Contains("left arm"))
+        if (Helper.inDetail)
         {
-            GameManager.Room1.currentLeftArm = (GameManager.Room1.currentLeftArm == GameManager.Room1.leftArm.Length - 1) ? 0 : GameManager.Room1.currentLeftArm + 1;
-            print(GameManager.Room1.currentLeftArm);
-        }
+            if (currentHover.Contains("left arm"))
+                GameManager.Room1.currentLeftArm = (GameManager.Room1.currentLeftArm == GameManager.Room1.leftArm.Length - 1) ? 0 : GameManager.Room1.currentLeftArm + 1;
 
-        if (currentHover.Contains("right arm"))
-        {
-            GameManager.Room1.currentRightArm = (GameManager.Room1.currentRightArm == GameManager.Room1.rightArm.Length - 1) ? 0 : GameManager.Room1.currentRightArm + 1;
-            print(GameManager.Room1.currentRightArm);
+            if (currentHover.Contains("right arm"))
+                GameManager.Room1.currentRightArm = (GameManager.Room1.currentRightArm == GameManager.Room1.rightArm.Length - 1) ? 0 : GameManager.Room1.currentRightArm + 1;
+            checkStatues();
         }
-        checkStatues();
     }
 
     public void updateStatueDetailArm()
