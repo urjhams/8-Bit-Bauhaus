@@ -22,7 +22,7 @@ public class Room1MouseControl : GlobalMouseControl
         //disable bowl without box
         Helper.getSpriteRendererOf("bowl without box").enabled = false;
     }
-    
+
     private void OnMouseDown()
     {
         switch (currentHover)
@@ -31,20 +31,29 @@ public class Room1MouseControl : GlobalMouseControl
                 onOffEffect("lamp_light");
                 break;
             case "statues_discover":
-                detailInteraction("InteractContainer_statues", "Schmitz", "This statues... is that the same one in the picture?");
+                detailInteraction(
+                    "InteractContainer_statues",
+                    "Schmitz",
+                    "This statues... is that the same one in the picture?");
                 break;
             case "rooftop door_interact":
                 //TODO
                 break;
             case "ladder_discover":
-                SceneManager.LoadScene("Room 1 basement");
-                Helper.setMouseStatus(MouseStatus.Free);
+                if (!Helper.inDetail)
+                    FadeToLevel("Room 1 basement");
                 break;
             case "painting_discover":
-                detailInteraction("InteractContainer_paint", "Schmitz", "Hmm... this picture look nice...");
+                detailInteraction(
+                    "InteractContainer_paint",
+                    "Schmitz",
+                    "Hmm... this picture look nice...");
                 break;
             case "bowl with box_discover":
-                detailInteraction("InteractContainer_box", "Schmitz", "A box, with a puzzle...?");
+                detailInteraction(
+                    "InteractContainer_box",
+                    "Schmitz",
+                    "A box, with a puzzle...?");
                 break;
             default:
                 break;
@@ -77,7 +86,7 @@ public class Room1MouseControl : GlobalMouseControl
                 Helper.getSpriteRendererOf(Helper.rightArmDetail[i]).enabled = (i == Helper.room1_RightArm);
             }
         }
-        catch {}
+        catch { }
     }
 
     private void checkStatues()
@@ -87,8 +96,8 @@ public class Room1MouseControl : GlobalMouseControl
             if (ladder != null)
             {
                 ladder.SetActive(true);
-                if (interactContainer != null && 
-                interactContainer.name.Equals("InteractContainer_statues") && 
+                if (interactContainer != null &&
+                interactContainer.name.Equals("InteractContainer_statues") &&
                 interactContainer.activeSelf)
                     dialogBox.text = "Wow The basement's door suddenly open.";
             }
@@ -103,9 +112,6 @@ public class Room1MouseControl : GlobalMouseControl
     public override void toolTipHandle()
     {
         base.toolTipHandle();
-        // if (Helper.inDetail) {
-        //     return;
-        // }
         if (base.currentHover.Contains("discover"))
         {
             if (base.currentHover.Equals("ladder_discover"))

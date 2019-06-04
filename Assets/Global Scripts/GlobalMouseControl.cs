@@ -1,5 +1,6 @@
 ﻿using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GlobalMouseControl : GlobalEffectControl
 {
@@ -32,7 +33,6 @@ public class GlobalMouseControl : GlobalEffectControl
 
     private void OnMouseEnter()
     {
-        print(col.name);
         currentHover = col.name;
         if (currentHover.Contains("interact"))
         {
@@ -96,7 +96,7 @@ public class GlobalMouseControl : GlobalEffectControl
         Tooltip.hideToolTip_Static();
     }
 
-    void disableGameObjectList(string[] names)
+    public void disableGameObjectList(string[] names)
     {
         foreach (var name in names)
         {
@@ -108,7 +108,7 @@ public class GlobalMouseControl : GlobalEffectControl
         }
     }
 
-    void enableGameObjectList(string[] names)
+    public void enableGameObjectList(string[] names)
     {
         foreach (var name in names)
         {

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GlobalEffectControl : MonoBehaviour
 {
@@ -14,7 +15,6 @@ public class GlobalEffectControl : MonoBehaviour
         foreach (CanvasGroup element in uiElement)
             StartCoroutine(FadeCanvasGroup(element, element.alpha, 0));
     }
-    //TODO: add a fade in, fade out function for game
     public IEnumerator FadeCanvasGroup(CanvasGroup cg, float start, float end, float lerpTime = 0.5f)
     {
         float timeStartedLerping = Time.time;
@@ -78,5 +78,13 @@ public class GlobalEffectControl : MonoBehaviour
             rend.material.color = color;
             StartCoroutine(FadeIn(rend));
         }
+    }
+
+    public void FadeToLevel(string name)
+    {
+        // var animator = GameObject.Find("room changer").GetComponent<Animator>();
+        // animator.Play("ScreenFadeOut");
+        SceneManager.LoadScene(name);
+        Helper.setMouseStatus(MouseStatus.Free);
     }
 }
