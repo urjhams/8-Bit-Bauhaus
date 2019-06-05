@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,5 +20,6 @@ public class GameManager
         public static bool statuesDone = false;
         public static bool ladderDone = false;
         public static List<string> boxCorrectPeices = new List<string>();
+        public static List<Tuple<string,Vector3>> boxPeices = new List<Tuple<string, Vector3>>();
     }
 }

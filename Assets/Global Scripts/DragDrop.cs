@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class DragDrop : MonoBehaviour
 {
-    [HideInInspector] public bool locked = false;
+    private bool locked = false;
     [HideInInspector] public bool selected;
     private Vector2 initPosition;
-    private Collider2D containerCollider;
+    [HideInInspector] public Collider2D containerCollider;
     protected virtual void Start()
     {
         initPosition = gameObject.transform.position;
