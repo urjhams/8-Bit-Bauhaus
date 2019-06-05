@@ -11,7 +11,7 @@ public class MenuFader : GlobalEffectControl
     /// </summary>
     void Awake()
     {
-        Screen.SetResolution(1366, 720, false);
+        Screen.SetResolution(1920, 1080, false);
     }
     void Start()
     {

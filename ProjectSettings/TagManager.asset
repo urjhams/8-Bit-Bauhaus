@@ -9,6 +9,7 @@ TagManager:
   - enviroment group
   - interactable group
   - effect group
+  - Room manager
   layers:
   - Default
   - TransparentFX

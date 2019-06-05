@@ -13,11 +13,6 @@ public class IntroManager : MonoBehaviour
         length = player.clip.length;
     }
 
-    private void Awake()
-    {
-        Screen.SetResolution(1280, 720, false);
-    }
-
     void Update()
     {
         checkOver();
