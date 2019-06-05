@@ -411,6 +411,7 @@ GameObject:
   - component: {fileID: 175991253}
   - component: {fileID: 175991254}
   - component: {fileID: 175991255}
+  - component: {fileID: 175991256}
   m_Layer: 0
   m_Name: puzzle peice 9
   m_TagString: Untagged
@@ -490,7 +491,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -528,6 +529,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bee6f1103bd94d3180248c1438e86e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &175991256
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175991251}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &208133736
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,6 +807,7 @@ GameObject:
   - component: {fileID: 286983813}
   - component: {fileID: 286983814}
   - component: {fileID: 286983815}
+  - component: {fileID: 286983816}
   m_Layer: 0
   m_Name: puzzle peice 4
   m_TagString: Untagged
@@ -864,7 +887,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -917,6 +940,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bee6f1103bd94d3180248c1438e86e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &286983816
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286983811}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &312387246
 GameObject:
   m_ObjectHideFlags: 0
@@ -958,7 +1002,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1458,7 +1502,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1600,6 +1644,7 @@ GameObject:
   - component: {fileID: 453448873}
   - component: {fileID: 453448874}
   - component: {fileID: 453448875}
+  - component: {fileID: 453448876}
   m_Layer: 0
   m_Name: puzzle peice 7
   m_TagString: Untagged
@@ -1679,7 +1724,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1723,6 +1768,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bee6f1103bd94d3180248c1438e86e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &453448876
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453448871}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &471053251
 GameObject:
   m_ObjectHideFlags: 0
@@ -2019,7 +2085,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2139,6 +2205,7 @@ GameObject:
   m_Component:
   - component: {fileID: 528237912}
   - component: {fileID: 528237913}
+  - component: {fileID: 528237914}
   m_Layer: 0
   m_Name: puzzle frame
   m_TagString: Untagged
@@ -2230,6 +2297,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!68 &528237914
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528237911}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -1.9541864, y: -0.7718987}
+  - {x: -1.750585, y: 1.2775145}
+  - {x: 0.26712248, y: 2.154469}
+  - {x: 1.9493415, y: 0.9795029}
+  - {x: 1.812706, y: -1.2032619}
+  - {x: -0.13820797, y: -2.087185}
+  - {x: -1.9541702, y: -0.7736508}
 --- !u!1 &649461462
 GameObject:
   m_ObjectHideFlags: 0
@@ -2775,6 +2865,7 @@ GameObject:
   - component: {fileID: 873447724}
   - component: {fileID: 873447725}
   - component: {fileID: 873447726}
+  - component: {fileID: 873447727}
   m_Layer: 0
   m_Name: puzzle peice 10
   m_TagString: Untagged
@@ -2854,7 +2945,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2898,6 +2989,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bee6f1103bd94d3180248c1438e86e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &873447727
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873447722}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &887140174
 GameObject:
   m_ObjectHideFlags: 0
@@ -3155,6 +3267,7 @@ GameObject:
   - component: {fileID: 904008135}
   - component: {fileID: 904008136}
   - component: {fileID: 904008137}
+  - component: {fileID: 904008138}
   m_Layer: 0
   m_Name: puzzle peice 6
   m_TagString: Untagged
@@ -3234,7 +3347,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3273,6 +3386,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bee6f1103bd94d3180248c1438e86e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &904008138
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904008133}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &923477614
 GameObject:
   m_ObjectHideFlags: 0
@@ -3905,8 +4039,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1038832283}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0051, y: 0.14, z: 0}
-  m_LocalScale: {x: 0.021593273, y: 0.037666045, z: 0.40430698}
+  m_LocalPosition: {x: 0.002, y: 0.125, z: 0}
+  m_LocalScale: {x: 0.023601448, y: 0.041168988, z: 0.44190755}
   m_Children:
   - {fileID: 528237912}
   m_Father: {fileID: 716707892}
@@ -3972,6 +4106,7 @@ GameObject:
   - component: {fileID: 1050698184}
   - component: {fileID: 1050698185}
   - component: {fileID: 1050698186}
+  - component: {fileID: 1050698187}
   m_Layer: 0
   m_Name: puzzle peice 3
   m_TagString: Untagged
@@ -4051,7 +4186,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -4102,6 +4237,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bee6f1103bd94d3180248c1438e86e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &1050698187
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1050698182}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1053408936
 GameObject:
   m_ObjectHideFlags: 0
@@ -4322,6 +4478,7 @@ GameObject:
   - component: {fileID: 1118584763}
   - component: {fileID: 1118584764}
   - component: {fileID: 1118584765}
+  - component: {fileID: 1118584766}
   m_Layer: 0
   m_Name: puzzle peice 5
   m_TagString: Untagged
@@ -4401,7 +4558,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -4445,6 +4602,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bee6f1103bd94d3180248c1438e86e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &1118584766
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118584761}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1120079764
 GameObject:
   m_ObjectHideFlags: 0
@@ -4565,7 +4743,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -4988,7 +5166,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -5041,6 +5219,7 @@ GameObject:
   - component: {fileID: 1360872602}
   - component: {fileID: 1360872603}
   - component: {fileID: 1360872604}
+  - component: {fileID: 1360872605}
   m_Layer: 0
   m_Name: puzzle peice 2
   m_TagString: Untagged
@@ -5120,7 +5299,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -5183,6 +5362,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bee6f1103bd94d3180248c1438e86e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &1360872605
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360872600}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1366663095
 GameObject:
   m_ObjectHideFlags: 0
@@ -5382,7 +5582,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -6087,7 +6287,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -6160,7 +6360,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -6833,6 +7033,7 @@ GameObject:
   - component: {fileID: 1893533588}
   - component: {fileID: 1893533589}
   - component: {fileID: 1893533590}
+  - component: {fileID: 1893533591}
   m_Layer: 0
   m_Name: puzzle peice 8
   m_TagString: Untagged
@@ -6912,7 +7113,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -6962,6 +7163,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bee6f1103bd94d3180248c1438e86e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &1893533591
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893533586}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1903785599 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7045310711122185280, guid: 0a750db1088894402baf96c00eaedea6,
@@ -7028,7 +7250,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -7078,6 +7300,7 @@ GameObject:
   - component: {fileID: 1975277719}
   - component: {fileID: 1975277720}
   - component: {fileID: 1975277721}
+  - component: {fileID: 1975277722}
   m_Layer: 0
   m_Name: puzzle peice 11
   m_TagString: Untagged
@@ -7157,7 +7380,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -7207,6 +7430,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bee6f1103bd94d3180248c1438e86e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &1975277722
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975277717}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &2012575943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7222,7 +7466,7 @@ PrefabInstance:
     - target: {fileID: 8405497574292633993, guid: e5a50ef28123c4e348d94092d5bccd88,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8405497574292633993, guid: e5a50ef28123c4e348d94092d5bccd88,
         type: 3}
@@ -7426,7 +7670,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
