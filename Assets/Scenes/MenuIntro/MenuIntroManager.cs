@@ -11,10 +11,11 @@ public class MenuIntroManager : MonoBehaviour
     {
         length = player.clip.length;
     }
-
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetMouseButtonDown(0))
+            SceneManager.LoadScene("Intro");
         checkOver();
     }
     private void checkOver()
