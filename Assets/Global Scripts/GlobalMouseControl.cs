@@ -78,7 +78,7 @@ public class GlobalMouseControl : GlobalEffectControl
         Tooltip.hideToolTip_Static();
     }
 
-    public void endDetailView()
+    public virtual void endDetailView()
     {
         Helper.inDetail = false;
         if (interactContainer != null)

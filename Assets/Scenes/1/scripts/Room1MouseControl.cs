@@ -19,6 +19,10 @@ public class Room1MouseControl : GlobalMouseControl
             var collider = GameObject.Find("statues_discover").GetComponent<Collider2D>();
             collider.enabled = false;
         }
+        if (GameManager.Room1.ladderDone)
+        {
+            ladder.SetActive(true);
+        }
     }
     private void setUpContext()
     {
@@ -40,7 +44,7 @@ public class Room1MouseControl : GlobalMouseControl
                     "This statues... is that the same one in the picture?");
                 break;
             case "rooftop door_interact":
-                rooftopDoorInteract();
+                startDialogView("Schmitz", "Hmm, is it locked?");
                 break;
             case "ladder_discover":
                 if (!Helper.inDetail)
@@ -107,28 +111,16 @@ public class Room1MouseControl : GlobalMouseControl
                 interactContainer.activeSelf)
                 {
                     GameManager.Room1.statuesDone = true;
-                    endDetailView();
+                    GameManager.Room1.ladderDone = true;
+                    try
+                    {
+                        var door = GameObject.Find("rooftop door_interact");
+                        door.SetActive(false);
+                    }
+                    catch { }
                     startDialogView("Schmitz", "I just hear somthing on the roof top door, should I check it?");
                 }
             }
-        }
-    }
-    private void rooftopDoorInteract()
-    {
-        if (GameManager.Room1.ladderDone)
-        {
-            ladder.SetActive(true);
-            try
-            {
-                var door = GameObject.Find("rooftop door_interact");
-                door.SetActive(false);
-                startDialogView("Schmitz", "the roof top door is open! there is a ladder show up!");
-            }
-            catch { }
-        }
-        else
-        {
-            startDialogView("Schmitz", "Hmm, is it locked?");
         }
     }
     private void onOffEffect(string obj)
