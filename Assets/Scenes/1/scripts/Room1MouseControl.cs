@@ -19,7 +19,7 @@ public class Room1MouseControl : GlobalMouseControl
             var collider = GameObject.Find("statues_discover").GetComponent<Collider2D>();
             collider.enabled = false;
         }
-        if (GameManager.Room1.ladderDone)
+        if (GameManager.Room1.ladderDone && ladder != null)
         {
             ladder.SetActive(true);
         }
