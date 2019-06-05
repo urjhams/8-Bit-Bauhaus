@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class DragDrop : MonoBehaviour
 {
-    private bool locked = false;
-    private bool selected;
+    [HideInInspector] public bool locked = false;
+    [HideInInspector] public bool selected;
     private Vector2 initPosition;
     private Collider2D containerCollider;
-    void Start()
+    protected virtual void Start()
     {
         initPosition = gameObject.transform.position;
         containerCollider = gameObject.transform.parent.GetComponent<Collider2D>();
     }
-    void Update()
+    protected virtual void Update()
     {
         if (selected && !locked)
         {
+            setLayerOrder(4);
             Vector2 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             transform.position = new Vector2(cursorPosition.x, cursorPosition.y);
         }
@@ -26,8 +27,10 @@ public class DragDrop : MonoBehaviour
             if (containerCollider.bounds.Contains(gameObject.GetComponent<Collider2D>().bounds.min) &&
             containerCollider.bounds.Contains(gameObject.GetComponent<Collider2D>().bounds.max))
             {
-                // inside container
-            } else {
+                setLayerOrder(2);
+            }
+            else
+            {
                 transform.position = initPosition;
             }
         }
@@ -37,7 +40,7 @@ public class DragDrop : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
             selected = true;
     }
-    void OnTriggerStay2D(Collider2D other)
+    protected virtual void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.name.Equals("correct " + gameObject.name) && !selected)
         {
@@ -47,7 +50,7 @@ public class DragDrop : MonoBehaviour
             selected = !selected;
         }
     }
-    private void setLayerOrder(int order)
+    public void setLayerOrder(int order)
     {
         gameObject.GetComponent<SpriteRenderer>().sortingOrder = order;
     }

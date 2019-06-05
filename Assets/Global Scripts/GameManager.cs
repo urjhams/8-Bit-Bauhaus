@@ -18,5 +18,6 @@ public class GameManager
         "interact_left arm 4", "interact_left arm 3", "interact_left arm 2" };
         public static bool statuesDone = false;
         public static bool ladderDone = false;
+        public static List<string> boxCorrectPeices = new List<string>();
     }
 }
