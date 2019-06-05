@@ -12,20 +12,25 @@ public class DragDrop : MonoBehaviour
             Vector2 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             transform.position = new Vector2(cursorPosition.x, cursorPosition.y);
         }
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0)) {
             selected = false;
+        }
     }
     void OnMouseOver()
     {
         if (Input.GetMouseButtonDown(0))
             selected = true;
     }
-
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.name.Equals("correct " + gameObject.name)) {
+        if (other.gameObject.name.Equals("correct " + gameObject.name) && !selected) {
             transform.position = other.gameObject.transform.position;
             locked = true;
+            setLayerOrder(2);
+            selected = !selected;
         }
+    }
+    private void setLayerOrder(int order) {
+        gameObject.GetComponent<SpriteRenderer>().sortingOrder = order;
     }
 }
