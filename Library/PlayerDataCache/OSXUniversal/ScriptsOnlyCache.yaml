@@ -12,6 +12,7 @@ ScriptsOnlyBuild:
     - Room1BasementMouseControl
     - Room1Manager
     - Room1MouseControl
+    - SoundOnClick
     - Tooltip
     Unity.TextMeshPro.dll:
     - TMPro.TMP_ColorGradient
@@ -55,6 +56,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -79,6 +84,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 9774}
     - Class: 114
       Script: {instanceID: 10062}
+    - Class: 114
+      Script: {instanceID: 16774}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -120,6 +127,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -152,6 +163,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 10124}
     - Class: 114
       Script: {instanceID: 10218}
+    - Class: 114
+      Script: {instanceID: 16774}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1250,6 +1263,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 6898d7090861da3b9cdb91e9e4a15634
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SoundOnClick
   platform: 2
   scenePathNames:
   - Assets/Scenes/Menu/Menu.unity

@@ -22,6 +22,7 @@ public class BoxPuzzleDragDrop : DragDrop
                 transform.position = item.Item2;
             }
         }
+        print("start");
     }
 
     protected override void Update()
