@@ -29,7 +29,7 @@ public class Room1MouseControl : GlobalMouseControl
         //disable bowl without box
         Helper.getSpriteRendererOf("bowl without box").enabled = false;
     }
-    private void OnMouseDown()
+    public void OnMouseDown()
     {
         switch (currentHover)
         {
@@ -56,12 +56,12 @@ public class Room1MouseControl : GlobalMouseControl
                     "Schmitz",
                     "Hmm... this picture look nice...");
                 break;
-            case "bowl with box_discover":
-                detailInteraction(
-                    "InteractContainer_box",
-                    "Schmitz",
-                    "A box, with a puzzle...?");
-                break;
+            // case "bowl with box_discover":
+            //     detailInteraction(
+            //         "InteractContainer_box",
+            //         "Schmitz",
+            //         "A box, with a puzzle...?");
+            //     break;
             default:
                 break;
         }

@@ -4,12 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - detail container
   - background group
   - enviroment group
   - interactable group
   - effect group
-  - Room manager
+  - Inventory
+  - detail container
   layers:
   - Default
   - TransparentFX
