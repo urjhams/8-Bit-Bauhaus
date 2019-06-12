@@ -1,6 +1,7 @@
 ﻿using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class GlobalMouseControl : GlobalEffectControl
 {
@@ -12,6 +13,9 @@ public class GlobalMouseControl : GlobalEffectControl
     [HideInInspector] public string currentHover = "None";
     private Button closeDialogButton;
 
+public bool IsMouseOverUI() {
+    return EventSystem.current.IsPointerOverGameObject();
+}
     void Start()
     {
         closeDialogButton = GameObject.Find("dialog close").GetComponent<Button>();
@@ -25,6 +29,7 @@ public class GlobalMouseControl : GlobalEffectControl
 
     private void OnMouseEnter()
     {
+        print(IsMouseOverUI() ? "yes" : "");
         currentHover = col.name;
         if (currentHover.Contains("interact"))
         {
@@ -93,14 +98,6 @@ public class GlobalMouseControl : GlobalEffectControl
         dialogBox.text = contentText;
         nameBox.text = nameText;
         dialogCanvas.enabled = true;
-        Helper.setMouseStatus(MouseStatus.Free);
-        Tooltip.hideToolTip_Static();
-    }
-
-    public void endDialogView() {
-        Helper.inDetail = false;
-        if (dialogCanvas != null)
-            dialogCanvas.enabled = false;
         Helper.setMouseStatus(MouseStatus.Free);
         Tooltip.hideToolTip_Static();
     }

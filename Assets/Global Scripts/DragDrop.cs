@@ -11,7 +11,7 @@ public class DragDrop : MonoBehaviour
     protected virtual void Start()
     {
         initPosition = gameObject.transform.position;
-        containerCollider = gameObject.transform.parent.GetComponent<Collider2D>();
+        containerCollider = GameObject.Find("puzzle frame").transform.GetComponent<Collider2D>();
     }
     protected virtual void Update()
     {

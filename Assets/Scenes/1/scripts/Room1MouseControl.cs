@@ -6,10 +6,6 @@ using UnityEngine.SceneManagement;
 public class Room1MouseControl : GlobalMouseControl
 {
     [SerializeField] public GameObject ladder;
-    private void Awake()
-    {
-        this.setUpContext();
-    }
     private void Update()
     {
         updateStatueDetailArm();
@@ -23,11 +19,6 @@ public class Room1MouseControl : GlobalMouseControl
         {
             ladder.SetActive(true);
         }
-    }
-    private void setUpContext()
-    {
-        //disable bowl without box
-        Helper.getSpriteRendererOf("bowl without box").enabled = false;
     }
     public void OnMouseDown()
     {
@@ -56,12 +47,10 @@ public class Room1MouseControl : GlobalMouseControl
                     "Schmitz",
                     "Hmm... this picture look nice...");
                 break;
-            // case "bowl with box_discover":
-            //     detailInteraction(
-            //         "InteractContainer_box",
-            //         "Schmitz",
-            //         "A box, with a puzzle...?");
-            //     break;
+            case "bowl with box_discover":
+                Destroy(gameObject);
+                Helper.getSpriteRendererOf("bowl without box").enabled = true;
+                break;
             default:
                 break;
         }
