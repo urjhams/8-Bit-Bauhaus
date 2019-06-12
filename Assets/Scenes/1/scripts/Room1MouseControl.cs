@@ -22,6 +22,8 @@ public class Room1MouseControl : GlobalMouseControl
     }
     public void OnMouseDown()
     {
+        if (IsMouseOverUI())
+            return;
         switch (currentHover)
         {
             case "lamp_interact":

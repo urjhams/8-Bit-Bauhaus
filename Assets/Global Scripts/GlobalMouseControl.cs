@@ -29,7 +29,8 @@ public bool IsMouseOverUI() {
 
     private void OnMouseEnter()
     {
-        print(IsMouseOverUI() ? "yes" : "");
+        if (IsMouseOverUI())
+            Helper.setMouseStatus(MouseStatus.Free);
         currentHover = col.name;
         if (currentHover.Contains("interact"))
         {
