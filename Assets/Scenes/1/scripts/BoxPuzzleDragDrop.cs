@@ -31,7 +31,7 @@ public class BoxPuzzleDragDrop : DragDrop
     protected override void Update()
     {
         base.Update();
-        if (selected ^^ !locked)
+        if (selected && !locked)
             setLayerOrder(4);
         if (Input.GetMouseButtonUp(0))
         {

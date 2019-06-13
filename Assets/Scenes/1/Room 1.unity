@@ -775,6 +775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b831bd91122a4cffa2ea69874f199b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  locked: 0
   selected: 0
   containerCollider: {fileID: 0}
 --- !u!1 &208133736
@@ -1151,6 +1152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b831bd91122a4cffa2ea69874f199b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  locked: 0
   selected: 0
   containerCollider: {fileID: 0}
 --- !u!1 &316872837
@@ -1405,7 +1407,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2082858596}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1751,6 +1753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b831bd91122a4cffa2ea69874f199b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  locked: 0
   selected: 0
   containerCollider: {fileID: 0}
 --- !u!1 &471079472
@@ -2283,7 +2286,6 @@ GameObject:
   - component: {fileID: 783511665}
   - component: {fileID: 783511666}
   - component: {fileID: 783511667}
-  - component: {fileID: 783511668}
   - component: {fileID: 783511669}
   m_Layer: 0
   m_Name: bowl with box_discover
@@ -2399,19 +2401,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.63012075, y: 0.3286538}
   m_EdgeRadius: 0
---- !u!114 &783511668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 783511663}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28926142eaaed43f59043116de0dd72d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemButton: {fileID: 815962552}
 --- !u!114 &783511669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2906,128 +2895,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemButton: {fileID: 377110859}
---- !u!1 &815962552
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 815962553}
-  - component: {fileID: 815962555}
-  - component: {fileID: 815962554}
-  - component: {fileID: 815962557}
-  - component: {fileID: 815962556}
-  m_Layer: 5
-  m_Name: puzzle box inventory
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &815962553
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 815962552}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2082858596}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &815962554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 815962552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 9cfc8dbf2bcea4c75b47be233ada6091, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
---- !u!222 &815962555
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 815962552}
-  m_CullTransparentMesh: 0
---- !u!114 &815962556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 815962552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 815962557}
-          m_MethodName: clickPuzzleBox
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
---- !u!114 &815962557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 815962552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2f91db5b5d0c42098ce46d6ea60e29f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactContainer: {fileID: 8405497572410245454}
-  dialogCanvas: {fileID: 1036997547}
-  dialogBox: {fileID: 1036997548}
-  nameBox: {fileID: 1036997549}
 --- !u!1 &840355893
 GameObject:
   m_ObjectHideFlags: 0
@@ -3562,6 +3429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b831bd91122a4cffa2ea69874f199b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  locked: 0
   selected: 0
   containerCollider: {fileID: 0}
 --- !u!1 &923477614
@@ -4300,6 +4168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b831bd91122a4cffa2ea69874f199b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  locked: 0
   selected: 0
   containerCollider: {fileID: 0}
 --- !u!1 &1053408936
@@ -4645,6 +4514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b831bd91122a4cffa2ea69874f199b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  locked: 0
   selected: 0
   containerCollider: {fileID: 0}
 --- !u!1 &1120079764
@@ -5202,6 +5072,37 @@ Camera:
     type: 3}
   m_PrefabInstance: {fileID: 4663653651976081917}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1330558614 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4233943321153287868, guid: 5ae38656714584396bf220af7eddea3b,
+    type: 3}
+  m_PrefabInstance: {fileID: 9193976559848122856}
+  m_PrefabAsset: {fileID: 0}
+--- !u!68 &1330558615
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330558614}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -1.7228901, y: 1.263432}
+  - {x: -1.7281522, y: 1.2585486}
+  - {x: 0.23013148, y: 2.1274064}
+  - {x: 1.94706, y: 0.9264422}
+  - {x: 1.7675598, y: -1.1645612}
+  - {x: -0.16994677, y: -2.1069195}
+  - {x: -1.9859688, y: -0.7656756}
+  - {x: -1.7274402, y: 1.258866}
+  - {x: -1.7185131, y: 1.2633294}
 --- !u!1 &1360872600 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9193976561175276912, guid: 5ae38656714584396bf220af7eddea3b,
@@ -5220,6 +5121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b831bd91122a4cffa2ea69874f199b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  locked: 0
   selected: 0
   containerCollider: {fileID: 0}
 --- !u!1 &1366663095
@@ -6357,6 +6259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b831bd91122a4cffa2ea69874f199b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  locked: 0
   selected: 0
   containerCollider: {fileID: 0}
 --- !u!1 &1744510015
@@ -6626,6 +6529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b831bd91122a4cffa2ea69874f199b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  locked: 0
   selected: 0
   containerCollider: {fileID: 0}
 --- !u!1 &1903785599 stripped
@@ -6671,6 +6575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b831bd91122a4cffa2ea69874f199b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  locked: 0
   selected: 0
   containerCollider: {fileID: 0}
 --- !u!1 &2029286815
@@ -7727,6 +7632,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5876511436384961503, guid: 5ae38656714584396bf220af7eddea3b,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6847059652759010173, guid: 5ae38656714584396bf220af7eddea3b,
         type: 3}
       propertyPath: m_Points.Array.data[3].x
@@ -7804,4 +7714,5 @@ PrefabInstance:
     - {fileID: 9193976559489484834, guid: 5ae38656714584396bf220af7eddea3b, type: 3}
     - {fileID: 9193976561175276916, guid: 5ae38656714584396bf220af7eddea3b, type: 3}
     - {fileID: 9193976560417629282, guid: 5ae38656714584396bf220af7eddea3b, type: 3}
+    - {fileID: 6847059652759010173, guid: 5ae38656714584396bf220af7eddea3b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5ae38656714584396bf220af7eddea3b, type: 3}
