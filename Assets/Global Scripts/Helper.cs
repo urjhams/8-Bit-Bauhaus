@@ -25,7 +25,5 @@ public class Helper
 public enum MouseStatus
 {
     Free,
-    Click,
-    Grap,
-    Inspect
+    Click
 }

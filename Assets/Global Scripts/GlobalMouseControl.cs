@@ -13,6 +13,15 @@ public class GlobalMouseControl : GlobalEffectControl
     [HideInInspector] public string currentHover = "None";
     private Button closeDialogButton;
 
+public virtual void OnMouseDown()
+{
+    Helper.setMouseStatus(MouseStatus.Click);
+}
+
+void OnMouseUp()
+{
+    Helper.setMouseStatus(MouseStatus.Free);
+}
 public bool IsMouseOverUI() {
     return EventSystem.current.IsPointerOverGameObject();
 }
@@ -24,7 +33,8 @@ public bool IsMouseOverUI() {
 
     void OnDestroy()
     {
-        closeDialogButton.onClick.RemoveListener(() => this.endDetailView());
+        if (closeDialogButton != null)
+            closeDialogButton.onClick.RemoveListener(() => this.endDetailView());
     }
 
     private void OnMouseEnter()
@@ -32,25 +42,6 @@ public bool IsMouseOverUI() {
         if (IsMouseOverUI())
             Helper.setMouseStatus(MouseStatus.Free);
         currentHover = col.name;
-        if (currentHover.Contains("interact"))
-        {
-            Helper.setMouseStatus(MouseStatus.Click);
-        }
-        else if (currentHover.Contains("discover"))
-        {
-            if (!Helper.inDetail)
-                Helper.setMouseStatus(MouseStatus.Inspect);
-            else
-                Helper.setMouseStatus(MouseStatus.Free);
-        }
-        else if (currentHover.Contains("grab"))
-        {
-            Helper.setMouseStatus(MouseStatus.Grap);
-        }
-        else
-        {
-            Helper.setMouseStatus(MouseStatus.Free);
-        }
         this.toolTipHandle();
     }
 

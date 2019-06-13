@@ -2286,7 +2286,7 @@ GameObject:
   - component: {fileID: 783511665}
   - component: {fileID: 783511666}
   - component: {fileID: 783511667}
-  - component: {fileID: 783511669}
+  - component: {fileID: 783511668}
   m_Layer: 0
   m_Name: bowl with box_discover
   m_TagString: Untagged
@@ -2401,7 +2401,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.63012075, y: 0.3286538}
   m_EdgeRadius: 0
---- !u!114 &783511669
+--- !u!114 &783511668
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4490,12 +4490,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1068793162 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6883211724745805270, guid: efab2d598d82c47d293ce63c91e022e4,
-    type: 3}
-  m_PrefabInstance: {fileID: 6883211725579186332}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1118584761 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9193976560899577425, guid: 5ae38656714584396bf220af7eddea3b,
@@ -5008,7 +5002,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1269388976}
   - component: {fileID: 1269388975}
-  - component: {fileID: 1269388977}
   m_Layer: 0
   m_Name: RoomManager
   m_TagString: Untagged
@@ -5029,9 +5022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   freeMouse: {fileID: 2800000, guid: 038e1078b0e7f4f479fbd4fb0df66063, type: 3}
-  grabMouse: {fileID: 2800000, guid: 99a5950711fba4ed6aeb67b4be8261a9, type: 3}
   clickMouse: {fileID: 2800000, guid: 722d8f96dca8141b78e56ccb90e44b4c, type: 3}
-  inspectMouse: {fileID: 2800000, guid: 328cc3ce6b88140529bea0cc156443cc, type: 3}
 --- !u!4 &1269388976
 Transform:
   m_ObjectHideFlags: 0
@@ -5046,26 +5037,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1269388977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1269388974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55fd2dbadf2c443c3aa4f30b3f316b62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hasItem: 000000000000
-  slot:
-  - {fileID: 1068793162}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!20 &1324083623 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 4663653653286434906, guid: c74a681450e664197aa7834fd23ab406,

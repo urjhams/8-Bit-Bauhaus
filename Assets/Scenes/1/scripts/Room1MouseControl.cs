@@ -19,8 +19,9 @@ public class Room1MouseControl : GlobalMouseControl
             ladder.SetActive(true);
         }
     }
-    public void OnMouseDown()
+    public override void OnMouseDown()
     {
+        base.OnMouseDown();
         if (IsMouseOverUI())
             return;
         switch (currentHover)
