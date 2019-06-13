@@ -69,6 +69,7 @@
      <Compile Include="Assets\Global Scripts\TextureScale.cs" />
      <Compile Include="Assets\Global Scripts\Tooltip.cs" />
      <Compile Include="Assets\Global Scripts\TurnOnObjectTrigger.cs" />
+     <Compile Include="Assets\Scenes\1\scripts\BirdFoodCollect.cs" />
      <Compile Include="Assets\Scenes\1\scripts\BoxPuzzleDragDrop.cs" />
      <Compile Include="Assets\Scenes\1\scripts\Room1BasementMouseControl.cs" />
      <Compile Include="Assets\Scenes\1\scripts\Room1Manager.cs" />

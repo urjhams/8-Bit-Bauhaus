@@ -11,7 +11,7 @@ public class selfCollect : MonoBehaviour
     {
         inventory = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>();
     }
-    void OnMouseDown()
+    public virtual void OnMouseDown()
     {
         if (itemButton == null)
             return;
@@ -24,6 +24,7 @@ public class selfCollect : MonoBehaviour
                 color.a = 1.0f;
                 Instantiate(itemButton, inventory.slot[i].transform, false);
                 Destroy(gameObject);
+                GameManager.currentInventoryItems.Add(itemButton);
                 break;
             }
         }

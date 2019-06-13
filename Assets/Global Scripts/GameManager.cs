@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class GameManager
 {
+    public static ArrayList currentInventoryItems = new ArrayList();
     public class Room1
     {
         public static int currentRightArm = 0;
@@ -21,5 +22,7 @@ public class GameManager
         public static bool ladderDone = false;
         public static List<string> boxCorrectPeices = new List<string>();
         public static List<Tuple<string,Vector3>> boxPeices = new List<Tuple<string, Vector3>>();
+        public static bool birdFood = false;
+        public static bool boxOnTable = false;
     }
 }

@@ -8,8 +8,7 @@ public class Room1MouseControl : GlobalMouseControl
     [SerializeField] public GameObject ladder;
     private void Update()
     {
-        updateStatueDetailArm();
-        checkStatues();
+        updateSceneState();
         if (GameManager.Room1.statuesDone)
         {
             var collider = GameObject.Find("statues_discover").GetComponent<Collider2D>();
@@ -80,6 +79,18 @@ public class Room1MouseControl : GlobalMouseControl
             checkStatues();
         }
     }
+    void updateSceneState()
+    {
+        updateStatueDetailArm();
+        checkStatues();
+        try
+        {
+            GameObject.Find("bird food_collect").SetActive(GameManager.Room1.birdFood);
+            GameObject.Find("the box_discover").SetActive(GameManager.Room1.boxOnTable);
+            GameObject.Find("bowl with box_discover").SetActive(!GameManager.Room1.boxOnTable);
+        }
+        catch { }
+    }
     public void updateStatueDetailArm()
     {
         try
@@ -127,18 +138,8 @@ public class Room1MouseControl : GlobalMouseControl
     }
     public override void toolTipHandle()
     {
-        if (Helper.inDetail)
-        {
-            Tooltip.hideToolTip_Static();
-            return;
-        }
-        if (base.currentHover.Contains("discover"))
-        {
-            if (base.currentHover.Equals("ladder_discover"))
-                Tooltip.showTooltip_Static("Get upstair to take a look");
-            else
-                Tooltip.showTooltip_Static("Discover");
-        }
+        if (base.currentHover.Equals("ladder_discover"))
+            Tooltip.showTooltip_Static("Get upstair to take a look");
         else
         {
             Tooltip.hideToolTip_Static();
