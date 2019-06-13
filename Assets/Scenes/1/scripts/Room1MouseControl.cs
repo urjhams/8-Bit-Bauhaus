@@ -53,6 +53,13 @@ public class Room1MouseControl : GlobalMouseControl
                 Destroy(gameObject);
                 Helper.getSpriteRendererOf("bowl without box").enabled = true;
                 break;
+            case "the box_discover":
+                detailInteraction(
+                    "InteractContainer_box",
+                    "Schmitz",
+                    "A box, with a puzzle...?"
+                );
+                break;
             default:
                 break;
         }

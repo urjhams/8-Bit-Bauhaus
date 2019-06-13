@@ -4,35 +4,23 @@ using UnityEngine;
 
 public class DragDrop : MonoBehaviour
 {
-    private bool locked = false;
+    [HideInInspector] public bool locked = false;
     [HideInInspector] public bool selected;
-    private Vector2 initPosition;
     [HideInInspector] public Collider2D containerCollider;
     protected virtual void Start()
     {
-        initPosition = gameObject.transform.position;
-        containerCollider = GameObject.Find("puzzle frame").transform.GetComponent<Collider2D>();
+        
     }
     protected virtual void Update()
     {
         if (selected && !locked)
         {
-            setLayerOrder(4);
             Vector2 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             transform.position = new Vector2(cursorPosition.x, cursorPosition.y);
         }
         if (Input.GetMouseButtonUp(0))
         {
             selected = false;
-            if (containerCollider.bounds.Contains(gameObject.GetComponent<Collider2D>().bounds.min) &&
-            containerCollider.bounds.Contains(gameObject.GetComponent<Collider2D>().bounds.max))
-            {
-                setLayerOrder(2);
-            }
-            else
-            {
-                transform.position = initPosition;
-            }
         }
     }
     void OnMouseOver()
@@ -46,12 +34,7 @@ public class DragDrop : MonoBehaviour
         {
             transform.position = other.gameObject.transform.position;
             locked = true;
-            setLayerOrder(2);
             selected = !selected;
         }
-    }
-    public void setLayerOrder(int order)
-    {
-        gameObject.GetComponent<SpriteRenderer>().sortingOrder = order;
     }
 }
