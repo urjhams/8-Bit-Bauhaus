@@ -3,9 +3,7 @@
 public class Helper
 {
     public static MouseStatus mouseStatus = MouseStatus.Free;
-
     public static bool inDetail = false;
-
     public static void setMouseStatus(MouseStatus status)
     {
         mouseStatus = status;
