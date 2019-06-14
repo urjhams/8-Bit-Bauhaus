@@ -13,11 +13,6 @@ public class IntroManager : MonoBehaviour
         length = player.clip.length;
     }
 
-    private void Awake()
-    {
-        Screen.SetResolution(1366, 720, false);
-    }
-
     void Update()
     {
         checkOver();
@@ -29,7 +24,6 @@ public class IntroManager : MonoBehaviour
         print(length);
         if (currentTime >= length - 0.05)
         {
-            print("end");
             SceneManager.LoadScene("Room 1");
         }
     }

@@ -14,20 +14,17 @@ public class Room1Manager : CursorHandle
         base.Update();
         try
         {
-            for (int i = 0; i < Helper.leftArm.Length; i++)
+            for (int i = 0; i < GameManager.Room1.leftArm.Length; i++)
             {
-                Helper.getSpriteRendererOf(Helper.leftArm[i]).enabled = 
-                (i == Helper.room1_LeftArm);
+                Helper.getSpriteRendererOf(GameManager.Room1.leftArm[i]).enabled = 
+                (i == GameManager.Room1.currentLeftArm);
             }
-            for (int i = 0; i < Helper.rightArm.Length; i++)
+            for (int i = 0; i < GameManager.Room1.rightArm.Length; i++)
             {
-                Helper.getSpriteRendererOf(Helper.rightArm[i]).enabled = 
-                (i == Helper.room1_RightArm);
+                Helper.getSpriteRendererOf(GameManager.Room1.rightArm[i]).enabled = 
+                (i == GameManager.Room1.currentRightArm);
             }
         }
-        catch (NullReferenceException e)
-        {
-            
-        }
+        catch {}
     }
 }
