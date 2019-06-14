@@ -60,3 +60,7 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
+*.pdb
+*.dll
+Library/metadata/57/57a757a9a510549439f878e99e345852
+*.dwlt
