@@ -4,10 +4,8 @@ public class DragDrop : MonoBehaviour
 {
     [HideInInspector] public bool locked = false;
     [HideInInspector] public bool selected;
-    [HideInInspector] public Collider2D containerCollider;
     protected virtual void Start()
     {
-        
     }
     protected virtual void Update()
     {

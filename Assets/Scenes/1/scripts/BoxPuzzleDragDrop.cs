@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class BoxPuzzleDragDrop : DragDrop
 {
-
+    [HideInInspector] public Collider2D containerCollider;
     private Vector2 initPosition;
     protected override void Start()
     {
@@ -57,7 +57,7 @@ public class BoxPuzzleDragDrop : DragDrop
 
         }
     }
-        private void setLayerOrder(int order)
+    private void setLayerOrder(int order)
     {
         gameObject.GetComponent<SpriteRenderer>().sortingOrder = order;
     }
