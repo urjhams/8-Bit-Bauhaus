@@ -9,18 +9,18 @@ public class bowlClickHandle : TurnOnObjectTrigger
         base.OnMouseDown();
         if (triggerObjects != null)
         {
-            foreach (var item in triggerObjects)
+            for (int index = 0; index < triggerObjects.Length; index++)
             {
-                switch (item.name)
+                if (triggerObjects[index] != null)
                 {
-                    case "bird food_collect":
-                        GameManager.Room1.birdFood = true;
-                        break;
-                    case "the box_discover":
-                        GameManager.Room1.boxOnTable = true;
-                        break;
-                    default:
-                        break;
+                    switch (triggerObjects[index].name)
+                    {
+                        case "bird food_collect":
+                            GameManager.Room1.birdFood = true;
+                            break;
+                        default:
+                            break;
+                    }
                 }
             }
         }

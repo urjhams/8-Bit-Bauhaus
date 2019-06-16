@@ -1,7 +1,4 @@
-using System;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class Room1MouseControl : GlobalMouseControl
 {
@@ -50,14 +47,22 @@ public class Room1MouseControl : GlobalMouseControl
                     "Hmm... this picture look nice...");
                 break;
             case "bowl with box_discover":
-                Destroy(gameObject);
-                Helper.getSpriteRendererOf("bowl without box").enabled = true;
+                detailInteraction(
+                    "InteractContainer_bowl",
+                    "Schmitz",
+                    "A box, with a puzzle...?"
+                );
                 break;
-            case "the box_discover":
+            case "box closeup_discover":
+                print(currentHover);
+                endDetailView();
+                try {
+                    GameObject.Find("InteractContainer_bowl").SetActive(false);
+                } catch {}
                 detailInteraction(
                     "InteractContainer_box",
                     "Schmitz",
-                    "A box, with a puzzle...?"
+                    "Seem like the puzzle is the way to open it"
                 );
                 break;
             default:
@@ -87,8 +92,6 @@ public class Room1MouseControl : GlobalMouseControl
         try
         {
             GameObject.Find("bird food_collect").SetActive(GameManager.Room1.birdFood);
-            GameObject.Find("the box_discover").SetActive(GameManager.Room1.boxOnTable);
-            GameObject.Find("bowl with box_discover").SetActive(!GameManager.Room1.boxOnTable);
         }
         catch { }
     }

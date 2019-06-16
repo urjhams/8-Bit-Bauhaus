@@ -5,10 +5,12 @@ public class TurnOnObjectTrigger : MonoBehaviour
     public GameObject[] triggerObjects;
     public virtual void OnMouseDown()
     {
-        if (triggerObjects != null){
-            foreach (var item in triggerObjects)
+        if (triggerObjects != null)
+        {
+            for (int index = 0; index < triggerObjects.Length; index++)
             {
-                item.SetActive(true);
+                if (triggerObjects[index] != null)
+                    triggerObjects[index].SetActive(true);
             }
         }
     }
