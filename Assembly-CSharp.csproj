@@ -58,6 +58,7 @@
      <Compile Include="Assets\Global Scripts\Collect.cs" />
      <Compile Include="Assets\Global Scripts\CursorHandle.cs" />
      <Compile Include="Assets\Global Scripts\DragDrop.cs" />
+     <Compile Include="Assets\Global Scripts\DragHandle.cs" />
      <Compile Include="Assets\Global Scripts\GameManager.cs" />
      <Compile Include="Assets\Global Scripts\GlobalEffectControl.cs" />
      <Compile Include="Assets\Global Scripts\GlobalMouseControl.cs" />
@@ -70,6 +71,7 @@
      <Compile Include="Assets\Global Scripts\Tooltip.cs" />
      <Compile Include="Assets\Global Scripts\TurnOnObjectTrigger.cs" />
      <Compile Include="Assets\Scenes\1\scripts\BirdFoodCollect.cs" />
+     <Compile Include="Assets\Scenes\1\scripts\birdFoodHandler.cs" />
      <Compile Include="Assets\Scenes\1\scripts\bowlClickHandle.cs" />
      <Compile Include="Assets\Scenes\1\scripts\BoxPuzzleDragDrop.cs" />
      <Compile Include="Assets\Scenes\1\scripts\Room1BasementMouseControl.cs" />
