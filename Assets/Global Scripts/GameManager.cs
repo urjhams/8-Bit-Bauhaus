@@ -24,4 +24,7 @@ public class GameManager
         public static List<Tuple<string,Vector3>> boxPeices = new List<Tuple<string, Vector3>>();
         public static bool birdFood = false;
     }
+    public class Room1Basement {
+        
+    }
 }
