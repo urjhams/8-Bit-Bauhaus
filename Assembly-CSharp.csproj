@@ -57,6 +57,7 @@
   <ItemGroup>
      <Compile Include="Assets\Global Scripts\Collect.cs" />
      <Compile Include="Assets\Global Scripts\CursorHandle.cs" />
+     <Compile Include="Assets\Global Scripts\DontDestroy.cs" />
      <Compile Include="Assets\Global Scripts\DragDrop.cs" />
      <Compile Include="Assets\Global Scripts\DragHandle.cs" />
      <Compile Include="Assets\Global Scripts\GameManager.cs" />

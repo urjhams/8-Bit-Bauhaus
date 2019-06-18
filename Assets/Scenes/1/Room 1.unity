@@ -2152,7 +2152,6 @@ GameObject:
   - component: {fileID: 984931152}
   - component: {fileID: 984931153}
   - component: {fileID: 984931154}
-  - component: {fileID: 984931156}
   - component: {fileID: 984931155}
   m_Layer: 0
   m_Name: ladder_discover
@@ -2448,19 +2447,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &984931156
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 984931150}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c0b39441e7d94b7e8f532d152cef304, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioS: {fileID: 984931155}
 --- !u!1 &1004690982
 GameObject:
   m_ObjectHideFlags: 0
@@ -4770,6 +4756,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.0012574
+      objectReference: {fileID: 0}
+    - target: {fileID: 4684914210703684698, guid: 06005189419cc416382de7cd44104eef,
+        type: 3}
+      propertyPath: BypassListenerEffects
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06005189419cc416382de7cd44104eef, type: 3}
