@@ -125,6 +125,7 @@ public class Room1MouseControl : GlobalMouseControl
                 {
                     GameManager.Room1.statuesDone = true;
                     GameManager.Room1.ladderDone = true;
+                    ladder.GetComponent<AudioSource>().Play();
                     try
                     {
                         var door = GameObject.Find("rooftop door_interact");

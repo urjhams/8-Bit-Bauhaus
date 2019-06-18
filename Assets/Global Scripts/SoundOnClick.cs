@@ -5,17 +5,6 @@ using UnityEngine;
 public class SoundOnClick : MonoBehaviour
 {
     public AudioSource audioS;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void OnMouseDown() {
         audioS.Play();
     }
