@@ -8,6 +8,7 @@ public class ColliderRecognize : MonoBehaviour
     /// </summary>
     void OnMouseOver()
     {
+        print(col.name);
         GameManager.currentOverGameObjectName = col.name;
     }
     /// <summary>

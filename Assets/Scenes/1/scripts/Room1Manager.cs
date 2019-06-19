@@ -12,9 +12,10 @@ public class Room1Manager : CursorHandle
     void Awake()
     {
         if (GameManager.staticInventory != null) {
-            inventory = GameManager.staticInventory;
+            Destroy(inventory);
         } else {
-            GameManager.staticInventory = inventory;
+            GameManager.staticInventory = new GameObject();
+            Instantiate(GameManager.staticInventory,inventory.transform, false);
         }
     }
     /// <summary>
