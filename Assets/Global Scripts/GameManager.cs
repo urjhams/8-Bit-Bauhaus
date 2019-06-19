@@ -25,6 +25,10 @@ public class GameManager
         public static bool birdFood = false;
     }
     public class Room1Basement {
-        
+        public static bool lastPeiceCutScene = false;
+        public static bool lastPeice = false;
     }
+
+    // this one use for drop
+    public static String currentOverGameObjectName = "";
 }

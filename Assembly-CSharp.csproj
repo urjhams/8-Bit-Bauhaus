@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Global Scripts\Collect.cs" />
+     <Compile Include="Assets\Global Scripts\ColliderRecognize.cs" />
      <Compile Include="Assets\Global Scripts\CursorHandle.cs" />
      <Compile Include="Assets\Global Scripts\DontDestroy.cs" />
      <Compile Include="Assets\Global Scripts\DragDrop.cs" />
@@ -75,6 +76,7 @@
      <Compile Include="Assets\Scenes\1\scripts\birdFoodHandler.cs" />
      <Compile Include="Assets\Scenes\1\scripts\bowlClickHandle.cs" />
      <Compile Include="Assets\Scenes\1\scripts\BoxPuzzleDragDrop.cs" />
+     <Compile Include="Assets\Scenes\1\scripts\Room1BasementManager.cs" />
      <Compile Include="Assets\Scenes\1\scripts\Room1BasementMouseControl.cs" />
      <Compile Include="Assets\Scenes\1\scripts\Room1Manager.cs" />
      <Compile Include="Assets\Scenes\1\scripts\Room1MouseControl.cs" />
