@@ -9,7 +9,6 @@ public class ColliderRecognize : MonoBehaviour
     void OnMouseOver()
     {
         GameManager.currentOverGameObjectName = col.name;
-        print(GameManager.currentOverGameObjectName);
     }
     /// <summary>
     /// Called when the mouse is not any longer over the GUIElement or Collider.
@@ -17,6 +16,5 @@ public class ColliderRecognize : MonoBehaviour
     void OnMouseExit()
     {
         GameManager.currentOverGameObjectName = "";
-        print(GameManager.currentOverGameObjectName);
     }
 }

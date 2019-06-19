@@ -16,7 +16,8 @@ public class bowlClickHandle : TurnOnObjectTrigger
                     switch (triggerObjects[index].name)
                     {
                         case "bird food_collect":
-                            GameManager.Room1.birdFood = true;
+                            if (!GameManager.Room1.birdFoodGave)
+                                GameManager.Room1.birdFood = true;
                             break;
                         default:
                             break;

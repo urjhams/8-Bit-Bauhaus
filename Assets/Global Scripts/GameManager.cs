@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class GameManager
 {
+    public static GameObject staticInventory = null;
     public static ArrayList currentInventoryItems = new ArrayList();
     public class Room1
     {
@@ -23,6 +24,7 @@ public class GameManager
         public static List<string> boxCorrectPeices = new List<string>();
         public static List<Tuple<string,Vector3>> boxPeices = new List<Tuple<string, Vector3>>();
         public static bool birdFood = false;
+        public static bool birdFoodGave = false;
     }
     public class Room1Basement {
         public static bool lastPeiceCutScene = false;

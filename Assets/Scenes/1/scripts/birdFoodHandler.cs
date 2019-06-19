@@ -1,5 +1,4 @@
-﻿using UnityEngine;
-using UnityEngine.EventSystems;
+﻿using UnityEngine.EventSystems;
 
 public class birdFoodHandler : DragHandle
 {
@@ -9,10 +8,11 @@ public class birdFoodHandler : DragHandle
         if (GameManager.currentOverGameObjectName.Equals("bird")) {
             GameManager.Room1Basement.lastPeice = true;
             GameManager.Room1Basement.lastPeiceCutScene = true;
+            GameManager.Room1.birdFoodGave = true;
+            base.destroyObject("bird food");
             Destroy(gameObject);
-        } else {
-            base.OnEndDrag(eventData);
         }
+        base.OnEndDrag(eventData);
     }
     #endregion
 }

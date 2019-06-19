@@ -31,7 +31,6 @@ public class Room1BasementManager : MonoBehaviour
         currentTime = player.time;
         if (currentTime >= length - 0.05)
         {
-            print("Done");
             cutsceneCamera.SetActive(false);
         }
     }
