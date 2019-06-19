@@ -31,6 +31,7 @@ public class DragDrop : MonoBehaviour
             transform.position = other.gameObject.transform.position;
             locked = true;
             selected = !selected;
+            GameManager.Room1.addedPeice.Add(gameObject.name);
         }
     }
 }

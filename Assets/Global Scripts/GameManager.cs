@@ -26,6 +26,7 @@ public class GameManager
         public static bool birdFood = false;
         public static bool birdFoodGave = false;
         public static bool goal = false;
+        public static ArrayList addedPeice = new ArrayList();
     }
     public class Room1Basement {
         public static bool lastPeiceCutScene = false;

@@ -76,6 +76,7 @@
      <Compile Include="Assets\Scenes\1\scripts\birdFoodHandler.cs" />
      <Compile Include="Assets\Scenes\1\scripts\bowlClickHandle.cs" />
      <Compile Include="Assets\Scenes\1\scripts\BoxPuzzleDragDrop.cs" />
+     <Compile Include="Assets\Scenes\1\scripts\EndRoom1Intro.cs" />
      <Compile Include="Assets\Scenes\1\scripts\lastPeiceCollect.cs" />
      <Compile Include="Assets\Scenes\1\scripts\LastPeiceHandle.cs" />
      <Compile Include="Assets\Scenes\1\scripts\Room1BasementManager.cs" />

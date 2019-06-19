@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Room1Manager : CursorHandle
 {
     public GameObject lastPeice;
@@ -49,6 +49,11 @@ public class Room1Manager : CursorHandle
         catch {}
         if (GameManager.Room1.goal) {
             lastPeice.GetComponent<SpriteRenderer>().enabled = true;
+            print(GameManager.Room1.addedPeice.Count);
+        }
+        if (!Helper.inDetail && GameManager.Room1.goal && GameManager.Room1.addedPeice.Count >= 10) {
+            // GameManager.staticInventory.transform.Find("inventory frame").gameObject.SetActive(false);
+            SceneManager.LoadScene("Room 1 End");
         }
     }
 }
