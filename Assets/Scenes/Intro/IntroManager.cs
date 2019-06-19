@@ -20,8 +20,6 @@ public class IntroManager : MonoBehaviour
     private void checkOver()
     {
         currentTime = player.time;
-        print(currentTime);
-        print(length);
         if (currentTime >= length - 0.05)
         {
             SceneManager.LoadScene("Room 1");

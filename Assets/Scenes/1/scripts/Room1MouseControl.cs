@@ -15,6 +15,15 @@ public class Room1MouseControl : GlobalMouseControl
         {
             ladder.SetActive(true);
         }
+        if (Helper.inDetail) {
+            try {
+                ladder.GetComponent<Collider2D>().enabled = false;
+            } catch {}
+        } else {
+            try {
+                ladder.GetComponent<Collider2D>().enabled = true;
+            } catch {}
+        }
     }
     public override void OnMouseDown()
     {

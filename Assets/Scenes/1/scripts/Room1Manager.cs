@@ -2,7 +2,7 @@
 
 public class Room1Manager : CursorHandle
 {
-    
+    public GameObject lastPeice;
     public GameObject birdFood;
     public GameObject inventory;
 
@@ -46,5 +46,8 @@ public class Room1Manager : CursorHandle
             }
         }
         catch {}
+        if (GameManager.Room1.goal) {
+            lastPeice.GetComponent<SpriteRenderer>().enabled = true;
+        }
     }
 }
