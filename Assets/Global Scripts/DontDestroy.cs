@@ -1,11 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class DontDestroy : MonoBehaviour
 {
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
+        for (int i = 0; i < gameObject.scene.GetRootGameObjects().Length; i++) {
+            if (i != 0) {
+                Destroy(gameObject);
+            }
+        }
     }
 }

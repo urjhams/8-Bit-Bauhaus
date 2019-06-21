@@ -6,22 +6,6 @@ public class Room1Manager : CursorHandle
     public GameObject birdFood;
     public GameObject inventory;
 
-    /// <summary>
-    /// Awake is called when the script instance is being loaded.
-    /// </summary>
-    void Awake()
-    {
-        if (GameManager.staticInventory != null) {
-            Destroy(inventory);
-        } else {
-            GameManager.staticInventory = new GameObject();
-            Instantiate(GameManager.staticInventory,inventory.transform, false);
-        }
-    }
-    /// <summary>
-    /// Start is called on the frame when a script is enabled just before
-    /// any of the Update methods is called the first time.
-    /// </summary>
     void Start()
     {
         birdFood.SetActive(GameManager.Room1.birdFood);
@@ -52,7 +36,6 @@ public class Room1Manager : CursorHandle
             print(GameManager.Room1.addedPeice.Count);
         }
         if (!Helper.inDetail && GameManager.Room1.goal && GameManager.Room1.addedPeice.Count >= 10) {
-            // GameManager.staticInventory.transform.Find("inventory frame").gameObject.SetActive(false);
             SceneManager.LoadScene("Room 1 End");
         }
     }
