@@ -9,6 +9,7 @@ public class birdFoodHandler : DragHandle
             GameManager.Room1Basement.lastPeice = true;
             GameManager.Room1Basement.lastPeiceCutScene = true;
             GameManager.Room1.birdFoodGave = true;
+            GameManager.Room1Basement.lastPeiceCollected = true;
             base.destroyObject("bird food");
             Destroy(gameObject);
         }

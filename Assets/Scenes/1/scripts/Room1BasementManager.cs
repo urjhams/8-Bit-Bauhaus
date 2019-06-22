@@ -19,10 +19,12 @@ public class Room1BasementManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        try {
+            GameObject.Find("bird").SetActive(!GameManager.Room1Basement.lastPeiceCollected);
+        } catch {}
         wardrobeUpdate();
         if (GameManager.Room1Basement.lastPeiceCutScene && GameManager.Room1Basement.lastPeice)
         {
-            lastPeice.SetActive(true);
             cutsceneCamera.SetActive(true);
             player.Play();
             GameManager.Room1Basement.lastPeiceCutScene = false;
@@ -47,6 +49,7 @@ public class Room1BasementManager : MonoBehaviour
         if (currentTime >= length - 0.05)
         {
             cutsceneCamera.SetActive(false);
+            lastPeice.SetActive(true);
         }
     }
 }
