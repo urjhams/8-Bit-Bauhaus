@@ -31,6 +31,7 @@ public class GameManager
     public class Room1Basement {
         public static bool lastPeiceCutScene = false;
         public static bool lastPeice = false;
+        public static bool wardrobeOpen = false;
     }
 
     // this one use for drop

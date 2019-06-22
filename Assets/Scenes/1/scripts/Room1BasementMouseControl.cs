@@ -1,5 +1,4 @@
-﻿using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine.SceneManagement;
 
 
 public class Room1BasementMouseControl : GlobalMouseControl
@@ -7,9 +6,23 @@ public class Room1BasementMouseControl : GlobalMouseControl
     public override void OnMouseDown()
     {
         base.OnMouseDown();
-        if (currentHover.Equals("ladder"))
+        switch (currentHover)
         {
-            SceneManager.LoadScene("Room 1");
+            case "ladder":
+                SceneManager.LoadScene("Room 1");
+                break;
+            case "wardrobe":
+                if (!GameManager.Room1Basement.wardrobeOpen)
+                    GameManager.Room1Basement.wardrobeOpen = true;
+                break;
+            case "wardrobe_opened":
+                detailInteraction(
+                    "InteractContainer_wardrobe", 
+                    "Schmitz", 
+                    "There is a box here, is it possible to open?");
+                break;
+            default:
+                break;
         }
     }
     private void OnMouseEnter()

@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Room1BasementManager : MonoBehaviour
 {
+    public GameObject wardrobeOpened;
     public GameObject cutsceneCamera;
     public GameObject lastPeice;
     public VideoPlayer player;
@@ -18,7 +19,9 @@ public class Room1BasementManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.Room1Basement.lastPeiceCutScene && GameManager.Room1Basement.lastPeice) {
+        wardrobeUpdate();
+        if (GameManager.Room1Basement.lastPeiceCutScene && GameManager.Room1Basement.lastPeice)
+        {
             lastPeice.SetActive(true);
             cutsceneCamera.SetActive(true);
             player.Play();
@@ -27,7 +30,19 @@ public class Room1BasementManager : MonoBehaviour
         PlayBirdCutCcene();
     }
 
-    private void PlayBirdCutCcene () {
+    private void wardrobeUpdate()
+    {
+        try
+        {
+            GameObject wardrobe = GameObject.Find("wardrobe");
+            wardrobe.SetActive(!GameManager.Room1Basement.wardrobeOpen);
+        }
+        catch { }
+        wardrobeOpened.SetActive(GameManager.Room1Basement.wardrobeOpen);
+    }
+
+    private void PlayBirdCutCcene()
+    {
         currentTime = player.time;
         if (currentTime >= length - 0.05)
         {
