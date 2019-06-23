@@ -12,19 +12,20 @@ public class GlobalMouseControl : GlobalEffectControl
     [HideInInspector] public string currentHover = "None";
     private Button closeDialogButton;
 
-public virtual void OnMouseDown()
-{
-    Helper.setMouseStatus(MouseStatus.Click);
-}
+    public virtual void OnMouseDown()
+    {
+        Helper.setMouseStatus(MouseStatus.Click);
+    }
 
-void OnMouseUp()
-{
-    Helper.setMouseStatus(MouseStatus.Free);
-}
-public bool IsMouseOverUI() {
-    return EventSystem.current.IsPointerOverGameObject();
-}
-    void Start()
+    void OnMouseUp()
+    {
+        Helper.setMouseStatus(MouseStatus.Free);
+    }
+    public bool IsMouseOverUI()
+    {
+        return EventSystem.current.IsPointerOverGameObject();
+    }
+    public virtual void Start()
     {
         closeDialogButton = GameObject.Find("dialog close").GetComponent<Button>();
         closeDialogButton.onClick.AddListener(() => this.endDetailView());
@@ -50,7 +51,7 @@ public bool IsMouseOverUI() {
         Tooltip.hideToolTip_Static();
     }
 
-    public virtual void toolTipHandle() {}
+    public virtual void toolTipHandle() { }
 
     public void detailInteraction(string name, string nameText, string contentText)
     {
@@ -84,7 +85,8 @@ public bool IsMouseOverUI() {
         Tooltip.hideToolTip_Static();
     }
 
-    public void startDialogView(string nameText, string contentText) {
+    public void startDialogView(string nameText, string contentText)
+    {
         Helper.inDetail = true;
         dialogBox.text = contentText;
         nameBox.text = nameText;

@@ -3,6 +3,14 @@ using UnityEngine;
 public class Room1MouseControl : GlobalMouseControl
 {
     [SerializeField] public GameObject ladder;
+    public override void Start()
+    {
+        base.Start();
+        try {
+            if (ladder.activeSelf)
+                GameObject.Find("rooftop door_interact").SetActive(false);
+        } catch {}
+    }
     private void Update()
     {
         updateSceneState();

@@ -1369,8 +1369,8 @@ GameObject:
   - component: {fileID: 783511664}
   - component: {fileID: 783511665}
   - component: {fileID: 783511666}
-  - component: {fileID: 783511667}
   - component: {fileID: 783511668}
+  - component: {fileID: 783511667}
   m_Layer: 0
   m_Name: bowl with box_discover
   m_TagString: Untagged
@@ -1472,7 +1472,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.04388213, y: 0.242594}
+  m_Offset: {x: 0.09923795, y: -0.5513216}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1483,7 +1483,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.63012075, y: 0.3286538}
+  m_Size: {x: 0.78046757, y: 2.0173566}
   m_EdgeRadius: 0
 --- !u!114 &783511668
 MonoBehaviour:
@@ -2780,21 +2780,6 @@ PrefabInstance:
       propertyPath: m_TargetDisplay
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7045310712621432908, guid: 0a750db1088894402baf96c00eaedea6,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7045310710931486787, guid: 0a750db1088894402baf96c00eaedea6,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7045310710931486788, guid: 0a750db1088894402baf96c00eaedea6,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 118.600006
-      objectReference: {fileID: 0}
     - target: {fileID: 3420468639740958422, guid: 0a750db1088894402baf96c00eaedea6,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2824,6 +2809,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Transition
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045310712621432908, guid: 0a750db1088894402baf96c00eaedea6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045310710931486787, guid: 0a750db1088894402baf96c00eaedea6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045310710931486788, guid: 0a750db1088894402baf96c00eaedea6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 118.600006
       objectReference: {fileID: 0}
     - target: {fileID: 7045310712202356223, guid: 0a750db1088894402baf96c00eaedea6,
         type: 3}
@@ -6043,6 +6043,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883211723691139641, guid: efab2d598d82c47d293ce63c91e022e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6883211724109929565, guid: efab2d598d82c47d293ce63c91e022e4,
         type: 3}

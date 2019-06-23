@@ -8,6 +8,7 @@ public class selfCollect : MonoBehaviour
     void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>();
+        // inventory = gameObject.scene.GetRootGameObjects()[0].GetComponent<Inventory>();
         // inventory = GameManager.staticInventory.GetComponent<Inventory>();
     }
     public virtual void OnMouseDown()
