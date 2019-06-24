@@ -21,8 +21,6 @@ public class MenuIntroManager : MonoBehaviour
     private void checkOver()
     {
         currentTime = player.time;
-        print(currentTime);
-        print(length);
         if (currentTime >= length - 0.05)
         {
             SceneManager.LoadScene("Intro");

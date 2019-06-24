@@ -1523,7 +1523,6 @@ GameObject:
   - component: {fileID: 9193976560417629295}
   - component: {fileID: 9193976560417629280}
   - component: {fileID: 9193976560417629281}
-  - component: {fileID: 9193976560417629282}
   - component: {fileID: 9193976560417629283}
   m_Layer: 0
   m_Name: puzzle peice 1
@@ -1652,20 +1651,6 @@ PolygonCollider2D:
       - {x: 0.44, y: -0.71999997}
       - {x: 0.53, y: -0.71999997}
       - {x: 0.58, y: -0.7}
---- !u!114 &9193976560417629282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9193976560417629294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bee6f1103bd94d3180248c1438e86e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  locked: 0
-  selected: 0
 --- !u!50 &9193976560417629283
 Rigidbody2D:
   serializedVersion: 4

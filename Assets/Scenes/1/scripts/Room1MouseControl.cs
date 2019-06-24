@@ -71,7 +71,6 @@ public class Room1MouseControl : GlobalMouseControl
                 );
                 break;
             case "box closeup_discover":
-                print(currentHover);
                 endDetailView();
                 try {
                     GameObject.Find("InteractContainer_bowl").SetActive(false);

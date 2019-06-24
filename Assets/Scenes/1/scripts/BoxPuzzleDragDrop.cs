@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class BoxPuzzleDragDrop : DragDrop
 {
@@ -10,13 +11,6 @@ public class BoxPuzzleDragDrop : DragDrop
         base.Start();
         initPosition = gameObject.transform.position;
         containerCollider = GameObject.Find("puzzle frame").transform.GetComponent<Collider2D>();
-        foreach (var name in GameManager.Room1.boxCorrectPeices)
-        {
-            if (gameObject.name.Equals(name))
-            {
-                transform.position = GameObject.Find("correct " + gameObject.name).transform.position;
-            }
-        }
         foreach (var item in GameManager.Room1.boxPeices)
         {
             if (item.Item1.Equals(name))
@@ -42,7 +36,10 @@ public class BoxPuzzleDragDrop : DragDrop
             else
             {
                 transform.position = initPosition;
+                RemoveFromBox(name);
+
             }
+            correctingPuzzle(name);
         }
     }
     protected override void OnTriggerStay2D(Collider2D other)
@@ -50,13 +47,44 @@ public class BoxPuzzleDragDrop : DragDrop
         base.OnTriggerStay2D(other);
         if (other.gameObject.name.Equals("correct " + gameObject.name) && !selected)
         {
-            GameManager.Room1.boxCorrectPeices.Add(gameObject.name);
             setLayerOrder(2);
-
         }
     }
     private void setLayerOrder(int order)
     {
         gameObject.GetComponent<SpriteRenderer>().sortingOrder = order;
+    }
+    private void correctingPuzzle(string name)
+    {
+        bool exist = false;
+        try
+        {
+            foreach (var item in GameManager.Room1.boxPeices)
+            {
+                if (item.Item1.Equals(name))
+                {
+                    if (!exist)
+                    {
+                        exist = true;
+                    }
+                    else
+                    {
+                        GameManager.Room1.boxPeices.Remove(item);
+                    }
+                }
+            }
+        }
+        catch { }
+    }
+    private void RemoveFromBox(string name)
+    {
+        try {
+            foreach (var item in GameManager.Room1.boxPeices)
+            {
+                if (item.Item1.Equals(name)) {
+                    GameManager.Room1.boxPeices.Remove(item);
+                }
+            }
+        } catch {}
     }
 }

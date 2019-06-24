@@ -33,9 +33,8 @@ public class Room1Manager : CursorHandle
         catch {}
         if (GameManager.Room1.goal) {
             lastPeice.GetComponent<SpriteRenderer>().enabled = true;
-            print(GameManager.Room1.addedPeice.Count);
         }
-        if (!Helper.inDetail && GameManager.Room1.goal && GameManager.Room1.addedPeice.Count >= 10) {
+        if (!Helper.inDetail && GameManager.Room1.goal && GameManager.Room1.boxPeices.Count >= 11) {
             SceneManager.LoadScene("Room 1 End");
         }
     }
