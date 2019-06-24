@@ -31,6 +31,30 @@ public class DragDrop : MonoBehaviour
             transform.position = other.gameObject.transform.position;
             locked = true;
             selected = !selected;
+            GameManager.Room1.addedPeice.Add(gameObject.name);
+            correctingPuzzle(name);
         }
+    }
+    private void correctingPuzzle(string name)
+    {
+        bool exist = false;
+        try
+        {
+            foreach (string item in GameManager.Room1.addedPeice)
+            {
+                if (item.Equals(name))
+                {
+                    if (!exist)
+                    {
+                        exist = true;
+                    }
+                    else
+                    {
+                        GameManager.Room1.addedPeice.Remove(item);
+                    }
+                }
+            }
+        }
+        catch { }
     }
 }
