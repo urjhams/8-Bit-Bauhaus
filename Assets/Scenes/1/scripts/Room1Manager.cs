@@ -3,12 +3,10 @@ using UnityEngine.SceneManagement;
 public class Room1Manager : CursorHandle
 {
     public GameObject lastPeice;
-    public GameObject birdFood;
     public GameObject inventory;
 
     void Start()
     {
-        birdFood.SetActive(GameManager.Room1.birdFood);
     }
     protected override void Update()
     {
