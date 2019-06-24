@@ -74,8 +74,8 @@
      <Compile Include="Assets\Global Scripts\TurnOnObjectTrigger.cs" />
      <Compile Include="Assets\Scenes\1\scripts\BirdFoodCollect.cs" />
      <Compile Include="Assets\Scenes\1\scripts\birdFoodHandler.cs" />
-     <Compile Include="Assets\Scenes\1\scripts\bowlClickHandle.cs" />
      <Compile Include="Assets\Scenes\1\scripts\BoxPuzzleDragDrop.cs" />
+     <Compile Include="Assets\Scenes\1\scripts\CollectInside.cs" />
      <Compile Include="Assets\Scenes\1\scripts\EndRoom1Intro.cs" />
      <Compile Include="Assets\Scenes\1\scripts\lastPeiceCollect.cs" />
      <Compile Include="Assets\Scenes\1\scripts\LastPeiceHandle.cs" />

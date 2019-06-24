@@ -1,4 +1,4 @@
-﻿public class BirdFoodCollect : selfCollect
+﻿public class BirdFoodCollect : CollectInside
 {
     public override void OnMouseDown()
     {
