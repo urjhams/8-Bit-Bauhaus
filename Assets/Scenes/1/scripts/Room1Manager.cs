@@ -37,6 +37,9 @@ public class Room1Manager : CursorHandle
         }
         if (!Helper.inDetail && GameManager.Room1.goal && GameManager.Room1.addedPeice.Count >= 11) {
             Helper.inDetail = true;
+            try {
+                GameObject.Find("bowl with box_discover").SetActive(false);
+            } catch {}
             foreach (var item in fadeInGroup)
             {
                 item.GetComponent<ObjectFadeIn>().startFading();
