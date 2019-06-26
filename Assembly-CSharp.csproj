@@ -84,6 +84,9 @@
      <Compile Include="Assets\Scenes\1\scripts\Room1BasementMouseControl.cs" />
      <Compile Include="Assets\Scenes\1\scripts\Room1Manager.cs" />
      <Compile Include="Assets\Scenes\1\scripts\Room1MouseControl.cs" />
+     <Compile Include="Assets\Scenes\2\scripts\Room2MouseControl.cs" />
+     <Compile Include="Assets\Scenes\3\scripts\LockClickNumbers.cs" />
+     <Compile Include="Assets\Scenes\3\scripts\Room3MouseControl.cs" />
      <Compile Include="Assets\Scenes\Intro\IntroManager.cs" />
      <Compile Include="Assets\Scenes\Menu\MenuButtonController.cs" />
      <Compile Include="Assets\Scenes\Menu\MenuFader.cs" />
