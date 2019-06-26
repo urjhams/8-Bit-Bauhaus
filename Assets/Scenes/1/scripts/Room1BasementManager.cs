@@ -16,7 +16,6 @@ public class Room1BasementManager : MonoBehaviour
         lastPeice.SetActive(GameManager.Room1Basement.lastPeice);
     }
 
-    // Update is called once per frame
     void Update()
     {
         try
