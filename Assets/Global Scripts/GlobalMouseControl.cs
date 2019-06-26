@@ -15,6 +15,8 @@ public class GlobalMouseControl : GlobalEffectControl
     public virtual void OnMouseDown()
     {
         Helper.setMouseStatus(MouseStatus.Click);
+        if (IsMouseOverUI())
+            return;
     }
 
     void OnMouseUp()
