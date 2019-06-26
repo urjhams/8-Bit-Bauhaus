@@ -41,6 +41,8 @@ public class Room1BasementMouseControl : GlobalMouseControl
     }
     private void OnMouseEnter()
     {
+        if (IsMouseOverUI())
+            Helper.setMouseStatus(MouseStatus.Free);
         currentHover = col.name;
         if (currentHover.Equals("ladder"))
         {

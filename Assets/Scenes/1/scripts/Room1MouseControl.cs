@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class Room1MouseControl : GlobalMouseControl
 {
@@ -6,10 +8,12 @@ public class Room1MouseControl : GlobalMouseControl
     public override void Start()
     {
         base.Start();
-        try {
+        try
+        {
             if (ladder.activeSelf)
                 GameObject.Find("rooftop door_interact").SetActive(false);
-        } catch {}
+        }
+        catch { }
     }
     private void Update()
     {
@@ -23,14 +27,21 @@ public class Room1MouseControl : GlobalMouseControl
         {
             ladder.SetActive(true);
         }
-        if (Helper.inDetail) {
-            try {
+        if (Helper.inDetail)
+        {
+            try
+            {
                 ladder.GetComponent<Collider2D>().enabled = false;
-            } catch {}
-        } else {
-            try {
+            }
+            catch { }
+        }
+        else
+        {
+            try
+            {
                 ladder.GetComponent<Collider2D>().enabled = true;
-            } catch {}
+            }
+            catch { }
         }
     }
     public override void OnMouseDown()
@@ -38,6 +49,13 @@ public class Room1MouseControl : GlobalMouseControl
         base.OnMouseDown();
         switch (currentHover)
         {
+            case "foto":
+                try
+                {
+                    GameObject.Find("inventory frame").SetActive(false);
+                } catch {}
+                SceneManager.LoadScene("Room 1 End");
+                break;
             case "lamp_interact":
                 onOffEffect("lamp_light");
                 break;
@@ -70,9 +88,11 @@ public class Room1MouseControl : GlobalMouseControl
                 break;
             case "box closeup_discover":
                 endDetailView();
-                try {
+                try
+                {
                     GameObject.Find("InteractContainer_bowl").SetActive(false);
-                } catch {}
+                }
+                catch { }
                 detailInteraction(
                     "InteractContainer_box",
                     "Schmitz",

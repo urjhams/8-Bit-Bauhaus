@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 public class Room1Manager : CursorHandle
 {
     public GameObject lastPeice;
-    public GameObject inventory;
+    public GameObject[] fadeInGroup;
 
     void Start()
     {
@@ -37,7 +36,14 @@ public class Room1Manager : CursorHandle
             lastPeice.GetComponent<SpriteRenderer>().enabled = true;
         }
         if (!Helper.inDetail && GameManager.Room1.goal && GameManager.Room1.addedPeice.Count >= 11) {
-            SceneManager.LoadScene("Room 1 End");
+            Helper.inDetail = true;
+            foreach (var item in fadeInGroup)
+            {
+                item.GetComponent<ObjectFadeIn>().startFading();
+                try {
+                    item.GetComponent<Collider2D>().enabled = true;
+                } catch {}
+            }
         }
     }
 }
