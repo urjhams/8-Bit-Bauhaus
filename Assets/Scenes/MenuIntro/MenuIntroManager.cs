@@ -15,7 +15,7 @@ public class MenuIntroManager : MonoBehaviour
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
-            SceneManager.LoadScene("Intro");
+            SceneManager.LoadScene("Room 1 Intro");
         checkOver();
     }
     private void checkOver()
@@ -23,7 +23,7 @@ public class MenuIntroManager : MonoBehaviour
         currentTime = player.time;
         if (currentTime >= length - 0.05)
         {
-            SceneManager.LoadScene("Intro");
+            SceneManager.LoadScene("Room 1 Intro");
         }
     }
 }

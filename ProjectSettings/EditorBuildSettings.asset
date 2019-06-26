@@ -12,8 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuIntro/Menu Intro.unity
     guid: 8cb9a95c4167d44a98866bf0d58c28b1
   - enabled: 1
-    path: Assets/Scenes/Intro/Intro.unity
-    guid: 017335a2bb392448ca7552b6ddf9712f
+    path: Assets/Scenes/Room 1 Intro/Room 1 Intro.unity
+    guid: 19477bec497a04b8891c08f65b668c5c
   - enabled: 1
     path: Assets/Scenes/1/Room 1.unity
     guid: 2cda990e2423bbf4892e6590ba056729

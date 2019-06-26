@@ -87,10 +87,10 @@
      <Compile Include="Assets\Scenes\2\scripts\Room2MouseControl.cs" />
      <Compile Include="Assets\Scenes\3\scripts\LockClickNumbers.cs" />
      <Compile Include="Assets\Scenes\3\scripts\Room3MouseControl.cs" />
-     <Compile Include="Assets\Scenes\Intro\IntroManager.cs" />
      <Compile Include="Assets\Scenes\Menu\MenuButtonController.cs" />
      <Compile Include="Assets\Scenes\Menu\MenuFader.cs" />
      <Compile Include="Assets\Scenes\MenuIntro\MenuIntroManager.cs" />
+     <Compile Include="Assets\Scenes\Room 1 Intro\IntroManager.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />

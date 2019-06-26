@@ -63,11 +63,11 @@ public class Room1MouseControl : GlobalMouseControl
                 if (!GameManager.Room1.statuesDone)
                     detailInteraction(
                     "InteractContainer_statues",
-                    "Schmitz",
+                    "Sophia",
                     "This statues... is that the same one in the picture?");
                 break;
             case "rooftop door_interact":
-                startDialogView("Schmitz", "Hmm, is it locked?");
+                startDialogView("Sophia", "Hmm, is it locked?");
                 break;
             case "ladder_discover":
                 if (!Helper.inDetail)
@@ -76,13 +76,13 @@ public class Room1MouseControl : GlobalMouseControl
             case "painting_discover":
                 detailInteraction(
                     "InteractContainer_paint",
-                    "Schmitz",
+                    "Sophia",
                     "Hmm... this picture look nice...");
                 break;
             case "bowl with box_discover":
                 detailInteraction(
                     "InteractContainer_bowl",
-                    "Schmitz",
+                    "Sophia",
                     "A box, with a puzzle...?"
                 );
                 break;
@@ -95,7 +95,7 @@ public class Room1MouseControl : GlobalMouseControl
                 catch { }
                 detailInteraction(
                     "InteractContainer_box",
-                    "Schmitz",
+                    "Sophia",
                     "Seem like the puzzle is the way to open it"
                 );
                 break;
@@ -166,7 +166,7 @@ public class Room1MouseControl : GlobalMouseControl
                         door.SetActive(false);
                     }
                     catch { }
-                    startDialogView("Schmitz", "I just hear somthing on the roof top door, should I check it?");
+                    startDialogView("Sophia", "I just hear somthing on the roof top door, should I check it?");
                 }
             }
         }

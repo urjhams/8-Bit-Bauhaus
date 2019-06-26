@@ -18,20 +18,20 @@ public class Room1BasementMouseControl : GlobalMouseControl
             case "wardrobe_opened":
                 detailInteraction(
                     "InteractContainer_wardrobe", 
-                    "Schmitz", 
+                    "Sophia", 
                     "There is a box here, is it possible to open?"
                     );
                 break;
             case "bird":
                 startDialogView(
-                    "Schmitz",
+                    "Sophia",
                     "Is the bird keeping something? Maybe I can distract it with something..."
                     );
                 break;
             case "chest":
                 detailInteraction(
                     "InteractContainer_emptyBox",
-                    "Schmitz",
+                    "Sophia",
                     "There is nothing here"
                 );
                 break;
