@@ -7,7 +7,7 @@ public class DontDestroy : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         for (int i = 0; i < gameObject.scene.GetRootGameObjects().Length; i++)
         {
-            if (i != 0)
+            if (i > 1)
             {
                 gameObject.SetActive(false);
             }
