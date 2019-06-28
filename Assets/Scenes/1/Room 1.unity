@@ -499,6 +499,7 @@ MonoBehaviour:
   nameBox: {fileID: 1036997549}
   col: {fileID: 316872840}
   currentHover: None
+  closeDialogButton: {fileID: 0}
   ladder: {fileID: 0}
 --- !u!1 &324693731
 GameObject:
@@ -722,6 +723,7 @@ MonoBehaviour:
   nameBox: {fileID: 1036997549}
   col: {fileID: 403574702}
   currentHover: None
+  closeDialogButton: {fileID: 0}
   ladder: {fileID: 0}
 --- !u!1 &435287292
 GameObject:
@@ -1501,6 +1503,7 @@ MonoBehaviour:
   nameBox: {fileID: 1036997549}
   col: {fileID: 783511667}
   currentHover: None
+  closeDialogButton: {fileID: 0}
   ladder: {fileID: 0}
 --- !u!61 &783511667
 BoxCollider2D:
@@ -2076,6 +2079,7 @@ MonoBehaviour:
   nameBox: {fileID: 0}
   col: {fileID: 984931153}
   currentHover: None
+  closeDialogButton: {fileID: 0}
   ladder: {fileID: 0}
 --- !u!82 &984931155
 AudioSource:
@@ -2269,6 +2273,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7045310710931486787, guid: 0a750db1088894402baf96c00eaedea6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7045310711122185292, guid: 0a750db1088894402baf96c00eaedea6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2440,11 +2449,6 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7045310712621432908, guid: 0a750db1088894402baf96c00eaedea6,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7045310710931486787, guid: 0a750db1088894402baf96c00eaedea6,
         type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -3196,6 +3200,7 @@ MonoBehaviour:
   nameBox: {fileID: 0}
   col: {fileID: 1309397754}
   currentHover: None
+  closeDialogButton: {fileID: 0}
   ladder: {fileID: 0}
 --- !u!20 &1324083623 stripped
 Camera:
@@ -3702,6 +3707,7 @@ MonoBehaviour:
   nameBox: {fileID: 1036997549}
   col: {fileID: 1466734094}
   currentHover: None
+  closeDialogButton: {fileID: 0}
   ladder: {fileID: 984931150}
 --- !u!1001 &1482519543
 PrefabInstance:
@@ -4064,6 +4070,7 @@ MonoBehaviour:
   nameBox: {fileID: 0}
   col: {fileID: 1622057575}
   currentHover: None
+  closeDialogButton: {fileID: 0}
   ladder: {fileID: 0}
 --- !u!60 &1622057575
 PolygonCollider2D:
@@ -4315,6 +4322,7 @@ MonoBehaviour:
   nameBox: {fileID: 1036997549}
   col: {fileID: 1717903811}
   currentHover: None
+  closeDialogButton: {fileID: 0}
   ladder: {fileID: 984931150}
 --- !u!60 &1717903811
 PolygonCollider2D:
@@ -5261,6 +5269,7 @@ MonoBehaviour:
   nameBox: {fileID: 1036997549}
   col: {fileID: 2065779225}
   currentHover: None
+  closeDialogButton: {fileID: 0}
   ladder: {fileID: 0}
 --- !u!1 &2066184595
 GameObject:

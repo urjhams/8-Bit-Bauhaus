@@ -86,6 +86,7 @@
      <Compile Include="Assets\Scenes\1\scripts\Room1MouseControl.cs" />
      <Compile Include="Assets\Scenes\2\scripts\PuzzleControl.cs" />
      <Compile Include="Assets\Scenes\2\scripts\PuzzleMouseControl.cs" />
+     <Compile Include="Assets\Scenes\2\scripts\Room2Manager.cs" />
      <Compile Include="Assets\Scenes\2\scripts\Room2MouseControl.cs" />
      <Compile Include="Assets\Scenes\3\scripts\LockClickNumbers.cs" />
      <Compile Include="Assets\Scenes\3\scripts\Room3MouseControl.cs" />

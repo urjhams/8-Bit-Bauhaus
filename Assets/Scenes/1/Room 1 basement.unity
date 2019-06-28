@@ -689,6 +689,7 @@ MonoBehaviour:
   nameBox: {fileID: 1687985115}
   col: {fileID: 253725422}
   currentHover: None
+  closeDialogButton: {fileID: 0}
 --- !u!61 &253725422
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1116,7 +1117,6 @@ GameObject:
   m_Component:
   - component: {fileID: 472391392}
   - component: {fileID: 472391391}
-  - component: {fileID: 472391390}
   - component: {fileID: 472391393}
   m_Layer: 0
   m_Name: Main Camera
@@ -1125,14 +1125,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &472391390
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 472391389}
-  m_Enabled: 1
 --- !u!20 &472391391
 Camera:
   m_ObjectHideFlags: 0
@@ -1413,6 +1405,7 @@ MonoBehaviour:
   nameBox: {fileID: 1687985115}
   col: {fileID: 536434726}
   currentHover: None
+  closeDialogButton: {fileID: 0}
 --- !u!82 &536434728
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1805,6 +1798,7 @@ MonoBehaviour:
   nameBox: {fileID: 1687985115}
   col: {fileID: 794665678}
   currentHover: None
+  closeDialogButton: {fileID: 0}
 --- !u!1 &947573656
 GameObject:
   m_ObjectHideFlags: 0
@@ -1978,6 +1972,7 @@ MonoBehaviour:
   nameBox: {fileID: 1687985115}
   col: {fileID: 947573660}
   currentHover: None
+  closeDialogButton: {fileID: 0}
 --- !u!1001 &1246927201
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2734,6 +2729,7 @@ MonoBehaviour:
   nameBox: {fileID: 1687985115}
   col: {fileID: 1567294967}
   currentHover: None
+  closeDialogButton: {fileID: 0}
 --- !u!1001 &1687985112
 PrefabInstance:
   m_ObjectHideFlags: 0

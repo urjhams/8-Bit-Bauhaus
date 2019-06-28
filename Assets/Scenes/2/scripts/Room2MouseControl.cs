@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class Room2MouseControl : GlobalMouseControl
@@ -114,6 +112,92 @@ public class Room2MouseControl : GlobalMouseControl
                 default:
                     break;
             }
+        }
+    }
+
+    public override void endDetailView() {
+        bool setClose = true;
+
+        if (dialogCanvas != null)
+        {
+            if (dialogCanvas.name == "dialog1 canvas")
+            {
+                GameObject dialog = GameObject.Find("dialog canvas");
+                if (dialog != null)
+                {
+                    Image[] Images = dialog.GetComponentsInChildren<Image>();
+                    foreach (Image Im in Images)
+                    {
+                        Im.enabled = true;
+                    }
+                    Text[] Texte = dialog.GetComponentsInChildren<Text>();
+                    foreach (Text Tx in Texte)
+                    {
+                        Tx.enabled = true;
+                    }
+                }
+            }
+            else if (dialogCanvas.name == "dialog canvas")
+            {
+                GameObject dialog = GameObject.Find("dialog_worker canvas");
+                if (dialog != null)
+                {
+                    Image[] Images = dialog.GetComponentsInChildren<Image>();
+                    foreach (Image Im in Images)
+                    {
+                        Im.enabled = true;
+                    }
+                    Text[] Texte = dialog.GetComponentsInChildren<Text>();
+                    foreach (Text Tx in Texte)
+                    {
+                        Tx.enabled = true;
+                        if (Helper.PipelinePuzzleOK)
+                        {
+                            if (Tx.name == "Text_worker name")
+                                Tx.text = "Worker:";
+                            if (Tx.name == "Text_worker content")
+                                Tx.text = "\"Excellent! Here you have the screwdriver.\"";
+                        }
+                    }
+                }
+            }
+        }
+        if (interactContainer != null)
+        {
+            if (interactContainer.name == "InteractContainer_worker" & Helper.Scene2BaseOK)
+            {
+                if (Helper.PipelinePuzzleOK == false)
+                {
+                    if (Helper.DialogState == 0)
+                    {
+                        GameObject dialog = GameObject.Find("dialog_worker canvas");
+                        if (dialog != null)
+                        {
+                            Text[] Texte = dialog.GetComponentsInChildren<Text>();
+                            foreach (Text Tx in Texte)
+                            {
+                                if (Tx.name == "Text_worker name")
+                                    Tx.text = "Worker:";
+                                if (Tx.name == "Text_worker content")
+                                    Tx.text = "\"A screwdriver? Do you even know how to use that? I do not care ... you could actually help me with something. The pipes in the hole there have to be reconnected.\"";
+                            }
+                        }
+                        Helper.DialogState = 1;
+                        setClose = false;
+                    }
+                }
+            }
+        };
+
+        if (setClose)
+        {
+            Helper.inDetail = false;
+            if (interactContainer != null)
+                interactContainer.SetActive(false);
+            if (dialogCanvas != null)
+                dialogCanvas.enabled = false;
+            Helper.setMouseStatus(MouseStatus.Free);
+            Tooltip.hideToolTip_Static();
         }
     }
 }

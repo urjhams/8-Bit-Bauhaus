@@ -1823,6 +1823,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: dialog canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7045310710931486787, guid: 0a750db1088894402baf96c00eaedea6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7045310711122185292, guid: 0a750db1088894402baf96c00eaedea6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1994,11 +1999,6 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7045310712621432908, guid: 0a750db1088894402baf96c00eaedea6,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7045310710931486787, guid: 0a750db1088894402baf96c00eaedea6,
         type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -2853,7 +2853,6 @@ GameObject:
   m_Component:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
-  - component: {fileID: 519420029}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2861,14 +2860,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &519420029
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -3031,13 +3022,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 586016186}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92f724f9609c74cb89f1984fb60614d8, type: 3}
+  m_Script: {fileID: 11500000, guid: 89b4103d7c32546368a91eac20306187, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   freeMouse: {fileID: 2800000, guid: 038e1078b0e7f4f479fbd4fb0df66063, type: 3}
-  clickMouse: {fileID: 2800000, guid: 722d8f96dca8141b78e56ccb90e44b4c, type: 3}
-  lastPeice: {fileID: 0}
-  fadeInGroup: []
+  clickMouse: {fileID: 2800000, guid: 99a5950711fba4ed6aeb67b4be8261a9, type: 3}
 --- !u!4 &586016188
 Transform:
   m_ObjectHideFlags: 0
@@ -6115,6 +6104,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7045310710931486787, guid: 0a750db1088894402baf96c00eaedea6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7045310711122185292, guid: 0a750db1088894402baf96c00eaedea6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6291,11 +6285,6 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7045310712621432908, guid: 0a750db1088894402baf96c00eaedea6,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7045310710931486787, guid: 0a750db1088894402baf96c00eaedea6,
         type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -9890,6 +9879,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7045310710931486787, guid: 0a750db1088894402baf96c00eaedea6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7045310711122185292, guid: 0a750db1088894402baf96c00eaedea6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10066,11 +10060,6 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7045310712621432908, guid: 0a750db1088894402baf96c00eaedea6,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7045310710931486787, guid: 0a750db1088894402baf96c00eaedea6,
         type: 3}
       propertyPath: m_Enabled
       value: 1
