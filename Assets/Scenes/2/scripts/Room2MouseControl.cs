@@ -1,8 +1,16 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class Room2MouseControl : GlobalMouseControl
 {
+    public override void Start()
+    {
+        closeDialogButton = dialogCanvas.GetComponentInChildren<Button>();
+        if (closeDialogButton != null)
+            closeDialogButton.onClick.AddListener(() => this.endDetailView());
+    }
     public override void OnMouseDown()
     {
         bool runAction = true;
@@ -34,30 +42,44 @@ public class Room2MouseControl : GlobalMouseControl
                     }
                     else
                     {
-                        detailInteraction(
+                        if (Helper.PipelinePuzzleOK == false)
+                        {
+                            detailInteraction(
+                                "InteractContainer_worker",
+                                "Sophia:",
+                                "\"Excuse me, could I borrow a screwdriver?\"");
+                            Helper.DialogState = 0;
+                            Helper.inDetail = false;
+                        }
+                        else
+                        {
+                            detailInteraction(
                             "InteractContainer_worker",
-                            "Sophia:",
-                            "\"Excuse me, could I borrow a screwdriver?\"");
-                        Helper.inDetail = false;
+                            "Worker:",
+                            "\"I can not help you.\"");
+                        }
                     }
                     break;
                 case "other_stuff":
-                    detailInteraction(
+                    if (Helper.PipelinePuzzleOK == false)
+                    {
+                        detailInteraction(
                         "InteractContainer_puzzle",
                         "Sophia:",
                         "\"Puzzle?\"");
-                    dialog = GameObject.Find("dialog_worker canvas");
-                    if (dialog != null)
-                    {
-                        Image[] Images = dialog.GetComponentsInChildren<Image>();
-                        foreach (Image Im in Images)
+                        dialog = GameObject.Find("dialog_worker canvas");
+                        if (dialog != null)
                         {
-                            Im.enabled = false;
-                        }
-                        Text[] Texte = dialog.GetComponentsInChildren<Text>();
-                        foreach (Text Tx in Texte)
-                        {
-                            Tx.enabled = false;
+                            Image[] Images = dialog.GetComponentsInChildren<Image>();
+                            foreach (Image Im in Images)
+                            {
+                                Im.enabled = false;
+                            }
+                            Text[] Texte = dialog.GetComponentsInChildren<Text>();
+                            foreach (Text Tx in Texte)
+                            {
+                                Tx.enabled = false;
+                            }
                         }
                     }
                     break;

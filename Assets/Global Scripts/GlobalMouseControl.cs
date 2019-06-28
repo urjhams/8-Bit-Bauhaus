@@ -10,7 +10,7 @@ public class GlobalMouseControl : GlobalEffectControl
     [SerializeField] public Text nameBox;
     public Collider2D col;
     [HideInInspector] public string currentHover = "None";
-    private Button closeDialogButton;
+    [HideInInspector] public Button closeDialogButton;
 
     public virtual void OnMouseDown()
     {

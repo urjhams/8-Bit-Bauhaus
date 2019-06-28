@@ -338,7 +338,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: a5918da3f7f6ec14f9f4b11551faf39f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b903793e65761a04b984f00341384136, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1231,6 +1231,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7045310711122185280, guid: 0a750db1088894402baf96c00eaedea6,
+        type: 3}
+      propertyPath: m_TagString
+      value: dialog canvas
+      objectReference: {fileID: 0}
     - target: {fileID: 7045310710931486787, guid: 0a750db1088894402baf96c00eaedea6,
         type: 3}
       propertyPath: m_Enabled
@@ -1809,8 +1814,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -236211149
   m_SortingLayer: 5
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 869abebe45e64124e89088e6ea570641, type: 3}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 01da5910dadfa5347ac03b827824f591, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2066,6 +2071,21 @@ MonoBehaviour:
   nameBox: {fileID: 0}
   col: {fileID: 974038183}
   currentHover: None
+  sprite_Lock_open: {fileID: 21300000, guid: 2c0795cf0c6244046ab6e47cc7f85cd4, type: 3}
+  sprite_Locker_open: {fileID: 21300000, guid: beed4e5ae9e3b6e48b4e30d03308ff5c, type: 3}
+  sprite_Locker_Closeup_open: {fileID: 21300000, guid: 7109c069424819c49862d1fb6bda8e75,
+    type: 3}
+  sprite_Numbers:
+  - {fileID: 21300000, guid: e8e8dd9bf4369394b94c84bfe332a9e6, type: 3}
+  - {fileID: 21300000, guid: 71fc69352cfdbbd42b7ab013a4eac215, type: 3}
+  - {fileID: 21300000, guid: 40ad9c0aa6529f1419381ed368aab6aa, type: 3}
+  - {fileID: 21300000, guid: f16b213410f6ee94193be96772ff238a, type: 3}
+  - {fileID: 21300000, guid: 4d3c08c68ee150c458f3974700f3d8a0, type: 3}
+  - {fileID: 21300000, guid: 066ef2e70cec45d4f971e2a2379edbc2, type: 3}
+  - {fileID: 21300000, guid: 364e051e3e8bdbe44ba9341c0511827c, type: 3}
+  - {fileID: 21300000, guid: a0ba2d663fc9ecd4781419828a000472, type: 3}
+  - {fileID: 21300000, guid: ce1e9e53417a66a4697ce09ffa3d0ee8, type: 3}
+  - {fileID: 21300000, guid: 0a92fc6c5e61a9e4a9b598fe4dcefe47, type: 3}
 --- !u!60 &974038183
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2084,7 +2104,7 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 2.92, y: 0.98}
-    newSize: {x: 0.76, y: 1.29}
+    newSize: {x: 2.92, y: 0.98}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -2132,12 +2152,12 @@ SpriteRenderer:
   m_SortingLayerID: -236211149
   m_SortingLayer: 5
   m_SortingOrder: 13
-  m_Sprite: {fileID: 21300000, guid: d3965e2c652ea924e9454ad1209bc1ed, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e8e8dd9bf4369394b94c84bfe332a9e6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.76, y: 1.29}
+  m_Size: {x: 2.92, y: 0.98}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2614,7 +2634,7 @@ SpriteRenderer:
   m_SortingLayerID: -236211149
   m_SortingLayer: 5
   m_SortingOrder: 11
-  m_Sprite: {fileID: 21300000, guid: 158ea4cb160828f45bf7deadf435ec1c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 46dba7ccf2c043247acafb9ba92e7d23, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2899,7 +2919,7 @@ SpriteRenderer:
   m_SortingLayerID: -236211149
   m_SortingLayer: 5
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: a965f5af33550304c925f45a0ac9eadb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5b7190d78e3dad7479af46dfc776cc81, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3313,6 +3333,21 @@ MonoBehaviour:
   nameBox: {fileID: 0}
   col: {fileID: 2025091085}
   currentHover: None
+  sprite_Lock_open: {fileID: 21300000, guid: 2c0795cf0c6244046ab6e47cc7f85cd4, type: 3}
+  sprite_Locker_open: {fileID: 21300000, guid: beed4e5ae9e3b6e48b4e30d03308ff5c, type: 3}
+  sprite_Locker_Closeup_open: {fileID: 21300000, guid: 7109c069424819c49862d1fb6bda8e75,
+    type: 3}
+  sprite_Numbers:
+  - {fileID: 21300000, guid: e8e8dd9bf4369394b94c84bfe332a9e6, type: 3}
+  - {fileID: 21300000, guid: 71fc69352cfdbbd42b7ab013a4eac215, type: 3}
+  - {fileID: 21300000, guid: 40ad9c0aa6529f1419381ed368aab6aa, type: 3}
+  - {fileID: 21300000, guid: f16b213410f6ee94193be96772ff238a, type: 3}
+  - {fileID: 21300000, guid: 4d3c08c68ee150c458f3974700f3d8a0, type: 3}
+  - {fileID: 21300000, guid: 066ef2e70cec45d4f971e2a2379edbc2, type: 3}
+  - {fileID: 21300000, guid: 364e051e3e8bdbe44ba9341c0511827c, type: 3}
+  - {fileID: 21300000, guid: a0ba2d663fc9ecd4781419828a000472, type: 3}
+  - {fileID: 21300000, guid: ce1e9e53417a66a4697ce09ffa3d0ee8, type: 3}
+  - {fileID: 21300000, guid: 0a92fc6c5e61a9e4a9b598fe4dcefe47, type: 3}
 --- !u!60 &2025091085
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3331,7 +3366,7 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 2.92, y: 0.98}
-    newSize: {x: 0.76, y: 1.29}
+    newSize: {x: 2.92, y: 0.98}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -3379,12 +3414,12 @@ SpriteRenderer:
   m_SortingLayerID: -236211149
   m_SortingLayer: 5
   m_SortingOrder: 13
-  m_Sprite: {fileID: 21300000, guid: d3965e2c652ea924e9454ad1209bc1ed, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e8e8dd9bf4369394b94c84bfe332a9e6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.76, y: 1.29}
+  m_Size: {x: 2.92, y: 0.98}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -3470,7 +3505,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 19.610195, y: 42.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -3527,6 +3562,21 @@ MonoBehaviour:
   nameBox: {fileID: 0}
   col: {fileID: 2093606015}
   currentHover: None
+  sprite_Lock_open: {fileID: 21300000, guid: 2c0795cf0c6244046ab6e47cc7f85cd4, type: 3}
+  sprite_Locker_open: {fileID: 21300000, guid: beed4e5ae9e3b6e48b4e30d03308ff5c, type: 3}
+  sprite_Locker_Closeup_open: {fileID: 21300000, guid: 7109c069424819c49862d1fb6bda8e75,
+    type: 3}
+  sprite_Numbers:
+  - {fileID: 21300000, guid: e8e8dd9bf4369394b94c84bfe332a9e6, type: 3}
+  - {fileID: 21300000, guid: 71fc69352cfdbbd42b7ab013a4eac215, type: 3}
+  - {fileID: 21300000, guid: 40ad9c0aa6529f1419381ed368aab6aa, type: 3}
+  - {fileID: 21300000, guid: f16b213410f6ee94193be96772ff238a, type: 3}
+  - {fileID: 21300000, guid: 4d3c08c68ee150c458f3974700f3d8a0, type: 3}
+  - {fileID: 21300000, guid: 066ef2e70cec45d4f971e2a2379edbc2, type: 3}
+  - {fileID: 21300000, guid: 364e051e3e8bdbe44ba9341c0511827c, type: 3}
+  - {fileID: 21300000, guid: a0ba2d663fc9ecd4781419828a000472, type: 3}
+  - {fileID: 21300000, guid: ce1e9e53417a66a4697ce09ffa3d0ee8, type: 3}
+  - {fileID: 21300000, guid: 0a92fc6c5e61a9e4a9b598fe4dcefe47, type: 3}
 --- !u!60 &2093606015
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3545,7 +3595,7 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 2.92, y: 0.98}
-    newSize: {x: 0.76, y: 1.29}
+    newSize: {x: 2.92, y: 0.98}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -3593,12 +3643,12 @@ SpriteRenderer:
   m_SortingLayerID: -236211149
   m_SortingLayer: 5
   m_SortingOrder: 13
-  m_Sprite: {fileID: 21300000, guid: d3965e2c652ea924e9454ad1209bc1ed, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e8e8dd9bf4369394b94c84bfe332a9e6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.76, y: 1.29}
+  m_Size: {x: 2.92, y: 0.98}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
