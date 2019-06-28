@@ -6,116 +6,141 @@ using UnityEngine.SceneManagement;
 public class Room1MouseControl : GlobalMouseControl
 {
     [SerializeField] public GameObject ladder;
-    private void Awake()
-    {
-        this.setUpContext();
-    }
-
     private void Update()
     {
-        updateStatueDetailArm();
-        checkStatues();
+        updateSceneState();
+        if (GameManager.Room1.statuesDone)
+        {
+            var collider = GameObject.Find("statues_discover").GetComponent<Collider2D>();
+            collider.enabled = false;
+        }
+        if (GameManager.Room1.ladderDone && ladder != null)
+        {
+            ladder.SetActive(true);
+        }
     }
-
-    private void setUpContext()
+    public override void OnMouseDown()
     {
-        //disable bowl without box
-        Helper.getSpriteRendererOf("bowl without box").enabled = false;
-    }
-    
-    private void OnMouseDown()
-    {
+        base.OnMouseDown();
+        if (IsMouseOverUI())
+            return;
         switch (currentHover)
         {
             case "lamp_interact":
                 onOffEffect("lamp_light");
                 break;
             case "statues_discover":
-                detailInteraction("InteractContainer_statues", "Schmitz", "This statues... is that the same one in the picture?");
+                if (!GameManager.Room1.statuesDone)
+                    detailInteraction(
+                    "InteractContainer_statues",
+                    "Schmitz",
+                    "This statues... is that the same one in the picture?");
                 break;
             case "rooftop door_interact":
-                //TODO
+                startDialogView("Schmitz", "Hmm, is it locked?");
                 break;
             case "ladder_discover":
-                SceneManager.LoadScene("Room 1 basement");
-                Helper.setMouseStatus(MouseStatus.Free);
+                if (!Helper.inDetail)
+                    FadeToLevel("Room 1 basement");
                 break;
             case "painting_discover":
-                detailInteraction("InteractContainer_paint", "Schmitz", "Hmm... this picture look nice...");
+                detailInteraction(
+                    "InteractContainer_paint",
+                    "Schmitz",
+                    "Hmm... this picture look nice...");
                 break;
             case "bowl with box_discover":
-                detailInteraction("InteractContainer_box", "Schmitz", "A box, with a puzzle...?");
+                Destroy(gameObject);
+                Helper.getSpriteRendererOf("bowl without box").enabled = true;
+                break;
+            case "the box_discover":
+                detailInteraction(
+                    "InteractContainer_box",
+                    "Schmitz",
+                    "A box, with a puzzle...?"
+                );
                 break;
             default:
                 break;
         }
-
-        if (currentHover.Contains("left arm"))
+        if (Helper.inDetail && !GameManager.Room1.statuesDone)
         {
-            Helper.room1_LeftArm = (Helper.room1_LeftArm == Helper.leftArm.Length - 1) ? 0 : Helper.room1_LeftArm + 1;
-            print(Helper.room1_LeftArm);
-        }
+            if (currentHover.Contains("left arm"))
+                GameManager.Room1.currentLeftArm =
+                (GameManager.Room1.currentLeftArm == GameManager.Room1.leftArm.Length - 1) ?
+                0 :
+                GameManager.Room1.currentLeftArm + 1;
 
-        if (currentHover.Contains("right arm"))
-        {
-            Helper.room1_RightArm = (Helper.room1_RightArm == Helper.rightArm.Length - 1) ? 0 : Helper.room1_RightArm + 1;
-            print(Helper.room1_RightArm);
+            if (currentHover.Contains("right arm"))
+                GameManager.Room1.currentRightArm =
+                (GameManager.Room1.currentRightArm == GameManager.Room1.rightArm.Length - 1) ?
+                0 :
+                GameManager.Room1.currentRightArm + 1;
+
+            checkStatues();
         }
-        checkStatues();
     }
-
+    void updateSceneState()
+    {
+        updateStatueDetailArm();
+        checkStatues();
+        try
+        {
+            GameObject.Find("bird food_collect").SetActive(GameManager.Room1.birdFood);
+            GameObject.Find("the box_discover").SetActive(GameManager.Room1.boxOnTable);
+            GameObject.Find("bowl with box_discover").SetActive(!GameManager.Room1.boxOnTable);
+        }
+        catch { }
+    }
     public void updateStatueDetailArm()
     {
         try
         {
-            for (int i = 0; i < Helper.leftArm.Length; i++)
+            for (int i = 0; i < GameManager.Room1.leftArm.Length; i++)
             {
-                Helper.getSpriteRendererOf(Helper.leftArmDetail[i]).enabled = (i == Helper.room1_LeftArm);
+                Helper.getSpriteRendererOf(GameManager.Room1.leftArmDetail[i]).enabled =
+                (i == GameManager.Room1.currentLeftArm);
             }
-            for (int i = 0; i < Helper.rightArm.Length; i++)
+            for (int i = 0; i < GameManager.Room1.rightArm.Length; i++)
             {
-                Helper.getSpriteRendererOf(Helper.rightArmDetail[i]).enabled = (i == Helper.room1_RightArm);
+                Helper.getSpriteRendererOf(GameManager.Room1.rightArmDetail[i]).enabled =
+                (i == GameManager.Room1.currentRightArm);
             }
         }
-        catch (NullReferenceException e)
-        {
-            
-        }
+        catch { }
     }
-
     private void checkStatues()
     {
-        if (Helper.room1_LeftArm == 0 && Helper.room1_RightArm == 1)
+        if (GameManager.Room1.currentLeftArm == 0 && GameManager.Room1.currentRightArm == 1)
         {
             if (ladder != null)
             {
-                ladder.SetActive(true);
-                if (interactContainer != null && 
-                interactContainer.name.Equals("InteractContainer_statues") && 
+                GameManager.Room1.ladderDone = true;
+                if (interactContainer != null &&
+                interactContainer.name.Equals("InteractContainer_statues") &&
                 interactContainer.activeSelf)
-                    dialogBox.text = "Wow The basement's door suddenly open.";
+                {
+                    GameManager.Room1.statuesDone = true;
+                    GameManager.Room1.ladderDone = true;
+                    try
+                    {
+                        var door = GameObject.Find("rooftop door_interact");
+                        door.SetActive(false);
+                    }
+                    catch { }
+                    startDialogView("Schmitz", "I just hear somthing on the roof top door, should I check it?");
+                }
             }
         }
     }
-
     private void onOffEffect(string obj)
     {
         Helper.getSpriteRendererOf(obj).enabled = !Helper.getSpriteRendererOf(obj).enabled;
     }
-
     public override void toolTipHandle()
     {
-        base.toolTipHandle();
-        // if (Helper.inDetail) {
-        //     return;
-        // }
-        if (base.currentHover.Contains("discover"))
-        {
-            if (base.currentHover.Equals("ladder_discover"))
-                Tooltip.showTooltip_Static("Get upstair to take a look");
-            else
-                Tooltip.showTooltip_Static("Discover");
-        }
+        if (base.currentHover.Equals("ladder_discover"))
+            Tooltip.showTooltip_Static("Get upstair to take a look");
         else
         {
             Tooltip.hideToolTip_Static();

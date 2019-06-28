@@ -1,5 +1,8 @@
-﻿using UnityEngine.UI;
+﻿using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class GlobalMouseControl : GlobalEffectControl
 {
@@ -9,50 +12,43 @@ public class GlobalMouseControl : GlobalEffectControl
     [SerializeField] public Text nameBox;
     public Collider2D col;
     [HideInInspector] public string currentHover = "None";
-
     private Button closeDialogButton;
 
-    /// <summary>
-    /// Start is called on the frame when a script is enabled just before
-    /// any of the Update methods is called the first time.
-    /// </summary>
-    void Start()
+    public virtual void OnMouseDown()
     {
-        closeDialogButton = GameObject.Find("dialog close").GetComponent<Button>();
-        closeDialogButton.onClick.AddListener(() => this.endDetailView());
+        Helper.setMouseStatus(MouseStatus.Click);
     }
 
-    /// <summary>
-    /// This function is called when the MonoBehaviour will be destroyed.
-    /// </summary>
+    void OnMouseUp()
+    {
+        Helper.setMouseStatus(MouseStatus.Free);
+    }
+    public bool IsMouseOverUI()
+    {
+        return EventSystem.current.IsPointerOverGameObject();
+    }
+    void Start()
+    {
+        if (dialogCanvas != null)
+        {
+            //closeDialogButton = GameObject.Find("dialog close").GetComponent<Button>();
+            closeDialogButton = dialogCanvas.GetComponentInChildren<Button>();
+            if(closeDialogButton != null)
+                closeDialogButton.onClick.AddListener(() => this.endDetailView());
+        }
+    }
+
     void OnDestroy()
     {
-        closeDialogButton.onClick.RemoveListener(() => this.endDetailView());
+        if (closeDialogButton != null)
+            closeDialogButton.onClick.RemoveListener(() => this.endDetailView());
     }
 
     private void OnMouseEnter()
     {
-        print(col.name);
-        currentHover = col.name;
-        if (currentHover.Contains("interact"))
-        {
-            Helper.setMouseStatus(MouseStatus.Click);
-        }
-        else if (currentHover.Contains("discover"))
-        {
-            if (!Helper.inDetail)
-                Helper.setMouseStatus(MouseStatus.Inspect);
-            else
-                Helper.setMouseStatus(MouseStatus.Free);
-        }
-        else if (currentHover.Contains("grab"))
-        {
-            Helper.setMouseStatus(MouseStatus.Grap);
-        }
-        else
-        {
+        if (IsMouseOverUI())
             Helper.setMouseStatus(MouseStatus.Free);
-        }
+        currentHover = col.name;
         this.toolTipHandle();
     }
 
@@ -62,7 +58,7 @@ public class GlobalMouseControl : GlobalEffectControl
         Tooltip.hideToolTip_Static();
     }
 
-    public virtual void toolTipHandle() { }
+    public virtual void toolTipHandle() {}
 
     public void detailInteraction(string name, string nameText, string contentText)
     {
@@ -85,18 +81,93 @@ public class GlobalMouseControl : GlobalEffectControl
         Tooltip.hideToolTip_Static();
     }
 
-    void endDetailView()
+    public virtual void endDetailView()
     {
-        Helper.inDetail = false;
-        if (interactContainer != null)
-            interactContainer.SetActive(false);
+        bool setClose = true;
+
         if (dialogCanvas != null)
-            dialogCanvas.enabled = false;
+        {
+            if (dialogCanvas.name == "dialog1 canvas")
+            {
+                GameObject dialog = GameObject.Find("dialog canvas");
+                if (dialog != null)
+                {
+                    Image[] Images = dialog.GetComponentsInChildren<Image>();
+                    foreach (Image Im in Images)
+                    {
+                        Im.enabled = true;
+                    }
+                    Text[] Texte = dialog.GetComponentsInChildren<Text>();
+                    foreach (Text Tx in Texte)
+                    {
+                        Tx.enabled = true;
+                    }
+                }
+            }
+            else if (dialogCanvas.name == "dialog canvas")
+            {
+                GameObject dialog = GameObject.Find("dialog_worker canvas");
+                if (dialog != null)
+                {
+                    Image[] Images = dialog.GetComponentsInChildren<Image>();
+                    foreach (Image Im in Images)
+                    {
+                        Im.enabled = true;
+                    }
+                    Text[] Texte = dialog.GetComponentsInChildren<Text>();
+                    foreach (Text Tx in Texte)
+                    {
+                        Tx.enabled = true;
+                    }
+                }
+            }
+        }
+        if (interactContainer != null)
+        {
+            if (interactContainer.name == "InteractContainer_worker" & Helper.Scene2BaseOK)
+            {
+                if (Helper.DialogState == 0)
+                {
+                    GameObject dialog = GameObject.Find("dialog_worker canvas");
+                    if (dialog != null)
+                    {
+                        Text[] Texte = dialog.GetComponentsInChildren<Text>();
+                        foreach (Text Tx in Texte)
+                        {
+                            if (Tx.name == "Text_worker name")
+                                Tx.text = "Worker:";
+                            if (Tx.name == "Text_worker content")
+                                Tx.text = "\"A screwdriver? Do you even know how to use that? I do not care ... you could actually help me with something. The pipes in the hole there have to be reconnected.\"";
+                        }
+                    }
+                    Helper.DialogState = 1;
+                    setClose = false;
+                }
+            }
+        };
+
+        if (setClose)
+        {
+            Helper.inDetail = false;
+            if (interactContainer != null)
+                interactContainer.SetActive(false);
+            if (dialogCanvas != null)
+                dialogCanvas.enabled = false;
+            Helper.setMouseStatus(MouseStatus.Free);
+            Tooltip.hideToolTip_Static();
+        }
+    }
+
+    public void startDialogView(string nameText, string contentText) {
+        Helper.inDetail = true;
+        dialogBox.text = contentText;
+        nameBox.text = nameText;
+        dialogCanvas.enabled = true;
         Helper.setMouseStatus(MouseStatus.Free);
         Tooltip.hideToolTip_Static();
     }
 
-    void disableGameObjectList(string[] names)
+    public void disableGameObjectList(string[] names)
     {
         foreach (var name in names)
         {
@@ -108,7 +179,7 @@ public class GlobalMouseControl : GlobalEffectControl
         }
     }
 
-    void enableGameObjectList(string[] names)
+    public void enableGameObjectList(string[] names)
     {
         foreach (var name in names)
         {
