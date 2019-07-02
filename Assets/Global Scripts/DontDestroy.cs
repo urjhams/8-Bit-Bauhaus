@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DontDestroy : MonoBehaviour
 {
@@ -10,6 +11,14 @@ public class DontDestroy : MonoBehaviour
             if (i > 1)
             {
                 gameObject.SetActive(false);
+                if (!SceneManager.GetActiveScene().name.Contains("End"))
+                {
+                    try
+                    {
+                        gameObject.transform.Find("Inventory frame").GetComponent<CanvasRenderer>().SetAlpha(1);
+                    }
+                    catch { }
+                }
             }
         }
     }

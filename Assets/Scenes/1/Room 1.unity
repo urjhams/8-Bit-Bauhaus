@@ -2463,6 +2463,11 @@ PrefabInstance:
       propertyPath: uiCamera
       value: 
       objectReference: {fileID: 1324083623}
+    - target: {fileID: 6417935526648557911, guid: 0a750db1088894402baf96c00eaedea6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.00012207031
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a750db1088894402baf96c00eaedea6, type: 3}
 --- !u!223 &1036997547 stripped
@@ -6142,7 +6147,7 @@ PrefabInstance:
     - target: {fileID: 6883211723691139641, guid: efab2d598d82c47d293ce63c91e022e4,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6883211724109929565, guid: efab2d598d82c47d293ce63c91e022e4,
         type: 3}

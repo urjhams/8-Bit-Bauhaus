@@ -52,7 +52,7 @@ public class Room1MouseControl : GlobalMouseControl
             case "foto":
                 try
                 {
-                    GameObject.Find("inventory frame").SetActive(false);
+                    GameObject.Find("inventory frame").GetComponent<CanvasRenderer>().SetAlpha(0);
                 } catch {}
                 SceneManager.LoadScene("Room 1 End");
                 break;
@@ -166,7 +166,10 @@ public class Room1MouseControl : GlobalMouseControl
                         door.SetActive(false);
                     }
                     catch { }
-                    startDialogView("Sophia", "I just hear somthing on the roof top door, should I check it?");
+                    startDialogView(
+                        "Sophia", 
+                        "I just hear somthing on the roof top door, should I check it?"
+                        );
                 }
             }
         }

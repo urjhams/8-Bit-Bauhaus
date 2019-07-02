@@ -66,7 +66,6 @@
      <Compile Include="Assets\Global Scripts\GlobalMouseControl.cs" />
      <Compile Include="Assets\Global Scripts\Helper.cs" />
      <Compile Include="Assets\Global Scripts\Inventory.cs" />
-     <Compile Include="Assets\Global Scripts\InventoryClick.cs" />
      <Compile Include="Assets\Global Scripts\selfCollect.cs" />
      <Compile Include="Assets\Global Scripts\SoundOnClick.cs" />
      <Compile Include="Assets\Global Scripts\TextureScale.cs" />
