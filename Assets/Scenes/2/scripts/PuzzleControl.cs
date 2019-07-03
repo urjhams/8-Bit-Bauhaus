@@ -1,10 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 
 public class PuzzleControl : MonoBehaviour
 {
-    public static int[] position = { 0, 1, 2, 2, 0, 1, 1, 3, 2, 1, 0, 0, 1, 1, 0, 3, 1, 0, 0, 2, 1, 0, 3, 0, 1, 1};
+    public static int[] position = { 0, 1, 2, 2, 0, 1, 1, 3, 2, 1, 0, 0, 1, 1, 0, 3, 1, 0, 0, 2, 1, 0, 3, 0, 1, 1 };
 
     // Start is called before the first frame update
     void Start()
@@ -15,7 +14,7 @@ public class PuzzleControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void ResetPuzzle()
@@ -31,29 +30,31 @@ public class PuzzleControl : MonoBehaviour
             {
                 if (p.name.StartsWith("straight") || p.name.StartsWith("curved") || p.name.StartsWith("special"))
                 {
-                    try {
+                    try
+                    {
                         if (position[n] == 0)
-                    {
-                        p.transform.localRotation = Quaternion.Euler(0, 0, 0);
-                        p.transform.localScale = new Vector3(xscale, yscale, 0);
+                        {
+                            p.transform.localRotation = Quaternion.Euler(0, 0, 0);
+                            p.transform.localScale = new Vector3(xscale, yscale, 0);
+                        }
+                        else if (position[n] == 1)
+                        {
+                            p.transform.localRotation = Quaternion.Euler(0, 0, 90);
+                            p.transform.localScale = new Vector3(yscale, xscale, 0);
+                        }
+                        else if (position[n] == 2)
+                        {
+                            p.transform.localRotation = Quaternion.Euler(0, 0, 180);
+                            p.transform.localScale = new Vector3(xscale, yscale, 0);
+                        }
+                        else if (position[n] == 3)
+                        {
+                            p.transform.localRotation = Quaternion.Euler(0, 0, 270);
+                            p.transform.localScale = new Vector3(yscale, xscale, 0);
+                        }
+                        n++;
                     }
-                    else if (position[n] == 1)
-                    {
-                        p.transform.localRotation = Quaternion.Euler(0, 0, 90);
-                        p.transform.localScale = new Vector3(yscale, xscale, 0);
-                    }
-                    else if (position[n] == 2)
-                    {
-                        p.transform.localRotation = Quaternion.Euler(0, 0, 180);
-                        p.transform.localScale = new Vector3(xscale, yscale, 0);
-                    }
-                    else if (position[n] == 3)
-                    {
-                        p.transform.localRotation = Quaternion.Euler(0, 0, 270);
-                        p.transform.localScale = new Vector3(yscale, xscale, 0);
-                    }
-                    n++;
-                    } catch{}
+                    catch { }
                 }
             }
         }
