@@ -22,7 +22,7 @@ public class Room2MouseControl : GlobalMouseControl
             switch (currentHover)
             {
                 case "worker":
-                    if (!Helper.Scene2BaseOK && !GameManager.Room2.gotScrewDriver)
+                    if (Helper.Scene2BaseOK == false)
                     {
                         detailInteraction(
                             "InteractContainer_worker",
@@ -49,6 +49,13 @@ public class Room2MouseControl : GlobalMouseControl
                             Helper.DialogState = 0;
                             Helper.inDetail = false;
                         }
+                        // else
+                        // {
+                        //     detailInteraction(
+                        //     "InteractContainer_worker",
+                        //     "Worker:",
+                        //     "\"I can not help you.\"");
+                        // }
                     }
                     break;
                 case "other_stuff":
@@ -75,11 +82,12 @@ public class Room2MouseControl : GlobalMouseControl
                     }
                     break;
                 case "Goethe_Schiller":
-                    if (!Helper.inDetail) {
+                    if (!Helper.inDetail)
+                    {
                         detailInteraction(
-                        "InteractContainer_gs",
-                        "Sophia:",
-                        "\"What is that on the pedastal?\"");
+                            "InteractContainer_gs",
+                            "Sophia:",
+                            "\"What is that on the pedastal?\"");
                         Helper.inDetail = false;
                     }
                     break;
@@ -110,7 +118,8 @@ public class Room2MouseControl : GlobalMouseControl
         }
     }
 
-    public override void endDetailView() {
+    public override void endDetailView()
+    {
         bool setClose = true;
 
         if (dialogCanvas != null)
@@ -156,6 +165,11 @@ public class Room2MouseControl : GlobalMouseControl
                     }
                 }
             }
+            else if (dialogCanvas.name == "dialog_worker canvas") {
+                if (GameManager.Room2.gotScrewDriver) {
+                    GameObject.Find("RoomManager").GetComponent<ScewDriverCollect>().checkCollect();
+                }
+            }
         }
         if (interactContainer != null)
         {
@@ -174,7 +188,7 @@ public class Room2MouseControl : GlobalMouseControl
                                 if (Tx.name == "Text_worker name")
                                     Tx.text = "Worker:";
                                 if (Tx.name == "Text_worker content")
-                                    Tx.text = "\"A screwdriver? Yes I have it. However it still under the drain, and I have to fix it before lunch. You could help me then I give it to you.\"";
+                                    Tx.text = "\"A screwdriver? Do you even know how to use that? I do not care ... you could actually help me with something. The pipes in the hole there have to be reconnected.\"";
                             }
                         }
                         Helper.DialogState = 1;

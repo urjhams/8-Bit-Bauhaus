@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class PuzzleMouseControl : MonoBehaviour
 {
@@ -6,6 +8,7 @@ public class PuzzleMouseControl : MonoBehaviour
     {
         if (gameObject.name.StartsWith("straight") || gameObject.name.StartsWith("curved") || gameObject.name.StartsWith("special"))
         {
+            //Scale X = 0.01937887  Scale Y = 0.03390509
             float xscale = gameObject.transform.localScale.x;
             float yscale = gameObject.transform.localScale.y;
             gameObject.transform.Rotate(0, 0, 90, Space.Self);
@@ -75,6 +78,7 @@ public class PuzzleMouseControl : MonoBehaviour
                             if (puzzleOK != null)
                             {
                                 puzzleOK.GetComponent<SpriteRenderer>().sortingOrder = 15;
+                                GameManager.Room2.gotScrewDriver = true;
                             }
                         }
                     }
