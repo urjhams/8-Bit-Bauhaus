@@ -21,6 +21,7 @@ public class Room1BasementManager : MonoBehaviour
         try
         {
             GameObject.Find("bird").SetActive(!GameManager.Room1Basement.lastPeiceCollected);
+            GameObject.Find("bird_fulfilled").GetComponent<SpriteRenderer>().enabled = GameManager.Room1Basement.lastPeiceCollected;
         }
         catch { }
         wardrobeUpdate();

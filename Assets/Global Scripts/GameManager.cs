@@ -23,7 +23,6 @@ public class GameManager
         public static bool ladderDone = false;
         public static List<Tuple<string,Vector3>> boxPeices = new List<Tuple<string, Vector3>>();
         public static bool birdFood = false;
-        public static bool birdFoodGave = false;
         public static bool goal = false;
         public static ArrayList addedPeice = new ArrayList();
     }

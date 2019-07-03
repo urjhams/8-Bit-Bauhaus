@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 public class Room1Manager : CursorHandle
 {
     public GameObject lastPeice;
     public GameObject[] fadeInGroup;
-
+    [SerializeField] public Text dialogBox;
     void Start()
     {
     }
@@ -19,33 +20,44 @@ public class Room1Manager : CursorHandle
         {
             for (int i = 0; i < GameManager.Room1.leftArm.Length; i++)
             {
-                Helper.getSpriteRendererOf(GameManager.Room1.leftArm[i]).enabled = 
+                Helper.getSpriteRendererOf(GameManager.Room1.leftArm[i]).enabled =
                 (i == GameManager.Room1.currentLeftArm);
             }
             for (int i = 0; i < GameManager.Room1.rightArm.Length; i++)
             {
-                Helper.getSpriteRendererOf(GameManager.Room1.rightArm[i]).enabled = 
+                Helper.getSpriteRendererOf(GameManager.Room1.rightArm[i]).enabled =
                 (i == GameManager.Room1.currentRightArm);
             }
         }
-        catch {}
+        catch { }
     }
 
-    public void updateGoal() {
-        if (GameManager.Room1.goal) {
+    public void updateGoal()
+    {
+        if (GameManager.Room1.goal)
+        {
             lastPeice.GetComponent<SpriteRenderer>().enabled = true;
+            if (GameManager.Room1.addedPeice.Count >= 11)
+            {
+                dialogBox.text = "Wow the box is unlocked!";
+            }
         }
-        if (!Helper.inDetail && GameManager.Room1.goal && GameManager.Room1.addedPeice.Count >= 11) {
+        if (!Helper.inDetail && GameManager.Room1.goal && GameManager.Room1.addedPeice.Count >= 11)
+        {
             Helper.inDetail = true;
-            try {
+            try
+            {
                 GameObject.Find("bowl with box_discover").SetActive(false);
-            } catch {}
+            }
+            catch { }
             foreach (var item in fadeInGroup)
             {
                 item.GetComponent<ObjectFadeIn>().startFading();
-                try {
+                try
+                {
                     item.GetComponent<Collider2D>().enabled = true;
-                } catch {}
+                }
+                catch { }
             }
         }
     }

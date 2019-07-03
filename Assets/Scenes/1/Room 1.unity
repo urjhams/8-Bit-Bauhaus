@@ -2974,6 +2974,7 @@ MonoBehaviour:
   fadeInGroup:
   - {fileID: 2110869097}
   - {fileID: 1309397751}
+  dialogBox: {fileID: 1036997548}
 --- !u!4 &1269388976
 Transform:
   m_ObjectHideFlags: 0
