@@ -31,7 +31,8 @@ public class PuzzleControl : MonoBehaviour
             {
                 if (p.name.StartsWith("straight") || p.name.StartsWith("curved") || p.name.StartsWith("special"))
                 {
-                    if (position[n] == 0)
+                    try {
+                        if (position[n] == 0)
                     {
                         p.transform.localRotation = Quaternion.Euler(0, 0, 0);
                         p.transform.localScale = new Vector3(xscale, yscale, 0);
@@ -52,6 +53,7 @@ public class PuzzleControl : MonoBehaviour
                         p.transform.localScale = new Vector3(yscale, xscale, 0);
                     }
                     n++;
+                    } catch{}
                 }
             }
         }
