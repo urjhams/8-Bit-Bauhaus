@@ -163,6 +163,8 @@ public class Room1MouseControl : GlobalMouseControl
                 {
                     GameManager.Room1.statuesDone = true;
                     GameManager.Room1.ladderDone = true;
+                    if (!ladder.activeSelf)
+                        ladder.SetActive(true);
                     ladder.GetComponent<AudioSource>().Play();
                     try
                     {

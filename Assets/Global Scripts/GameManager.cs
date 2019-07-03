@@ -32,6 +32,10 @@ public class GameManager
         public static bool lastPeiceCollected = false;
         public static bool wardrobeOpen = false;
     }
+    public class Room2 {
+        public static bool needScrewDriver = false;
+        public static bool gotScrewDriver = false;
+    }
 
     // this one use for drop
     public static String currentOverGameObjectName = "";
