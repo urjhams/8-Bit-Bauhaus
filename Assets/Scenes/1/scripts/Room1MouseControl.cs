@@ -129,7 +129,7 @@ public class Room1MouseControl : GlobalMouseControl
         checkStatues();
         try
         {
-            GameObject.Find("bird food_collect").SetActive(GameManager.Room1.birdFood);
+            GameObject.Find("cup_birdfood").SetActive(GameManager.Room1.birdFood);
         }
         catch { }
     }
