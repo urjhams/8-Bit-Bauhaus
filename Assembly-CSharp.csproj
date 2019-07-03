@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Global Scripts\Collect.cs" />
+     <Compile Include="Assets\Global Scripts\CollectAfter.cs" />
      <Compile Include="Assets\Global Scripts\ColliderRecognize.cs" />
      <Compile Include="Assets\Global Scripts\CursorHandle.cs" />
      <Compile Include="Assets\Global Scripts\DontDestroy.cs" />
@@ -87,6 +88,7 @@
      <Compile Include="Assets\Scenes\2\scripts\PuzzleMouseControl.cs" />
      <Compile Include="Assets\Scenes\2\scripts\Room2Manager.cs" />
      <Compile Include="Assets\Scenes\2\scripts\Room2MouseControl.cs" />
+     <Compile Include="Assets\Scenes\2\scripts\ScewDriverCollect.cs" />
      <Compile Include="Assets\Scenes\2\scripts\ScewDriverHandle.cs" />
      <Compile Include="Assets\Scenes\3\scripts\LockClickNumbers.cs" />
      <Compile Include="Assets\Scenes\3\scripts\Room3MouseControl.cs" />

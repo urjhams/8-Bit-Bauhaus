@@ -75,7 +75,6 @@ public class PuzzleMouseControl : MonoBehaviour
                             if (puzzleOK != null)
                             {
                                 puzzleOK.GetComponent<SpriteRenderer>().sortingOrder = 15;
-                                GameManager.Room2.gotScrewDriver = true;
                             }
                         }
                     }

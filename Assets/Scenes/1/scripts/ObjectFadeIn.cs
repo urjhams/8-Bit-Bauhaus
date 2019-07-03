@@ -26,5 +26,7 @@ public class ObjectFadeIn : MonoBehaviour
     public void startFading()
     {
         StartCoroutine("FadeIn");
+        if (Helper.inDetail)
+            Helper.inDetail = false;
     }
 }

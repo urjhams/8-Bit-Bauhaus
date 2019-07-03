@@ -73,7 +73,7 @@ public class Room1MouseControl : GlobalMouseControl
                     startDialogView("Sophia", "Hmm, is it locked?");
                     break;
                 case "ladder_discover":
-                    if (!Helper.inDetail)
+                    if (!Helper.inDetail && !GameManager.Room1.goal)
                         FadeToLevel("Room 1 basement");
                     break;
                 case "painting_discover":
@@ -88,6 +88,7 @@ public class Room1MouseControl : GlobalMouseControl
                         "Sophia",
                         "A box, with a puzzle...?"
                     );
+                    Helper.inDetail = false;
                     break;
                 case "box closeup_discover":
                     endDetailView();
