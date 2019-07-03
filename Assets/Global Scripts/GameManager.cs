@@ -35,6 +35,7 @@ public class GameManager
     public class Room2 {
         public static bool needScrewDriver = false;
         public static bool gotScrewDriver = false;
+        public static bool goal = false;
     }
 
     // this one use for drop
