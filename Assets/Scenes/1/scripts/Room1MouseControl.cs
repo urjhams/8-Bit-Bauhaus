@@ -47,60 +47,64 @@ public class Room1MouseControl : GlobalMouseControl
     public override void OnMouseDown()
     {
         base.OnMouseDown();
-        switch (currentHover)
+        if (!Helper.inDetail)
         {
-            case "foto":
-                try
-                {
-                    GameObject.Find("inventory frame").GetComponent<CanvasRenderer>().SetAlpha(0);
-                } catch {}
-                SceneManager.LoadScene("Room 1 End");
-                break;
-            case "lamp_interact":
-                onOffEffect("lamp_light");
-                break;
-            case "statues_discover":
-                if (!GameManager.Room1.statuesDone)
+            switch (currentHover)
+            {
+                case "foto":
+                    try
+                    {
+                        GameObject.Find("inventory frame").GetComponent<CanvasRenderer>().SetAlpha(0);
+                    }
+                    catch { }
+                    SceneManager.LoadScene("Room 1 End");
+                    break;
+                case "lamp_interact":
+                    onOffEffect("lamp_light");
+                    break;
+                case "statues_discover":
+                    if (!GameManager.Room1.statuesDone)
+                        detailInteraction(
+                        "InteractContainer_statues",
+                        "Sophia",
+                        "This statues... is that the same one in the picture?");
+                    break;
+                case "rooftop door_interact":
+                    startDialogView("Sophia", "Hmm, is it locked?");
+                    break;
+                case "ladder_discover":
+                    if (!Helper.inDetail)
+                        FadeToLevel("Room 1 basement");
+                    break;
+                case "painting_discover":
                     detailInteraction(
-                    "InteractContainer_statues",
-                    "Sophia",
-                    "This statues... is that the same one in the picture?");
-                break;
-            case "rooftop door_interact":
-                startDialogView("Sophia", "Hmm, is it locked?");
-                break;
-            case "ladder_discover":
-                if (!Helper.inDetail)
-                    FadeToLevel("Room 1 basement");
-                break;
-            case "painting_discover":
-                detailInteraction(
-                    "InteractContainer_paint",
-                    "Sophia",
-                    "Hmm... this picture look nice...");
-                break;
-            case "bowl with box_discover":
-                detailInteraction(
-                    "InteractContainer_bowl",
-                    "Sophia",
-                    "A box, with a puzzle...?"
-                );
-                break;
-            case "box closeup_discover":
-                endDetailView();
-                try
-                {
-                    GameObject.Find("InteractContainer_bowl").SetActive(false);
-                }
-                catch { }
-                detailInteraction(
-                    "InteractContainer_box",
-                    "Sophia",
-                    "Seem like the puzzle is the way to open it"
-                );
-                break;
-            default:
-                break;
+                        "InteractContainer_paint",
+                        "Sophia",
+                        "Hmm... this picture look nice...");
+                    break;
+                case "bowl with box_discover":
+                    detailInteraction(
+                        "InteractContainer_bowl",
+                        "Sophia",
+                        "A box, with a puzzle...?"
+                    );
+                    break;
+                case "box closeup_discover":
+                    endDetailView();
+                    try
+                    {
+                        GameObject.Find("InteractContainer_bowl").SetActive(false);
+                    }
+                    catch { }
+                    detailInteraction(
+                        "InteractContainer_box",
+                        "Sophia",
+                        "Seem like the puzzle is the way to open it"
+                    );
+                    break;
+                default:
+                    break;
+            }
         }
         if (Helper.inDetail && !GameManager.Room1.statuesDone)
         {
@@ -167,7 +171,7 @@ public class Room1MouseControl : GlobalMouseControl
                     }
                     catch { }
                     startDialogView(
-                        "Sophia", 
+                        "Sophia",
                         "I just hear somthing on the roof top door, should I check it?"
                         );
                 }

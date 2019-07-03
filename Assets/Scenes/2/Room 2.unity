@@ -2013,6 +2013,11 @@ PrefabInstance:
       propertyPath: uiCamera
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6417935526648557911, guid: 0a750db1088894402baf96c00eaedea6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a750db1088894402baf96c00eaedea6, type: 3}
 --- !u!1 &303089444 stripped
@@ -6299,6 +6304,11 @@ PrefabInstance:
       propertyPath: uiCamera
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6417935526648557911, guid: 0a750db1088894402baf96c00eaedea6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4467768721958675032, guid: 0a750db1088894402baf96c00eaedea6,
         type: 3}
       propertyPath: m_Name
@@ -10073,6 +10083,11 @@ PrefabInstance:
         type: 3}
       propertyPath: uiCamera
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6417935526648557911, guid: 0a750db1088894402baf96c00eaedea6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4467768721958675032, guid: 0a750db1088894402baf96c00eaedea6,
         type: 3}
