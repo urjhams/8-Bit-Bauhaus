@@ -21,20 +21,24 @@ public class GameManager
         "interact_left arm 4", "interact_left arm 3", "interact_left arm 2" };
         public static bool statuesDone = false;
         public static bool ladderDone = false;
-        public static List<Tuple<string,Vector3>> boxPeices = new List<Tuple<string, Vector3>>();
+        public static List<Tuple<string, Vector3>> boxPeices = new List<Tuple<string, Vector3>>();
         public static bool birdFood = true;
         public static bool goal = false;
         public static ArrayList addedPeice = new ArrayList();
     }
-    public class Room1Basement {
+    public class Room1Basement
+    {
         public static bool lastPeiceCutScene = false;
         public static bool lastPeice = false;
         public static bool lastPeiceCollected = false;
         public static bool wardrobeOpen = false;
     }
-    public class Room2 {
+    public class Room2
+    {
         public static bool needScrewDriver = false;
         public static bool gotScrewDriver = false;
+        public static bool puzzleGiven = false;
+
         public static bool goal = false;
     }
 

@@ -656,6 +656,7 @@ MonoBehaviour:
   col: {fileID: 186557229}
   currentHover: None
   closeDialogButton: {fileID: 0}
+  puzzleContainer: {fileID: 589712756}
 --- !u!60 &186557229
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3522,6 +3523,7 @@ MonoBehaviour:
   col: {fileID: 736118761}
   currentHover: None
   closeDialogButton: {fileID: 0}
+  puzzleContainer: {fileID: 0}
 --- !u!60 &736118761
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5822,6 +5824,7 @@ MonoBehaviour:
   col: {fileID: 1269774199}
   currentHover: None
   closeDialogButton: {fileID: 0}
+  puzzleContainer: {fileID: 0}
 --- !u!60 &1269774199
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -8797,6 +8800,7 @@ MonoBehaviour:
   col: {fileID: 1940924742}
   currentHover: None
   closeDialogButton: {fileID: 0}
+  puzzleContainer: {fileID: 0}
 --- !u!60 &1940924742
 PolygonCollider2D:
   m_ObjectHideFlags: 0

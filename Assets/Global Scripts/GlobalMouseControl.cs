@@ -65,7 +65,7 @@ public class GlobalMouseControl : GlobalEffectControl
         }
     }
 
-    void startDetailView(string nameText, string contentText)
+    public void startDetailView(string nameText, string contentText)
     {
         Helper.inDetail = true;
         interactContainer.SetActive(true);
