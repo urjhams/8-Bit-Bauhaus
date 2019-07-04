@@ -49,13 +49,10 @@ public class Room2MouseControl : GlobalMouseControl
                             Helper.DialogState = 0;
                             Helper.inDetail = false;
                         }
-                        // else
-                        // {
-                        //     detailInteraction(
-                        //     "InteractContainer_worker",
-                        //     "Worker:",
-                        //     "\"I can not help you.\"");
-                        // }
+                        else
+                        {
+                            return;
+                        }
                     }
                     break;
                 case "other_stuff":
