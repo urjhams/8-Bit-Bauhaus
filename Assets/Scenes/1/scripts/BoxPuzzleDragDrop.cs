@@ -1,6 +1,5 @@
 ﻿using System;
 using UnityEngine;
-using System.Collections.Generic;
 
 public class BoxPuzzleDragDrop : DragDrop
 {
@@ -37,7 +36,6 @@ public class BoxPuzzleDragDrop : DragDrop
             {
                 transform.position = initPosition;
                 RemoveFromBox(name);
-
             }
             correctingPuzzle(name);
         }
@@ -86,5 +84,13 @@ public class BoxPuzzleDragDrop : DragDrop
                 }
             }
         } catch {}
+    }
+
+    public override void clickingSound() {
+        try
+        {
+            GameObject.Find("Background").GetComponent<AudioSource>().Play();
+        }
+        catch { }
     }
 }

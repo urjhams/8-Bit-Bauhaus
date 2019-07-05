@@ -3306,6 +3306,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: room changer
       objectReference: {fileID: 0}
+    - target: {fileID: 6317099158673815097, guid: b4ac2ff081c764010bdb790eec4cd778,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6317099158673815099, guid: b4ac2ff081c764010bdb790eec4cd778,
         type: 3}
       propertyPath: m_LocalPosition.x

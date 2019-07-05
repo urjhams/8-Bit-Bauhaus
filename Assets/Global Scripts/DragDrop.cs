@@ -13,6 +13,7 @@ public class DragDrop : MonoBehaviour
         {
             Vector2 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             transform.position = new Vector2(cursorPosition.x, cursorPosition.y);
+            clickingSound();
         }
         if (Input.GetMouseButtonUp(0))
         {
@@ -54,6 +55,14 @@ public class DragDrop : MonoBehaviour
                     }
                 }
             }
+        }
+        catch { }
+    }
+    public virtual void clickingSound()
+    {
+        try
+        {
+            GameObject.Find("Background").GetComponent<AudioSource>().Play();
         }
         catch { }
     }
