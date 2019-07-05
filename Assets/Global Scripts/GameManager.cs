@@ -38,7 +38,7 @@ public class GameManager
         public static bool needScrewDriver = false;
         public static bool gotScrewDriver = false;
         public static bool puzzleGiven = false;
-
+        public static bool scewDriverCutScene = true;
         public static bool goal = false;
     }
 

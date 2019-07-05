@@ -10,6 +10,8 @@ TagManager:
   - effect group
   - Inventory
   - detail container
+  - dialog canvas
+  - Room 2 main interact
   layers:
   - Default
   - TransparentFX

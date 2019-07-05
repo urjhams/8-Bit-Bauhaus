@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Room2MouseControl : GlobalMouseControl
 {
-    [SerializeField] public GameObject puzzleContainer;
     public override void Start()
     {
         closeDialogButton = dialogCanvas.GetComponentInChildren<Button>();
@@ -22,6 +22,9 @@ public class Room2MouseControl : GlobalMouseControl
             base.OnMouseDown();
             switch (currentHover)
             {
+                case "words":
+                    SceneManager.LoadScene("Room 2 End");
+                    break;
                 case "worker":
                     if (Helper.Scene2BaseOK == false)
                     {
@@ -177,35 +180,27 @@ public class Room2MouseControl : GlobalMouseControl
             {
                 if (!GameManager.Room2.gotScrewDriver)
                 {
-                    if (!GameManager.Room2.puzzleGiven)
+                    if (Helper.DialogState == 0)
                     {
-                        if (Helper.DialogState == 0)
+                        GameObject dialog = GameObject.Find("dialog_worker canvas");
+                        if (dialog != null)
                         {
-                            GameObject dialog = GameObject.Find("dialog_worker canvas");
-                            if (dialog != null)
+                            Text[] Texte = dialog.GetComponentsInChildren<Text>();
+                            foreach (Text Tx in Texte)
                             {
-                                Text[] Texte = dialog.GetComponentsInChildren<Text>();
-                                foreach (Text Tx in Texte)
-                                {
-                                    if (Tx.name == "Text_worker name")
-                                        Tx.text = "Worker:";
-                                    if (Tx.name == "Text_worker content")
-                                        Tx.text = "\"A screwdriver? Do you even know how to use that? I do not care ... you could actually help me with something. The pipes in the hole there have to be reconnected.\"";
-                                }
+                                if (Tx.name == "Text_worker name")
+                                    Tx.text = "Worker:";
+                                if (Tx.name == "Text_worker content")
+                                    Tx.text = "\"A screwdriver? Do you even know how to use that? I do not care ... you could actually help me with something. The pipes in the hole there have to be reconnected.\"";
                             }
-                            Helper.DialogState = 1;
-                            GameManager.Room2.puzzleGiven = true;
-                            setClose = false;
                         }
-                    }
-                    else
-                    {
-                        startPuzzle();
+                        Helper.DialogState = 1;
                         setClose = false;
                     }
                 }
             }
         };
+
         if (setClose)
         {
             Helper.inDetail = false;
@@ -216,50 +211,5 @@ public class Room2MouseControl : GlobalMouseControl
             Helper.setMouseStatus(MouseStatus.Free);
             Tooltip.hideToolTip_Static();
         }
-    }
-    void startPuzzle()
-    {
-        if (GameManager.Room2.puzzleGiven)
-        {
-            detailPuzzleInteraction(
-                    "InteractContainer_puzzle",
-                    "Sophia:",
-                    "\"Puzzle?\"");
-            // GameObject dialog = GameObject.Find("dialog_worker canvas");
-            // if (dialog != null)
-            // {
-            //     Image[] Images = dialog.GetComponentsInChildren<Image>();
-            //     foreach (Image Im in Images)
-            //     {
-            //         Im.enabled = false;
-            //     }
-            //     Text[] Texte = dialog.GetComponentsInChildren<Text>();
-            //     foreach (Text Tx in Texte)
-            //     {
-            //         Tx.enabled = false;
-            //     }
-            // }
-            //TODO: handle the dilog here
-        }
-    }
-    void detailPuzzleInteraction(string name, string nameText, string contentText)
-    {
-        if (!puzzleContainer.name.Equals(name))
-            return;
-        if (!Helper.inDetail)
-        {
-            startPuzzleDetailView(nameText, contentText);
-        }
-    }
-
-    void startPuzzleDetailView(string nameText, string contentText)
-    {
-        Helper.inDetail = true;
-        puzzleContainer.SetActive(true);
-        dialogBox.text = contentText;
-        nameBox.text = nameText;
-        dialogCanvas.enabled = true;
-        Helper.setMouseStatus(MouseStatus.Free);
-        Tooltip.hideToolTip_Static();
     }
 }

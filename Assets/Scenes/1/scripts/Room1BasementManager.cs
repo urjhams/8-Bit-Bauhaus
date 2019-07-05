@@ -1,7 +1,7 @@
 ﻿using UnityEngine.Video;
 using UnityEngine;
 
-public class Room1BasementManager : MonoBehaviour
+public class Room1BasementManager : CursorHandle
 {
     public GameObject wardrobeOpened;
     public GameObject cutsceneCamera;
@@ -16,8 +16,9 @@ public class Room1BasementManager : MonoBehaviour
         lastPeice.SetActive(GameManager.Room1Basement.lastPeice);
     }
 
-    void Update()
+    protected override void Update()
     {
+        base.Update();
         try
         {
             GameObject.Find("bird").SetActive(!GameManager.Room1Basement.lastPeiceCollected);
