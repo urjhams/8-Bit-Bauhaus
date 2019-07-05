@@ -231,6 +231,7 @@ MonoBehaviour:
   nameBox: {fileID: 51585128}
   col: {fileID: 63377120}
   currentHover: None
+  closeDialogButton: {fileID: 0}
 --- !u!60 &63377120
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -381,6 +382,7 @@ MonoBehaviour:
   nameBox: {fileID: 322364885}
   col: {fileID: 72647326}
   currentHover: None
+  closeDialogButton: {fileID: 0}
 --- !u!60 &72647326
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -967,6 +969,7 @@ MonoBehaviour:
   nameBox: {fileID: 322364885}
   col: {fileID: 224094738}
   currentHover: None
+  closeDialogButton: {fileID: 0}
 --- !u!60 &224094738
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1183,6 +1186,7 @@ MonoBehaviour:
   nameBox: {fileID: 322364885}
   col: {fileID: 297368804}
   currentHover: None
+  closeDialogButton: {fileID: 0}
 --- !u!60 &297368804
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1235,11 +1239,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: dialog canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 7045310710931486787, guid: 0a750db1088894402baf96c00eaedea6,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7045310711122185292, guid: 0a750db1088894402baf96c00eaedea6,
         type: 3}
@@ -1381,16 +1380,6 @@ PrefabInstance:
       propertyPath: m_TargetDisplay
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7045310712621432908, guid: 0a750db1088894402baf96c00eaedea6,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7045310710931486788, guid: 0a750db1088894402baf96c00eaedea6,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 118.600006
-      objectReference: {fileID: 0}
     - target: {fileID: 3420468639740958422, guid: 0a750db1088894402baf96c00eaedea6,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1420,6 +1409,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Transition
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6417935526648557911, guid: 0a750db1088894402baf96c00eaedea6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045310712621432908, guid: 0a750db1088894402baf96c00eaedea6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045310710931486787, guid: 0a750db1088894402baf96c00eaedea6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045310710931486788, guid: 0a750db1088894402baf96c00eaedea6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 118.600006
       objectReference: {fileID: 0}
     - target: {fileID: 7045310712202356223, guid: 0a750db1088894402baf96c00eaedea6,
         type: 3}
@@ -2071,6 +2080,7 @@ MonoBehaviour:
   nameBox: {fileID: 0}
   col: {fileID: 974038183}
   currentHover: None
+  closeDialogButton: {fileID: 0}
   sprite_Lock_open: {fileID: 21300000, guid: 2c0795cf0c6244046ab6e47cc7f85cd4, type: 3}
   sprite_Locker_open: {fileID: 21300000, guid: beed4e5ae9e3b6e48b4e30d03308ff5c, type: 3}
   sprite_Locker_Closeup_open: {fileID: 21300000, guid: 7109c069424819c49862d1fb6bda8e75,
@@ -2354,11 +2364,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7045310710931486787, guid: 0a750db1088894402baf96c00eaedea6,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7045310711122185292, guid: 0a750db1088894402baf96c00eaedea6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2504,16 +2509,6 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7045310712621432908, guid: 0a750db1088894402baf96c00eaedea6,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7045310710931486788, guid: 0a750db1088894402baf96c00eaedea6,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 118.600006
-      objectReference: {fileID: 0}
     - target: {fileID: 3420468639740958422, guid: 0a750db1088894402baf96c00eaedea6,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2544,10 +2539,25 @@ PrefabInstance:
       propertyPath: m_Transition
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 7045310712202356223, guid: 0a750db1088894402baf96c00eaedea6,
+    - target: {fileID: 6417935526648557911, guid: 0a750db1088894402baf96c00eaedea6,
         type: 3}
-      propertyPath: uiCamera
-      value: 
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045310712621432908, guid: 0a750db1088894402baf96c00eaedea6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045310710931486787, guid: 0a750db1088894402baf96c00eaedea6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045310710931486788, guid: 0a750db1088894402baf96c00eaedea6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 118.600006
       objectReference: {fileID: 0}
     - target: {fileID: 4467768721958675032, guid: 0a750db1088894402baf96c00eaedea6,
         type: 3}
@@ -2563,6 +2573,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Text1 content
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045310712202356223, guid: 0a750db1088894402baf96c00eaedea6,
+        type: 3}
+      propertyPath: uiCamera
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a750db1088894402baf96c00eaedea6, type: 3}
@@ -3262,6 +3277,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   freeMouse: {fileID: 2800000, guid: 038e1078b0e7f4f479fbd4fb0df66063, type: 3}
   clickMouse: {fileID: 2800000, guid: 722d8f96dca8141b78e56ccb90e44b4c, type: 3}
+  lastPeice: {fileID: 0}
+  fadeInGroup: []
+  dialogBox: {fileID: 0}
 --- !u!4 &1770440870
 Transform:
   m_ObjectHideFlags: 0
@@ -3276,6 +3294,80 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1860600458
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6317099158673815097, guid: b4ac2ff081c764010bdb790eec4cd778,
+        type: 3}
+      propertyPath: m_Name
+      value: room changer
+      objectReference: {fileID: 0}
+    - target: {fileID: 6317099158673815099, guid: b4ac2ff081c764010bdb790eec4cd778,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 463.22696
+      objectReference: {fileID: 0}
+    - target: {fileID: 6317099158673815099, guid: b4ac2ff081c764010bdb790eec4cd778,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 209.55034
+      objectReference: {fileID: 0}
+    - target: {fileID: 6317099158673815099, guid: b4ac2ff081c764010bdb790eec4cd778,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -117.33436
+      objectReference: {fileID: 0}
+    - target: {fileID: 6317099158673815099, guid: b4ac2ff081c764010bdb790eec4cd778,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6317099158673815099, guid: b4ac2ff081c764010bdb790eec4cd778,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6317099158673815099, guid: b4ac2ff081c764010bdb790eec4cd778,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6317099158673815099, guid: b4ac2ff081c764010bdb790eec4cd778,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6317099158673815099, guid: b4ac2ff081c764010bdb790eec4cd778,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6317099158673815099, guid: b4ac2ff081c764010bdb790eec4cd778,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6317099158673815099, guid: b4ac2ff081c764010bdb790eec4cd778,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6317099158673815099, guid: b4ac2ff081c764010bdb790eec4cd778,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6317099159123928906, guid: b4ac2ff081c764010bdb790eec4cd778,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b4ac2ff081c764010bdb790eec4cd778, type: 3}
 --- !u!1 &1964971612 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8405497574292633993, guid: e5a50ef28123c4e348d94092d5bccd88,
@@ -3333,6 +3425,7 @@ MonoBehaviour:
   nameBox: {fileID: 0}
   col: {fileID: 2025091085}
   currentHover: None
+  closeDialogButton: {fileID: 0}
   sprite_Lock_open: {fileID: 21300000, guid: 2c0795cf0c6244046ab6e47cc7f85cd4, type: 3}
   sprite_Locker_open: {fileID: 21300000, guid: beed4e5ae9e3b6e48b4e30d03308ff5c, type: 3}
   sprite_Locker_Closeup_open: {fileID: 21300000, guid: 7109c069424819c49862d1fb6bda8e75,
@@ -3562,6 +3655,7 @@ MonoBehaviour:
   nameBox: {fileID: 0}
   col: {fileID: 2093606015}
   currentHover: None
+  closeDialogButton: {fileID: 0}
   sprite_Lock_open: {fileID: 21300000, guid: 2c0795cf0c6244046ab6e47cc7f85cd4, type: 3}
   sprite_Locker_open: {fileID: 21300000, guid: beed4e5ae9e3b6e48b4e30d03308ff5c, type: 3}
   sprite_Locker_Closeup_open: {fileID: 21300000, guid: 7109c069424819c49862d1fb6bda8e75,

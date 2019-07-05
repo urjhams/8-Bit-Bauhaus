@@ -12,6 +12,8 @@ public class Room1BasementManager : CursorHandle
     // Start is called before the first frame update
     void Start()
     {
+        Helper.setMouseStatus(MouseStatus.Free);
+        Tooltip.hideToolTip_Static();
         length = player.clip.length;
         lastPeice.SetActive(GameManager.Room1Basement.lastPeice);
     }

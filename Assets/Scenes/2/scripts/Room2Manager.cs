@@ -11,12 +11,10 @@ public class Room2Manager : CursorHandle
     double currentTime;
     void Start()
     {
+        Helper.setMouseStatus(MouseStatus.Free);
+        Tooltip.hideToolTip_Static();
         length = player.clip.length;
-        try
-        {
-            GameObject.Find("inventory frame").GetComponent<CanvasRenderer>().SetAlpha(1);
-        }
-        catch { }
+        Helper.showInventory();
     }
     protected override void Update()
     {

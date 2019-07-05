@@ -24,9 +24,22 @@ public class Helper
 
     public static void hideInventory()
     {
-
+        try
+        {
+            GameObject.Find("inventory frame").GetComponent<CanvasRenderer>().SetAlpha(0);
+            GameObject.Find("inventory frame").transform.Find("Image").GetComponent<CanvasRenderer>().SetAlpha(0);
+        }
+        catch { }
     }
 
+    public static void showInventory() {
+        try
+        {
+            GameObject.Find("inventory frame").GetComponent<CanvasRenderer>().SetAlpha(1);
+            GameObject.Find("inventory frame").transform.Find("Image").GetComponent<CanvasRenderer>().SetAlpha(1);
+        }
+        catch { }
+    }
     public static void showInventory(GameObject inventoryObject)
     {
         try

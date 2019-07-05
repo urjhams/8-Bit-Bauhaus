@@ -7,6 +7,8 @@ public class Room1Manager : CursorHandle
     [SerializeField] public Text dialogBox;
     void Start()
     {
+        Helper.setMouseStatus(MouseStatus.Free);
+        Tooltip.hideToolTip_Static();
     }
     protected override void Update()
     {
@@ -48,6 +50,7 @@ public class Room1Manager : CursorHandle
             try
             {
                 GameObject.Find("bowl with box_discover").SetActive(false);
+                GameObject.Find("ladder_discover").GetComponent<Collider2D>().enabled = false;
             }
             catch { }
             foreach (var item in fadeInGroup)
