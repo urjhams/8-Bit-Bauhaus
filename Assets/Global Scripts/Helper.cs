@@ -21,6 +21,21 @@ public class Helper
     {
         return GameObject.Find(objectName).GetComponentsInChildren<SpriteRenderer>();
     }
+
+    public static void hideInventory()
+    {
+
+    }
+
+    public static void showInventory(GameObject inventoryObject)
+    {
+        try
+        {
+            inventoryObject.transform.Find("Inventory frame").GetComponent<CanvasRenderer>().SetAlpha(1);
+            inventoryObject.transform.Find("Inventory frame").transform.Find("Image").GetComponent<CanvasRenderer>().SetAlpha(1);
+        }
+        catch { }
+    }
 }
 
 public enum MouseStatus

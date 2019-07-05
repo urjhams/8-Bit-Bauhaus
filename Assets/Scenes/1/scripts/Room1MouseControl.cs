@@ -50,11 +50,7 @@ public class Room1MouseControl : GlobalMouseControl
         switch (currentHover)
         {
             case "foto":
-                try
-                {
-                    GameObject.Find("inventory frame").GetComponent<CanvasRenderer>().SetAlpha(0);
-                }
-                catch { }
+                Helper.hideInventory();
                 SceneManager.LoadScene("Room 1 End");
                 break;
             case "lamp_interact":

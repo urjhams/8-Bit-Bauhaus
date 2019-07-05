@@ -23,6 +23,7 @@ public class Room2MouseControl : GlobalMouseControl
             switch (currentHover)
             {
                 case "words":
+                    Helper.hideInventory();
                     SceneManager.LoadScene("Room 2 End");
                     break;
                 case "worker":

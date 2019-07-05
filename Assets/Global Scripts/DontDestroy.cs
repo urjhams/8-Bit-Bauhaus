@@ -13,11 +13,7 @@ public class DontDestroy : MonoBehaviour
                 gameObject.SetActive(false);
                 if (!SceneManager.GetActiveScene().name.Contains("End"))
                 {
-                    try
-                    {
-                        gameObject.transform.Find("Inventory frame").GetComponent<CanvasRenderer>().SetAlpha(1);
-                    }
-                    catch { }
+                    Helper.showInventory(gameObject);
                 }
             }
         }
