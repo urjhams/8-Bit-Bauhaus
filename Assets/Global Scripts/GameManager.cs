@@ -32,6 +32,7 @@ public class GameManager
         public static bool lastPeice = false;
         public static bool lastPeiceCollected = false;
         public static bool wardrobeOpen = false;
+        public static bool goal = false;
     }
     public class Room2
     {
@@ -42,8 +43,7 @@ public class GameManager
         public static bool goal = false;
     }
     public class Room3 {
-        
-        public static bool goal = false;
+        public static bool puzzleSoved = false;
     }
 
     // this one use for drop

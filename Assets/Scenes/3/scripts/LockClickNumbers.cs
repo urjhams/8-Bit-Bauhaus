@@ -55,8 +55,9 @@ public class LockClickNumbers : GlobalMouseControl
                     foreach (Text Tx in Texte)
                     {
                         if (Tx.name == "Text content")
-                            Tx.text = "It's Open!!!!";
+                            Tx.text = "It's Unlocked!";
                     }
+                    GameManager.Room3.puzzleSoved = true;
                 }
             }
         }

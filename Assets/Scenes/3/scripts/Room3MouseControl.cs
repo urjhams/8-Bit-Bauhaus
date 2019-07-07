@@ -49,10 +49,12 @@ public class Room3MouseControl : GlobalMouseControl
                     "\"I need to find the right code to open it.\"");
                 break;
             case "closeup_dot":
+                if (!GameManager.Room3.puzzleSoved)
+                    return;
                 try {
                     GameObject.Find("InteractContainer_lock").SetActive(false);
                 } catch {}
-                endDetailView();
+                // endDetailView();
                 detailInteraction(
                         "InteractContainer_locker",
                         "Sophia:",

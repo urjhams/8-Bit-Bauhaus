@@ -91,6 +91,8 @@
      <Compile Include="Assets\Scenes\2\scripts\Room2MouseControl.cs" />
      <Compile Include="Assets\Scenes\2\scripts\ScewDriverCollect.cs" />
      <Compile Include="Assets\Scenes\2\scripts\ScewDriverHandle.cs" />
+     <Compile Include="Assets\Scenes\3\scripts\KeyCollect.cs" />
+     <Compile Include="Assets\Scenes\3\scripts\KeyHandle.cs" />
      <Compile Include="Assets\Scenes\3\scripts\LockClickNumbers.cs" />
      <Compile Include="Assets\Scenes\3\scripts\Room3Manager.cs" />
      <Compile Include="Assets\Scenes\3\scripts\Room3MouseControl.cs" />
