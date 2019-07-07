@@ -38,13 +38,25 @@ public class Room3MouseControl : GlobalMouseControl
                 break;
             case "lock":
                 endDetailView();
-                try {
+                try
+                {
                     interactContainer.SetActive(true);
-                } catch {}
+                }
+                catch { }
                 detailInteraction(
                     "InteractContainer_lock",
                     "Sophia:",
                     "\"I need to find the right code to open it.\"");
+                break;
+            case "closeup_dot":
+                try {
+                    GameObject.Find("InteractContainer_lock").SetActive(false);
+                } catch {}
+                endDetailView();
+                detailInteraction(
+                        "InteractContainer_locker",
+                        "Sophia:",
+                        "\"R.Schmidt! That must be the former locker of my grandma. Maybe i can find something inside.\"");
                 break;
             default:
                 break;
