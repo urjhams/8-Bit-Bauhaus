@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class LockClickNumbers : GlobalMouseControl
@@ -57,7 +55,7 @@ public class LockClickNumbers : GlobalMouseControl
                     foreach (Text Tx in Texte)
                     {
                         if (Tx.name == "Text content")
-                            Tx.text = "A key?!";
+                            Tx.text = "It's Open!!!!";
                     }
                 }
             }

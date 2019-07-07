@@ -41,6 +41,10 @@ public class GameManager
         public static bool scewDriverCutScene = true;
         public static bool goal = false;
     }
+    public class Room3 {
+        
+        public static bool goal = false;
+    }
 
     // this one use for drop
     public static String currentOverGameObjectName = "";
