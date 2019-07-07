@@ -6,8 +6,6 @@ public class Room3MouseControl : GlobalMouseControl
     public override void OnMouseDown()
     {
         base.OnMouseDown();
-        if (IsMouseOverUI())
-            return;
         switch (currentHover)
         {
             case "poster1":
@@ -39,24 +37,14 @@ public class Room3MouseControl : GlobalMouseControl
                 }
                 break;
             case "lock":
+                endDetailView();
+                try {
+                    interactContainer.SetActive(true);
+                } catch {}
                 detailInteraction(
                     "InteractContainer_lock",
                     "Sophia:",
                     "\"I need to find the right code to open it.\"");
-                GameObject dialog =  GameObject.Find("dialog canvas");
-                if (dialog != null)
-                {
-                    Image[] Images = dialog.GetComponentsInChildren<Image>();
-                    foreach (Image Im in Images)
-                    {
-                        Im.enabled = false;
-                    }
-                    Text[] Texte = dialog.GetComponentsInChildren<Text>();
-                    foreach(Text Tx in Texte)
-                    {
-                        Tx.enabled = false;
-                    }
-                }
                 break;
             default:
                 break;

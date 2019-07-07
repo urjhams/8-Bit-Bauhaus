@@ -8,4 +8,9 @@ public class Room3Manager : CursorHandle
         Helper.setMouseStatus(MouseStatus.Free);
         Tooltip.hideToolTip_Static();
     }
+    protected override void Update() 
+    {
+        base.Update();
+        
+    }
 }
