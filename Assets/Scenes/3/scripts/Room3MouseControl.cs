@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class Room3MouseControl : GlobalMouseControl
@@ -31,7 +29,6 @@ public class Room3MouseControl : GlobalMouseControl
                         "InteractContainer_locker",
                         "Sophia:",
                         "\"R.Schmidt! That must be the former locker of my grandma. Maybe i can find something inside.\"");
-                    Helper.inDetail = false;
                 }
                 else
                 {
@@ -39,7 +36,6 @@ public class Room3MouseControl : GlobalMouseControl
                         "InteractContainer_locker",
                         "Sophia:",
                         "\"Oh, i think i know what the key is for.\"");
-                    Helper.inDetail = false;
                 }
                 break;
             case "lock":
