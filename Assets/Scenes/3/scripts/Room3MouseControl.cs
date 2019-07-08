@@ -1,7 +1,19 @@
-﻿using UnityEngine;
+﻿using UnityEngine.SceneManagement;
+using UnityEngine;
 
 public class Room3MouseControl : GlobalMouseControl
 {
+    private GameObject key;
+    public override void Start()
+    {
+        base.Start();
+        try
+        {
+            key = GameObject.Find("key_box");
+            key.GetComponent<Collider2D>().enabled = false;
+        }
+        catch { }
+    }
     public override void OnMouseDown()
     {
         base.OnMouseDown();
@@ -50,14 +62,23 @@ public class Room3MouseControl : GlobalMouseControl
             case "closeup_dot":
                 if (!GameManager.Room3.puzzleSoved)
                     return;
-                try {
+                try
+                {
                     GameObject.Find("InteractContainer_lock").SetActive(false);
-                } catch {}
-                // endDetailView();
+                    key.GetComponent<Collider2D>().enabled = true;
+                }
+                catch { }
                 detailInteraction(
                         "InteractContainer_locker",
                         "Sophia:",
                         "\"R.Schmidt! That must be the former locker of my grandma. Maybe i can find something inside.\"");
+                break;
+            case "way back":
+                if (GameManager.Room3.goal)
+                {
+                    Helper.hideInventory();
+                    SceneManager.LoadScene("Room 3 End");
+                }
                 break;
             default:
                 break;

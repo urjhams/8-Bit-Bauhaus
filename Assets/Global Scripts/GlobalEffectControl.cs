@@ -82,8 +82,6 @@ public class GlobalEffectControl : MonoBehaviour
 
     public void FadeToLevel(string name)
     {
-        // var animator = GameObject.Find("room changer").GetComponent<Animator>();
-        // animator.Play("ScreenFadeOut");
         SceneManager.LoadScene(name);
         Helper.setMouseStatus(MouseStatus.Free);
     }

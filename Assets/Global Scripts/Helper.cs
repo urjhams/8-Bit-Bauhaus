@@ -24,19 +24,26 @@ public class Helper
 
     public static void hideInventory()
     {
-        try
-        {
-            GameObject.Find("inventory frame").GetComponent<CanvasRenderer>().SetAlpha(0);
-            GameObject.Find("inventory frame").transform.Find("Image").GetComponent<CanvasRenderer>().SetAlpha(0);
-        }
-        catch { }
+        setInventoryAlpha(0);
     }
 
     public static void showInventory() {
+        setInventoryAlpha(1);
+    }
+
+    private static void setInventoryAlpha(float alpha) {
         try
         {
-            GameObject.Find("inventory frame").GetComponent<CanvasRenderer>().SetAlpha(1);
-            GameObject.Find("inventory frame").transform.Find("Image").GetComponent<CanvasRenderer>().SetAlpha(1);
+            GameObject.Find("inventory frame").GetComponent<CanvasRenderer>().SetAlpha(alpha);
+            GameObject.Find("inventory frame").transform.Find("Image").GetComponent<CanvasRenderer>().SetAlpha(alpha);
+            var slots = GameObject.Find("inventory frame").transform.Find("Slot area").transform;
+            foreach (Transform item in slots)
+            {
+                if (item.GetChild(0) != null) 
+                {
+                    item.GetChild(0).GetComponent<CanvasRenderer>().SetAlpha(alpha);
+                }
+            }
         }
         catch { }
     }

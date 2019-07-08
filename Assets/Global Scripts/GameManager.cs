@@ -44,6 +44,7 @@ public class GameManager
     }
     public class Room3 {
         public static bool puzzleSoved = false;
+        public static bool goal = false;
     }
 
     // this one use for drop

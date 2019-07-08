@@ -63,6 +63,7 @@ public class Room2MouseControl : GlobalMouseControl
                 case "other_stuff":
                     if (!GameManager.Room2.gotScrewDriver)
                     {
+                        endDetailView();
                         detailInteraction(
                         "InteractContainer_puzzle",
                         "Sophia:",

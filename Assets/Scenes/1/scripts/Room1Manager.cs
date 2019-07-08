@@ -47,6 +47,8 @@ public class Room1Manager : CursorHandle
         }
         if (!Helper.inDetail && GameManager.Room1.goal && GameManager.Room1.addedPeice.Count >= 11)
         {
+            if (GameManager.Room3.goal)
+                return;
             Helper.inDetail = true;
             try
             {
