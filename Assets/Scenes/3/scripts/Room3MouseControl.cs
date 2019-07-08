@@ -62,5 +62,6 @@ public class Room3MouseControl : GlobalMouseControl
             default:
                 break;
         }
+        Helper.setMouseStatus(MouseStatus.Free);
     }
 }

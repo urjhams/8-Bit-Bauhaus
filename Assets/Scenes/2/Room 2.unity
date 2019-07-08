@@ -2740,7 +2740,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   freeMouse: {fileID: 2800000, guid: 038e1078b0e7f4f479fbd4fb0df66063, type: 3}
   clickMouse: {fileID: 2800000, guid: 99a5950711fba4ed6aeb67b4be8261a9, type: 3}
-  mainObject: {fileID: 431611112}
+  mainObject: {fileID: 242250956}
   cutsceneCamera: {fileID: 280908878}
   player: {fileID: 586016190}
   plate: {fileID: 956915498}

@@ -28,7 +28,7 @@ public class Room2Manager : CursorHandle
             plateDialogCanvas.enabled = false;
         }
         PlayScewDriverCutScene();
-        mainObject.SetActive(Helper.inDetail);
+        mainObject.SetActive(!Helper.inDetail);
     }
     private void PlayScewDriverCutScene()
     {
