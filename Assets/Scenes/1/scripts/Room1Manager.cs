@@ -9,6 +9,7 @@ public class Room1Manager : CursorHandle
     {
         Helper.setMouseStatus(MouseStatus.Free);
         Tooltip.hideToolTip_Static();
+        Helper.showInventory();
     }
     protected override void Update()
     {

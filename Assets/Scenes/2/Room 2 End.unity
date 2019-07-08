@@ -304,10 +304,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1685372620}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fda6387f4a1e409f919303cbebee68f, type: 3}
+  m_Script: {fileID: 11500000, guid: b77a0aee6afb14ba3abc28868377b753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1685372622}
+  nextRoomName: Room 3
 --- !u!328 &1685372622
 VideoPlayer:
   m_ObjectHideFlags: 0

@@ -5,17 +5,13 @@ public class ScewDriverHandle : DragHandle
     #region  IEndDragHAndler implementation
     public override void OnEndDrag(PointerEventData eventData)
     {
-        print(GameManager.currentOverGameObjectName);
         if (GameManager.currentOverGameObjectName.Equals("metal shield"))
         {
-            base.destroyObject("scewddriver");
+            base.destroyObject("scewdriver");
             Destroy(gameObject);
             GameManager.Room2.goal = true;
         }
-        else
-        {
-            base.OnEndDrag(eventData);
-        }
+        base.OnEndDrag(eventData);
     }
     #endregion
 }

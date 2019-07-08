@@ -62,6 +62,7 @@
      <Compile Include="Assets\Global Scripts\DontDestroy.cs" />
      <Compile Include="Assets\Global Scripts\DragDrop.cs" />
      <Compile Include="Assets\Global Scripts\DragHandle.cs" />
+     <Compile Include="Assets\Global Scripts\EndRoom.cs" />
      <Compile Include="Assets\Global Scripts\GameManager.cs" />
      <Compile Include="Assets\Global Scripts\GlobalEffectControl.cs" />
      <Compile Include="Assets\Global Scripts\GlobalMouseControl.cs" />
@@ -76,7 +77,6 @@
      <Compile Include="Assets\Scenes\1\scripts\birdFoodHandler.cs" />
      <Compile Include="Assets\Scenes\1\scripts\BoxPuzzleDragDrop.cs" />
      <Compile Include="Assets\Scenes\1\scripts\CollectInside.cs" />
-     <Compile Include="Assets\Scenes\1\scripts\EndRoom1Intro.cs" />
      <Compile Include="Assets\Scenes\1\scripts\lastPeiceCollect.cs" />
      <Compile Include="Assets\Scenes\1\scripts\LastPeiceHandle.cs" />
      <Compile Include="Assets\Scenes\1\scripts\ObjectFadeIn.cs" />
@@ -84,7 +84,6 @@
      <Compile Include="Assets\Scenes\1\scripts\Room1BasementMouseControl.cs" />
      <Compile Include="Assets\Scenes\1\scripts\Room1Manager.cs" />
      <Compile Include="Assets\Scenes\1\scripts\Room1MouseControl.cs" />
-     <Compile Include="Assets\Scenes\2\scripts\EndRoom2Intro.cs" />
      <Compile Include="Assets\Scenes\2\scripts\PuzzleControl.cs" />
      <Compile Include="Assets\Scenes\2\scripts\PuzzleMouseControl.cs" />
      <Compile Include="Assets\Scenes\2\scripts\Room2Manager.cs" />

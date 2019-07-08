@@ -147,10 +147,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 139356771}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5018148755143d3a599e6151131925, type: 3}
+  m_Script: {fileID: 11500000, guid: b77a0aee6afb14ba3abc28868377b753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 139356773}
+  nextRoomName: Room 2
 --- !u!328 &139356773
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -283,6 +284,7 @@ GameObject:
   m_Component:
   - component: {fileID: 907684524}
   - component: {fileID: 907684523}
+  - component: {fileID: 907684522}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -290,6 +292,14 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!81 &907684522
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907684521}
+  m_Enabled: 1
 --- !u!20 &907684523
 Camera:
   m_ObjectHideFlags: 0
