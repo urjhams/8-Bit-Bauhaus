@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Room2Manager : CursorHandle
 {
+    public GameObject mainObject;
     public GameObject cutsceneCamera;
     public VideoPlayer player;
     public GameObject plate;
@@ -28,7 +29,7 @@ public class Room2Manager : CursorHandle
         }
         PlayScewDriverCutScene();
     }
-        private void PlayScewDriverCutScene()
+    private void PlayScewDriverCutScene()
     {
         currentTime = player.time;
         if (currentTime >= length - 0.05)
@@ -42,5 +43,11 @@ public class Room2Manager : CursorHandle
             }
             catch { }
         }
+    }
+    private void HideMainIfNeed() {
+        if (Helper.inDetail)
+            mainObject.SetActive(true);
+        else
+            mainObject.SetActive(false);
     }
 }
