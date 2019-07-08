@@ -1,4 +1,5 @@
-﻿using UnityEngine.Video;
+﻿using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 using UnityEngine;
 
 public class Room1BasementManager : CursorHandle
@@ -35,6 +36,10 @@ public class Room1BasementManager : CursorHandle
             GameManager.Room1Basement.lastPeiceCutScene = false;
         }
         PlayBirdCutCcene();
+        if (GameManager.Room1Basement.goal)
+        {
+            SceneManager.LoadScene("Final End");
+        }
     }
 
     private void wardrobeUpdate()
