@@ -69,6 +69,8 @@ public class Room1MouseControl : GlobalMouseControl
             case "ladder_discover":
                 if (!Helper.inDetail && !GameManager.Room1.goal)
                     FadeToLevel("Room 1 basement");
+                if (!Helper.inDetail && GameManager.Room3.goal)
+                    FadeToLevel("Room 1 basement");
                 break;
             case "painting_discover":
                 detailInteraction(
