@@ -2099,7 +2099,7 @@ PrefabInstance:
     - target: {fileID: 6317099158673815097, guid: b4ac2ff081c764010bdb790eec4cd778,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6317099158673815099, guid: b4ac2ff081c764010bdb790eec4cd778,
         type: 3}
@@ -5535,11 +5535,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 2210001938556098878, guid: 55b6a6887278141978118474059d273c,
-        type: 3}
-      propertyPath: m_Name
-      value: scewdriver
-      objectReference: {fileID: 0}
     - target: {fileID: 6644667233193066113, guid: 55b6a6887278141978118474059d273c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5644,6 +5639,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2210001938556098878, guid: 55b6a6887278141978118474059d273c,
+        type: 3}
+      propertyPath: m_Name
+      value: scewdriver
       objectReference: {fileID: 0}
     - target: {fileID: 2210001938556098872, guid: 55b6a6887278141978118474059d273c,
         type: 3}

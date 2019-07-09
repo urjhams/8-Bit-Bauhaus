@@ -5,22 +5,25 @@ public class DontDestroy : MonoBehaviour
 {
     void Awake()
     {
-        if (SceneManager.GetActiveScene().name.Equals("Final End"))
-        {
-            Destroy(gameObject);
-            return;
-        }
         DontDestroyOnLoad(gameObject);
         for (int i = 0; i < gameObject.scene.GetRootGameObjects().Length; i++)
         {
             if (i > 1)
             {
-                gameObject.SetActive(false);
+                Destroy(gameObject);
                 if (!SceneManager.GetActiveScene().name.Contains("End"))
                 {
                     Helper.showInventory(gameObject);
                 }
             }
+        }
+    }
+
+    void Update()
+    {
+        if (SceneManager.GetActiveScene().name.Equals("Final End") || SceneManager.GetActiveScene().name.Equals("Menu"))
+        {
+            Destroy(gameObject);
         }
     }
 }
