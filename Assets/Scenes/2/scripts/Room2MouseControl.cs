@@ -82,6 +82,9 @@ public class Room2MouseControl : GlobalMouseControl
                             {
                                 Tx.enabled = false;
                             }
+                            try {
+                                dialog.GetComponent<AudioSource>().Play();
+                            } catch {}
                         }
                     }
                     break;
@@ -91,7 +94,7 @@ public class Room2MouseControl : GlobalMouseControl
                         detailInteraction(
                             "InteractContainer_gs",
                             "Sophia:",
-                            "\"What is that on the pedastal?\"");
+                            "\"Ok, behind the statue...\"");
                         Helper.inDetail = false;
                     }
                     break;
@@ -190,6 +193,7 @@ public class Room2MouseControl : GlobalMouseControl
                 {
                     GameObject.Find("RoomManager").GetComponent<ScewDriverCollect>().checkCollect();
                 }
+                dialogCanvas.GetComponent<AudioSource>().Stop();
             }
         }
         if (interactContainer != null)

@@ -163,11 +163,11 @@ public class Room1MouseControl : GlobalMouseControl
                     GameManager.Room1.ladderDone = true;
                     if (!ladder.activeSelf)
                         ladder.SetActive(true);
-                }
-                startDialogView(
+                    startDialogView(
                     "Sophia",
                     "I just hear somthing on the roof top door, should I check it?"
                     );
+                }
             }
         }
     }

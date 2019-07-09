@@ -1,4 +1,5 @@
-﻿using UnityEngine.SceneManagement;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class Room1BasementMouseControl : GlobalMouseControl
@@ -14,6 +15,7 @@ public class Room1BasementMouseControl : GlobalMouseControl
             case "wardrobe":
                 if (!GameManager.Room1Basement.wardrobeOpen)
                     GameManager.Room1Basement.wardrobeOpen = true;
+                GameObject.Find("wardrobe").GetComponent<AudioSource>().Play();
                 break;
             case "wardrobe_opened":
                 detailInteraction(
@@ -34,6 +36,7 @@ public class Room1BasementMouseControl : GlobalMouseControl
                     "Sophia",
                     "There is nothing here"
                 );
+                GetComponent<AudioSource>().Play();
                 break;
             default:
                 break;

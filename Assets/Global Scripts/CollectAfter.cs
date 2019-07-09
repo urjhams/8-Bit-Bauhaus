@@ -7,7 +7,11 @@ public class CollectAfter : MonoBehaviour
     public GameObject itemButton;
     void Start()
     {
-        inventory = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>();
+        try {
+            inventory = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>();
+        } catch {
+            print("the inventory is init in room 1, start from there");
+        }
     }
     public virtual void checkCollect()
     {
