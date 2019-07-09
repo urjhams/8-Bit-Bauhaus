@@ -114,8 +114,11 @@ public class Room1MouseControl : GlobalMouseControl
                 (GameManager.Room1.currentRightArm == GameManager.Room1.rightArm.Length - 1) ?
                 0 :
                 GameManager.Room1.currentRightArm + 1;
-
             checkStatues();
+            if (GameManager.Room1.currentLeftArm == 0 && GameManager.Room1.currentRightArm == 1)
+            {
+                GameObject.Find("detail_statues_discover").GetComponent<AudioSource>().Play();
+            }
         }
     }
     void updateSceneState()
@@ -160,18 +163,11 @@ public class Room1MouseControl : GlobalMouseControl
                     GameManager.Room1.ladderDone = true;
                     if (!ladder.activeSelf)
                         ladder.SetActive(true);
-                    ladder.GetComponent<AudioSource>().Play();
-                    try
-                    {
-                        var door = GameObject.Find("rooftop door_interact");
-                        door.SetActive(false);
-                    }
-                    catch { }
-                    startDialogView(
-                        "Sophia",
-                        "I just hear somthing on the roof top door, should I check it?"
-                        );
                 }
+                startDialogView(
+                    "Sophia",
+                    "I just hear somthing on the roof top door, should I check it?"
+                    );
             }
         }
     }

@@ -1042,7 +1042,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 50d0d2318631c4df8920de0fcc5ed255, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.45
+  m_Volume: 0
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2053,7 +2053,6 @@ GameObject:
   - component: {fileID: 984931151}
   - component: {fileID: 984931152}
   - component: {fileID: 984931154}
-  - component: {fileID: 984931155}
   - component: {fileID: 984931153}
   m_Layer: 0
   m_Name: ladder_discover
@@ -2170,102 +2169,6 @@ MonoBehaviour:
   currentHover: None
   closeDialogButton: {fileID: 0}
   ladder: {fileID: 0}
---- !u!82 &984931155
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 984931150}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 83127d70c8f0148eda8f013e039fbaab, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 1
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &1004690982
 GameObject:
   m_ObjectHideFlags: 0
@@ -4589,6 +4492,108 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1638429611 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4684914211309558108, guid: 06005189419cc416382de7cd44104eef,
+    type: 3}
+  m_PrefabInstance: {fileID: 1828719124}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1638429614
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638429611}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 9413aaac9ca4348cbb6f79845b173e96, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1717903807
 GameObject:
   m_ObjectHideFlags: 0
@@ -5192,6 +5197,96 @@ PrefabInstance:
       propertyPath: BypassListenerEffects
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4684914210213302464, guid: 06005189419cc416382de7cd44104eef,
+        type: 3}
+      propertyPath: dialogCanvas
+      value: 
+      objectReference: {fileID: 1036997547}
+    - target: {fileID: 4684914210213302464, guid: 06005189419cc416382de7cd44104eef,
+        type: 3}
+      propertyPath: nameBox
+      value: 
+      objectReference: {fileID: 1036997549}
+    - target: {fileID: 4684914210213302464, guid: 06005189419cc416382de7cd44104eef,
+        type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 1036997548}
+    - target: {fileID: 4684914210312323390, guid: 06005189419cc416382de7cd44104eef,
+        type: 3}
+      propertyPath: dialogCanvas
+      value: 
+      objectReference: {fileID: 1036997547}
+    - target: {fileID: 4684914210312323390, guid: 06005189419cc416382de7cd44104eef,
+        type: 3}
+      propertyPath: nameBox
+      value: 
+      objectReference: {fileID: 1036997549}
+    - target: {fileID: 4684914210312323390, guid: 06005189419cc416382de7cd44104eef,
+        type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 1036997548}
+    - target: {fileID: 4684914210703684696, guid: 06005189419cc416382de7cd44104eef,
+        type: 3}
+      propertyPath: dialogCanvas
+      value: 
+      objectReference: {fileID: 1036997547}
+    - target: {fileID: 4684914210703684696, guid: 06005189419cc416382de7cd44104eef,
+        type: 3}
+      propertyPath: nameBox
+      value: 
+      objectReference: {fileID: 1036997549}
+    - target: {fileID: 4684914210703684696, guid: 06005189419cc416382de7cd44104eef,
+        type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 1036997548}
+    - target: {fileID: 4684914210935297795, guid: 06005189419cc416382de7cd44104eef,
+        type: 3}
+      propertyPath: dialogCanvas
+      value: 
+      objectReference: {fileID: 1036997547}
+    - target: {fileID: 4684914210935297795, guid: 06005189419cc416382de7cd44104eef,
+        type: 3}
+      propertyPath: nameBox
+      value: 
+      objectReference: {fileID: 1036997549}
+    - target: {fileID: 4684914210935297795, guid: 06005189419cc416382de7cd44104eef,
+        type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 1036997548}
+    - target: {fileID: 4684914210981195752, guid: 06005189419cc416382de7cd44104eef,
+        type: 3}
+      propertyPath: dialogCanvas
+      value: 
+      objectReference: {fileID: 1036997547}
+    - target: {fileID: 4684914210981195752, guid: 06005189419cc416382de7cd44104eef,
+        type: 3}
+      propertyPath: nameBox
+      value: 
+      objectReference: {fileID: 1036997549}
+    - target: {fileID: 4684914210981195752, guid: 06005189419cc416382de7cd44104eef,
+        type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 1036997548}
+    - target: {fileID: 4684914212212878407, guid: 06005189419cc416382de7cd44104eef,
+        type: 3}
+      propertyPath: dialogCanvas
+      value: 
+      objectReference: {fileID: 1036997547}
+    - target: {fileID: 4684914212212878407, guid: 06005189419cc416382de7cd44104eef,
+        type: 3}
+      propertyPath: nameBox
+      value: 
+      objectReference: {fileID: 1036997549}
+    - target: {fileID: 4684914212212878407, guid: 06005189419cc416382de7cd44104eef,
+        type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 1036997548}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06005189419cc416382de7cd44104eef, type: 3}
 --- !u!1001 &1843714378
