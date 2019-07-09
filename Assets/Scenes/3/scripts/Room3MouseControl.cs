@@ -85,4 +85,13 @@ public class Room3MouseControl : GlobalMouseControl
         }
         Helper.setMouseStatus(MouseStatus.Free);
     }
+    public override void toolTipHandle()
+    {
+        if (base.currentHover.Equals("way back") && GameManager.Room3.goal)
+            Tooltip.showTooltip_Static("Get back to my appartment");
+        else
+        {
+            Tooltip.hideToolTip_Static();
+        }
+    }
 }

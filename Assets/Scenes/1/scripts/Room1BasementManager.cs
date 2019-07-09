@@ -17,6 +17,11 @@ public class Room1BasementManager : CursorHandle
         Tooltip.hideToolTip_Static();
         length = player.clip.length;
         lastPeice.SetActive(GameManager.Room1Basement.lastPeice);
+        try
+        {
+            GameObject.Find("basement_outside_dark").SetActive(GameManager.Room3.goal);
+        }
+        catch { }
     }
 
     protected override void Update()
@@ -25,7 +30,7 @@ public class Room1BasementManager : CursorHandle
         try
         {
             GameObject.Find("bird").SetActive(!GameManager.Room1Basement.lastPeiceCollected);
-            GameObject.Find("bird_fulfilled").GetComponent<SpriteRenderer>().enabled = GameManager.Room1Basement.lastPeiceCollected;
+            GameObject.Find("bird_fulfilled").GetComponent<SpriteRenderer>().enabled = GameManager.Room1Basement.lastPeiceCollected && !GameManager.Room3.goal;
         }
         catch { }
         wardrobeUpdate();

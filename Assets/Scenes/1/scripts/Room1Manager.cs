@@ -10,6 +10,11 @@ public class Room1Manager : CursorHandle
         Helper.setMouseStatus(MouseStatus.Free);
         Tooltip.hideToolTip_Static();
         Helper.showInventory();
+        try
+        {
+            GameObject.Find("outside_dark").SetActive(GameManager.Room3.goal);
+        }
+        catch { }
     }
     protected override void Update()
     {
