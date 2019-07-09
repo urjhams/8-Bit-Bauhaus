@@ -14,6 +14,7 @@ public class LockClickNumbers : GlobalMouseControl
         base.OnMouseDown();
         if (IsMouseOverUI())
             return;
+        gameObject.GetComponent<AudioSource>().Play();
         if (currentHover.StartsWith("number"))
         {
             string number = gameObject.GetComponent<SpriteRenderer>().sprite.name.Replace("numbers", "");
@@ -58,6 +59,7 @@ public class LockClickNumbers : GlobalMouseControl
                             Tx.text = "It's Unlocked!";
                     }
                     GameManager.Room3.puzzleSoved = true;
+                    GameObject.Find("InteractContainer_locker").GetComponent<AudioSource>().Play();
                 }
             }
         }
