@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -114,6 +115,21 @@ public class Room2MouseControl : GlobalMouseControl
                         }
                     }
                     Helper.Scene2BaseOK = true;
+                    break;
+                case "musician":
+                    AudioSource[] audios = GetComponents<AudioSource>();
+                    foreach (var audio in audios)
+                    {
+                        if (audio.isPlaying)
+                        {
+                            return;
+                        }
+                    }
+                    System.Random rand = new System.Random();
+                    int index = rand.Next(audios.Length);
+                    audios[index].Play();
+                    Animator animator = GetComponent<Animator>();
+                    animator.SetTrigger("Active");
                     break;
                 default:
                     break;
