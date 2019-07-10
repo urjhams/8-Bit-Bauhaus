@@ -2373,6 +2373,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: dialog canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7045310710931486787, guid: 0a750db1088894402baf96c00eaedea6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7045310711122185292, guid: 0a750db1088894402baf96c00eaedea6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2559,11 +2564,6 @@ PrefabInstance:
       value: 0.19995117
       objectReference: {fileID: 0}
     - target: {fileID: 7045310712621432908, guid: 0a750db1088894402baf96c00eaedea6,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7045310710931486787, guid: 0a750db1088894402baf96c00eaedea6,
         type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -6383,6 +6383,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7045310710931486787, guid: 0a750db1088894402baf96c00eaedea6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7045310711122185292, guid: 0a750db1088894402baf96c00eaedea6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6578,15 +6583,15 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7045310710931486787, guid: 0a750db1088894402baf96c00eaedea6,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7045310710931486788, guid: 0a750db1088894402baf96c00eaedea6,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 118.599976
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045310712202356223, guid: 0a750db1088894402baf96c00eaedea6,
+        type: 3}
+      propertyPath: uiCamera
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4467768721958675032, guid: 0a750db1088894402baf96c00eaedea6,
         type: 3}
@@ -6602,11 +6607,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Text_worker content
-      objectReference: {fileID: 0}
-    - target: {fileID: 7045310712202356223, guid: 0a750db1088894402baf96c00eaedea6,
-        type: 3}
-      propertyPath: uiCamera
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a750db1088894402baf96c00eaedea6, type: 3}
@@ -8663,7 +8663,7 @@ PrefabInstance:
     - target: {fileID: 8405497574292633993, guid: e5a50ef28123c4e348d94092d5bccd88,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8405497574292633993, guid: e5a50ef28123c4e348d94092d5bccd88,
         type: 3}
@@ -10112,6 +10112,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7045310710931486787, guid: 0a750db1088894402baf96c00eaedea6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7045310711122185292, guid: 0a750db1088894402baf96c00eaedea6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10307,15 +10312,15 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7045310710931486787, guid: 0a750db1088894402baf96c00eaedea6,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7045310710931486788, guid: 0a750db1088894402baf96c00eaedea6,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 118.599976
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045310712202356223, guid: 0a750db1088894402baf96c00eaedea6,
+        type: 3}
+      propertyPath: uiCamera
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4467768721958675032, guid: 0a750db1088894402baf96c00eaedea6,
         type: 3}
@@ -10331,11 +10336,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Text1 content
-      objectReference: {fileID: 0}
-    - target: {fileID: 7045310712202356223, guid: 0a750db1088894402baf96c00eaedea6,
-        type: 3}
-      propertyPath: uiCamera
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a750db1088894402baf96c00eaedea6, type: 3}
