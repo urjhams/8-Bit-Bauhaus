@@ -98,6 +98,10 @@ public class Room1MouseControl : GlobalMouseControl
                     "Seem like the puzzle is the way to open it"
                 );
                 break;
+            case "puzzle box":
+                if (GameManager.Room1.goal && GameManager.Room1.addedPeice.Count >= 11)
+                    endDetailView();
+                break;
             default:
                 break;
         }

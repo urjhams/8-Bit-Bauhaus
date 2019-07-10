@@ -599,6 +599,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f482f0d8270a3463a8408df636cb6eb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &399756342 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3407958714325480901, guid: 5ae38656714584396bf220af7eddea3b,
+    type: 3}
+  m_PrefabInstance: {fileID: 9193976559848122856}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &399756343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399756342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea2cb0aef0de4441ad6587241f99b8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactContainer: {fileID: 8405497572410245454}
+  dialogCanvas: {fileID: 1036997547}
+  dialogBox: {fileID: 1036997548}
+  nameBox: {fileID: 1036997549}
+  col: {fileID: 399756344}
+  currentHover: None
+  closeDialogButton: {fileID: 0}
+  ladder: {fileID: 0}
+--- !u!61 &399756344
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399756342}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.5720625, y: -1.9606619}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 12.14, y: 10.3}
+    newSize: {x: 12.14, y: 10.3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 8.995876, y: 2.4220257}
+  m_EdgeRadius: 0
 --- !u!1 &403574699
 GameObject:
   m_ObjectHideFlags: 0
@@ -6052,7 +6104,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2110869098
 Transform:
   m_ObjectHideFlags: 0
@@ -6541,7 +6593,7 @@ PrefabInstance:
     - target: {fileID: 6317099158673815097, guid: b4ac2ff081c764010bdb790eec4cd778,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6317099158673815099, guid: b4ac2ff081c764010bdb790eec4cd778,
         type: 3}
@@ -7094,7 +7146,7 @@ PrefabInstance:
     - target: {fileID: 806640737715759270, guid: 5ae38656714584396bf220af7eddea3b,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5655041865345333928, guid: 5ae38656714584396bf220af7eddea3b,
         type: 3}
