@@ -2083,6 +2083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemButton: {fileID: 66631156}
+  dialogContent: {fileID: 322364884}
 --- !u!60 &803472344
 PolygonCollider2D:
   m_ObjectHideFlags: 0
