@@ -420,7 +420,7 @@ GameObject:
   - component: {fileID: 167140557}
   m_Layer: 0
   m_Name: musician
-  m_TagString: Untagged
+  m_TagString: Room 2 main interact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1089,7 +1089,7 @@ GameObject:
   - component: {fileID: 186557228}
   m_Layer: 0
   m_Name: worker
-  m_TagString: Untagged
+  m_TagString: Room 2 main interact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1909,7 +1909,7 @@ GameObject:
   - component: {fileID: 242250957}
   m_Layer: 0
   m_Name: interactable
-  m_TagString: Room 2 main interact
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7375,7 +7375,7 @@ GameObject:
   - component: {fileID: 1269774198}
   m_Layer: 0
   m_Name: Goethe_Schiller
-  m_TagString: Untagged
+  m_TagString: Room 2 main interact
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

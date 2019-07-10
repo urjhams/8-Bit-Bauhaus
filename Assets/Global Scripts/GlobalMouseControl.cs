@@ -55,7 +55,7 @@ public class GlobalMouseControl : GlobalEffectControl
 
     public virtual void toolTipHandle() { }
 
-    public void detailInteraction(string name, string nameText, string contentText)
+    public virtual void detailInteraction(string name, string nameText, string contentText)
     {
         if (!interactContainer.name.Equals(name))
             return;

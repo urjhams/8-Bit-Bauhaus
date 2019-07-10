@@ -82,9 +82,11 @@ public class Room2MouseControl : GlobalMouseControl
                             {
                                 Tx.enabled = false;
                             }
-                            try {
+                            try
+                            {
                                 dialog.GetComponent<AudioSource>().Play();
-                            } catch {}
+                            }
+                            catch { }
                         }
                     }
                     break;
@@ -137,6 +139,16 @@ public class Room2MouseControl : GlobalMouseControl
                 default:
                     break;
             }
+        }
+    }
+
+    public override void detailInteraction(string name, string nameText, string contentText)
+    {
+        base.detailInteraction(name, nameText, contentText);
+        GameObject[] mains = GameObject.FindGameObjectsWithTag("Room 2 main interact");
+        foreach (var item in mains)
+        {
+            item.GetComponent<Collider2D>().enabled = false;
         }
     }
 
@@ -221,7 +233,7 @@ public class Room2MouseControl : GlobalMouseControl
                     }
                 }
             }
-        };
+        }
 
         if (setClose)
         {
@@ -232,6 +244,11 @@ public class Room2MouseControl : GlobalMouseControl
                 dialogCanvas.enabled = false;
             Helper.setMouseStatus(MouseStatus.Free);
             Tooltip.hideToolTip_Static();
+            GameObject[] mains = GameObject.FindGameObjectsWithTag("Room 2 main interact");
+            foreach (var item in mains)
+            {
+                item.GetComponent<Collider2D>().enabled = true;
+            }
         }
     }
 }
