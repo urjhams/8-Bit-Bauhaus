@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -28,7 +27,7 @@ public class Room2MouseControl : GlobalMouseControl
                     SceneManager.LoadScene("Room 2 End");
                     break;
                 case "worker":
-                    if (Helper.Scene2BaseOK == false)
+                    if (!Helper.Scene2BaseOK)
                     {
                         detailInteraction(
                             "InteractContainer_worker",
@@ -53,7 +52,6 @@ public class Room2MouseControl : GlobalMouseControl
                                 "Sophia:",
                                 "\"Excuse me, could I borrow a screwdriver?\"");
                             Helper.DialogState = 0;
-                            Helper.inDetail = false;
                         }
                         else
                         {
@@ -97,10 +95,10 @@ public class Room2MouseControl : GlobalMouseControl
                             "InteractContainer_gs",
                             "Sophia:",
                             "\"Ok, behind the statue...\"");
-                        Helper.inDetail = false;
                     }
                     break;
                 case "goethe_schiller_from behind":
+                    Helper.inDetail = false;
                     detailInteraction(
                         "InteractContainer_gs_base",
                         "Sophia:",
@@ -142,15 +140,15 @@ public class Room2MouseControl : GlobalMouseControl
         }
     }
 
-    // public override void detailInteraction(string name, string nameText, string contentText)
-    // {
-    //     base.detailInteraction(name, nameText, contentText);
-    //     GameObject[] mains = GameObject.FindGameObjectsWithTag("Room 2 main interact");
-    //     foreach (var item in mains)
-    //     {
-    //         item.GetComponent<Collider2D>().enabled = false;
-    //     }
-    // }
+    public override void toolTipHandle()
+    {
+        if (base.currentHover.Equals("other_stuff") && !GameManager.Room2.gotScrewDriver && Helper.Scene2BaseOK && Helper.DialogState != 0)
+            Tooltip.showTooltip_Static("Take a look");
+        else
+        {
+            Tooltip.hideToolTip_Static();
+        }
+    }
 
     public override void endDetailView()
     {
@@ -244,11 +242,6 @@ public class Room2MouseControl : GlobalMouseControl
                 dialogCanvas.enabled = false;
             Helper.setMouseStatus(MouseStatus.Free);
             Tooltip.hideToolTip_Static();
-            // GameObject[] mains = GameObject.FindGameObjectsWithTag("Room 2 main interact");
-            // foreach (var item in mains)
-            // {
-            //     item.GetComponent<Collider2D>().enabled = true;
-            // }
         }
     }
 }

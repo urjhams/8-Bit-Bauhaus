@@ -52,7 +52,8 @@ public class Room1BasementManager : CursorHandle
         try
         {
             GameObject wardrobe = GameObject.Find("wardrobe");
-            wardrobe.SetActive(!GameManager.Room1Basement.wardrobeOpen);
+            wardrobe.GetComponent<Collider2D>().enabled = !GameManager.Room1Basement.wardrobeOpen;
+            wardrobe.GetComponent<SpriteRenderer>().enabled = !GameManager.Room1Basement.wardrobeOpen;
         }
         catch { }
         wardrobeOpened.SetActive(GameManager.Room1Basement.wardrobeOpen);
