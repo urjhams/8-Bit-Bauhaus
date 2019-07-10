@@ -25,7 +25,10 @@ public class ObjectFadeIn : MonoBehaviour
 
     public void startFading()
     {
-        StartCoroutine("FadeIn");
+        // StartCoroutine("FadeIn");
+        Color color = rend.material.color;
+        color.a = 1f;
+        rend.material.color = color;
         if (Helper.inDetail)
             Helper.inDetail = false;
     }

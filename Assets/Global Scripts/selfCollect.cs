@@ -7,7 +7,10 @@ public class selfCollect : MonoBehaviour
     public GameObject itemButton;
     void Start()
     {
-        inventory = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>();
+        try 
+        {
+            inventory = GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>();
+        } catch {}
     }
     public virtual void OnMouseDown()
     {
