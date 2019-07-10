@@ -39,7 +39,6 @@ public class Room2Manager : CursorHandle
             {
                 cutsceneCamera.SetActive(false);
                 plate.SetActive(false);
-                plateDialogCanvas.enabled = true;
                 GameObject.Find("words").GetComponent<Collider2D>().enabled = true;
             }
             catch { }

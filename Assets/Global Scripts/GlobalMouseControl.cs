@@ -98,6 +98,11 @@ public class GlobalMouseControl : GlobalEffectControl
         Tooltip.hideToolTip_Static();
     }
 
+    public void disableDialogView()
+    {
+        dialogCanvas.enabled = false;
+    }
+
     public void disableGameObjectList(string[] names)
     {
         foreach (var name in names)
