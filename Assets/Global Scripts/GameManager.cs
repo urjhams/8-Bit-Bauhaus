@@ -42,11 +42,45 @@ public class GameManager
         public static bool scewDriverCutScene = true;
         public static bool goal = false;
     }
-    public class Room3 {
+    public class Room3
+    {
         public static bool puzzleSoved = false;
         public static bool goal = false;
     }
 
     // this one use for drop
     public static String currentOverGameObjectName = "";
+
+    public static void resetGame()
+    {
+        staticInventory = null;
+        currentInventoryItems = new ArrayList();
+        currentOverGameObjectName = "";
+
+        Room1.currentRightArm = 0;
+        Room1.currentLeftArm = 1;
+        Room1.statuesDone = false;
+        Room1.ladderDone = false;
+        Room1.boxPeices = new List<Tuple<string, Vector3>>();
+        Room1.birdFood = true;
+        Room1.goal = false;
+        Room1.addedPeice = new ArrayList();
+
+        Room1Basement.lastPeiceCutScene = false;
+        Room1Basement.lastPeice = false;
+        Room1Basement.lastPeiceCollected = false;
+        Room1Basement.wardrobeOpen = false;
+        Room1Basement.goal = false;
+
+        Room2.needScrewDriver = false;
+        Room2.gotScrewDriver = false;
+        Room2.puzzleGiven = false;
+        Room2.scewDriverCutScene = true;
+        Room2.goal = false;
+
+        Room3.puzzleSoved = false;
+        Room3.goal = false;
+
+        Helper.inDetail = false;
+    }
 }

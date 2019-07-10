@@ -45,6 +45,19 @@ public class Room3MouseControl : GlobalMouseControl
                         "InteractContainer_locker",
                         "Sophia:",
                         "\"Oh, i think i know what the key is for.\"");
+                    try
+                    {
+                        key = GameObject.Find("key_box");
+                        if (GameManager.Room3.puzzleSoved)
+                        {
+                            key.GetComponent<Collider2D>().enabled = true;
+                        }
+                        else
+                        {
+                            key.GetComponent<Collider2D>().enabled = false;
+                        }
+                    }
+                    catch { }
                 }
                 break;
             case "lock":
