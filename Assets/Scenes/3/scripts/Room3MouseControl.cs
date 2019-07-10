@@ -93,6 +93,12 @@ public class Room3MouseControl : GlobalMouseControl
                     SceneManager.LoadScene("Room 3 End");
                 }
                 break;
+            case "room plate":
+                detailInteraction(
+                        "InteractContainer_roomPlate",
+                        "Sophia:",
+                        ".....");
+                break;
             default:
                 break;
         }
