@@ -29,11 +29,13 @@ public class Helper
         setInventoryAlpha(0);
     }
 
-    public static void showInventory() {
+    public static void showInventory()
+    {
         setInventoryAlpha(1);
     }
 
-    private static void setInventoryAlpha(float alpha) {
+    private static void setInventoryAlpha(float alpha)
+    {
         try
         {
             GameObject.Find("inventory frame").GetComponent<CanvasRenderer>().SetAlpha(alpha);
@@ -41,10 +43,14 @@ public class Helper
             var slots = GameObject.Find("inventory frame").transform.Find("Slot area").transform;
             foreach (Transform item in slots)
             {
-                if (item.GetChild(0) != null) 
+                try
                 {
-                    item.GetChild(0).GetComponent<CanvasRenderer>().SetAlpha(alpha);
+                    if (item.GetChild(0) != null)
+                    {
+                        item.GetChild(0).GetComponent<CanvasRenderer>().SetAlpha(alpha);
+                    }
                 }
+                catch { }
             }
         }
         catch { }

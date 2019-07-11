@@ -10,7 +10,10 @@ public class LockClickNumbers : GlobalMouseControl
     public Sprite[] sprite_Numbers;
     public override void Start()
     {
-        base.Start();        
+        base.Start();
+        number1 = 0;
+        number2 = 0;
+        number3 = 0;
     }
     public override void OnMouseDown()
     {

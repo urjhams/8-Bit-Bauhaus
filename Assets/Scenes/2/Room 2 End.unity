@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1685372622}
-  nextRoomName: Room 2 Scond End
+  nextRoomName: Room 2 Second End
 --- !u!328 &1685372622
 VideoPlayer:
   m_ObjectHideFlags: 0
