@@ -21,6 +21,24 @@ public class DontDestroy : MonoBehaviour
 
     void Update()
     {
+        switch (SceneManager.GetActiveScene().name)
+        {
+            case "Room 1":
+                break;
+            case "Room 1 basement":
+                break;
+            default:
+                if (gameObject.name.Contains("background music"))
+                    Destroy(gameObject);
+                break;
+        }
+        if (!SceneManager.GetActiveScene().name.Equals("Room 1"))
+        {
+            if (!SceneManager.GetActiveScene().name.Equals("Room 1 basement"))
+            {
+                
+            }
+        }
         if (SceneManager.GetActiveScene().name.Equals("Final End") || SceneManager.GetActiveScene().name.Equals("Menu"))
         {
             Destroy(gameObject);
