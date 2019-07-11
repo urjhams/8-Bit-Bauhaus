@@ -116,6 +116,7 @@ MonoBehaviour:
   uiElement:
   - {fileID: 2382598287303492259}
   - {fileID: 7477835215924744051}
+  menuCanvas: {fileID: 2543084988651339197}
 --- !u!1 &2299670109728520467
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,6 +7,8 @@ public class Room1BasementMouseControl : GlobalMouseControl
     public override void OnMouseDown()
     {
         base.OnMouseDown();
+        if (IsMouseOverUI())
+            return;
         switch (currentHover)
         {
             case "ladder":

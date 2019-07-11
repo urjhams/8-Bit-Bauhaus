@@ -69,7 +69,7 @@ public class Room2MouseControl : GlobalMouseControl
                         detailInteraction(
                         "InteractContainer_puzzle",
                         "Sophia:",
-                        "\"Puzzle?\"");
+                        "\"Pipe? Oh so I need to change the direction of these parts to make the pipe\"");
                         dialog = GameObject.Find("dialog_worker canvas");
                         if (dialog != null)
                         {
@@ -226,7 +226,7 @@ public class Room2MouseControl : GlobalMouseControl
                                 if (Tx.name == "Text_worker name")
                                     Tx.text = "Worker:";
                                 if (Tx.name == "Text_worker content")
-                                    Tx.text = "\"A screwdriver? Do you even know how to use that? I do not care ... you could actually help me with something. The pipes in the hole there have to be reconnected.\"";
+                                    Tx.text = "\"A screwdriver? Well I'm currently using it, I can give you after I connect this pipe, It could be quicker if you help me.\"";
                             }
                             dialogCanvas.transform.Find("dialog_worker close").GetComponentInChildren<Text>().text = "Close";
                         }

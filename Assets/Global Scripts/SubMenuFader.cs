@@ -3,6 +3,7 @@
 public class SubMenuFader : GlobalEffectControl
 {
     public CanvasGroup[] uiElement;
+    public Canvas menuCanvas;
     private bool showUp = false;
     void Start()
     {
@@ -10,6 +11,7 @@ public class SubMenuFader : GlobalEffectControl
         {
             element.alpha = 0;
         }
+        menuCanvas.enabled = false;
     }
     void Update()
     {
@@ -17,6 +19,7 @@ public class SubMenuFader : GlobalEffectControl
         {
             if (!showUp)
             {
+                menuCanvas.enabled = true;
                 foreach (CanvasGroup element in uiElement)
                 {
                     element.alpha = 0;
@@ -28,6 +31,7 @@ public class SubMenuFader : GlobalEffectControl
             {
                 this.FadeOut(uiElement);
                 Helper.showInventory();
+                menuCanvas.enabled = false;
             }
             showUp = !showUp;
         }
