@@ -204,7 +204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1025497149}
   - component: {fileID: 1025497148}
-  - component: {fileID: 1025497147}
+  - component: {fileID: 1025497150}
   m_Layer: 0
   m_Name: Video Player
   m_TagString: Untagged
@@ -212,20 +212,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1025497147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1025497146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b77a0aee6afb14ba3abc28868377b753, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1025497148}
-  nextRoomName: Menu
 --- !u!328 &1025497148
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -274,6 +260,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1025497150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025497146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56da34f19eb34d64b85eb1b1dacbc85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1025497148}
 --- !u!1 &1661780329
 GameObject:
   m_ObjectHideFlags: 0

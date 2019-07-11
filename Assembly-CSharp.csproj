@@ -97,6 +97,7 @@
      <Compile Include="Assets\Scenes\3\scripts\LockClickNumbers.cs" />
      <Compile Include="Assets\Scenes\3\scripts\Room3Manager.cs" />
      <Compile Include="Assets\Scenes\3\scripts\Room3MouseControl.cs" />
+     <Compile Include="Assets\Scenes\Final\FinalIntroManager.cs" />
      <Compile Include="Assets\Scenes\Menu\MenuButtonController.cs" />
      <Compile Include="Assets\Scenes\Menu\MenuFader.cs" />
      <Compile Include="Assets\Scenes\MenuIntro\MenuIntroManager.cs" />
