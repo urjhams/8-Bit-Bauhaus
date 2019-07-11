@@ -59,6 +59,8 @@ public class Room1MouseControl : GlobalMouseControl
                 onOffEffect("lamp_light");
                 break;
             case "statues_discover":
+                if (GameManager.Room1.goal && GameManager.Room1.addedPeice.Count >= 11)
+                    return;
                 if (!GameManager.Room1.statuesDone)
                     detailInteraction(
                     "InteractContainer_statues",
