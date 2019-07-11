@@ -59,8 +59,6 @@ public class Room1MouseControl : GlobalMouseControl
                 onOffEffect("lamp_light");
                 break;
             case "statues_discover":
-                if (GameManager.Room1.goal && GameManager.Room1.addedPeice.Count >= 11)
-                    return;
                 if (!GameManager.Room1.statuesDone)
                     detailInteraction(
                     "InteractContainer_statues",
@@ -77,6 +75,8 @@ public class Room1MouseControl : GlobalMouseControl
                     FadeToLevel("Room 1 basement");
                 break;
             case "painting_discover":
+                if (GameManager.Room1.goal && GameManager.Room1.addedPeice.Count >= 11)
+                    return;
                 detailInteraction(
                     "InteractContainer_paint",
                     "Sophia",
