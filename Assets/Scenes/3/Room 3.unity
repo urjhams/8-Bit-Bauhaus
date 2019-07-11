@@ -1823,6 +1823,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Menu canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2543084988651339197, guid: b3cc1b6a5b1304141b5b73be124f6a53,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1236388961}
+    - target: {fileID: 2543084988651339197, guid: b3cc1b6a5b1304141b5b73be124f6a53,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1336323591
+      objectReference: {fileID: 0}
+    - target: {fileID: 2543084988651339197, guid: b3cc1b6a5b1304141b5b73be124f6a53,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1208598749153295930, guid: b3cc1b6a5b1304141b5b73be124f6a53,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1927,21 +1942,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2543084988651339197, guid: b3cc1b6a5b1304141b5b73be124f6a53,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1236388961}
-    - target: {fileID: 2543084988651339197, guid: b3cc1b6a5b1304141b5b73be124f6a53,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1336323591
-      objectReference: {fileID: 0}
-    - target: {fileID: 2543084988651339197, guid: b3cc1b6a5b1304141b5b73be124f6a53,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1590424099628647112, guid: b3cc1b6a5b1304141b5b73be124f6a53,
         type: 3}
@@ -3527,7 +3527,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: abe2e729c49044278895722dd8eba557, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 1
   Mute: 0
