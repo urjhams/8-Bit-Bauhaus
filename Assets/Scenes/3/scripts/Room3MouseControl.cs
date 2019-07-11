@@ -106,15 +106,12 @@ public class Room3MouseControl : GlobalMouseControl
                 GameObject.Find("environment").GetComponent<AudioSource>().Play();
                 if (easterEggCount == 7)
                 {
-                    GameObject.Find("musician").GetComponent<SpriteRenderer>().enabled = true;
-                    gameObject.GetComponent<AudioSource>().Play();
+                    GameObject.Find("air ship").GetComponent<Animator>().SetTrigger("Active");
                     easterEggCount = 0;
                 }
                 else
                 {
-                    GameObject.Find("musician").GetComponent<SpriteRenderer>().enabled = false;
-                    if (gameObject.GetComponent<AudioSource>().isPlaying)
-                        gameObject.GetComponent<AudioSource>().Stop();
+                    GameObject.Find("air ship").GetComponent<Animator>().SetTrigger("Deactive");
                     easterEggCount++;
                 }
                 break;
