@@ -1,4 +1,5 @@
-﻿using UnityEngine.EventSystems;
+﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class birdFoodHandler : DragHandle
 {
@@ -6,6 +7,7 @@ public class birdFoodHandler : DragHandle
     public override void OnEndDrag(PointerEventData eventData)
     {
         if (GameManager.currentOverGameObjectName.Equals("bird")) {
+            GameObject.Find("bird").GetComponent<Room1BasementMouseControl>().endDetailView();
             GameManager.Room1Basement.lastPeice = true;
             GameManager.Room1Basement.lastPeiceCutScene = true;
             GameManager.Room1Basement.lastPeiceCollected = true;
