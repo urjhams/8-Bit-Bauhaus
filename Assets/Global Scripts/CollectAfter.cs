@@ -26,7 +26,7 @@ public class CollectAfter : MonoBehaviour
                 color.a = 1.0f;
                 Instantiate(itemButton, inventory.slot[i].transform, false);
                 GameManager.currentInventoryItems.Add(itemButton);
-                return;
+                break;
             }
         }
     }

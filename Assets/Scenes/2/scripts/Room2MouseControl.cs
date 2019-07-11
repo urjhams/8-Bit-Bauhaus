@@ -123,6 +123,8 @@ public class Room2MouseControl : GlobalMouseControl
                     Helper.Scene2BaseOK = true;
                     break;
                 case "musician":
+                    if (Helper.inDetail)
+                        return;
                     AudioSource[] audios = GetComponents<AudioSource>();
                     foreach (var audio in audios)
                     {
@@ -196,6 +198,8 @@ public class Room2MouseControl : GlobalMouseControl
                                 Tx.text = "Worker:";
                             if (Tx.name == "Text_worker content")
                                 Tx.text = "\"Great job! Here you are.\"";
+                            if (Tx.name == "Text")
+                                Tx.text = "Cool, thank you!";
                         }
                     }
                 }

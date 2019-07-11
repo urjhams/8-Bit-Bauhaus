@@ -1,5 +1,2 @@
 ﻿
-public class ScewDriverCollect : CollectAfter
-{
-    
-}
+public class ScewDriverCollect : CollectAfter {}

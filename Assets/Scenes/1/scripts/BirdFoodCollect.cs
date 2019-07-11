@@ -2,7 +2,10 @@
 {
     public override void OnMouseDown()
     {
-        base.OnMouseDown();
-        GameManager.Room1.birdFood = false;
+        if (GameManager.Room1.birdFood)
+        {
+            base.OnMouseDown();
+            GameManager.Room1.birdFood = false;
+        }
     }
 }
