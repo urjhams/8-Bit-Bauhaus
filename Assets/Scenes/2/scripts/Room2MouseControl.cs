@@ -148,7 +148,13 @@ public class Room2MouseControl : GlobalMouseControl
     public override void toolTipHandle()
     {
         if (base.currentHover.Equals("other_stuff") && !GameManager.Room2.gotScrewDriver && Helper.Scene2BaseOK && Helper.DialogState != 0)
+        {
+            try {
+                if (GameObject.Find("InteractContainer_puzzle").activeSelf)
+                    return;
+            } catch{}
             Tooltip.showTooltip_Static("Take a look");
+        }
         else
         {
             Tooltip.hideToolTip_Static();
