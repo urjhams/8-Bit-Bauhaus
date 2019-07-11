@@ -20,6 +20,8 @@ public class Room2MouseControl : GlobalMouseControl
         if (runAction)
         {
             base.OnMouseDown();
+            if (IsMouseOverUI())
+                return;
             switch (currentHover)
             {
                 case "words":

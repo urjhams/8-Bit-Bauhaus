@@ -68,8 +68,10 @@
      <Compile Include="Assets\Global Scripts\GlobalMouseControl.cs" />
      <Compile Include="Assets\Global Scripts\Helper.cs" />
      <Compile Include="Assets\Global Scripts\Inventory.cs" />
+     <Compile Include="Assets\Global Scripts\MidGameMenuController.cs" />
      <Compile Include="Assets\Global Scripts\selfCollect.cs" />
      <Compile Include="Assets\Global Scripts\SoundOnClick.cs" />
+     <Compile Include="Assets\Global Scripts\SubMenuFader.cs" />
      <Compile Include="Assets\Global Scripts\TextureScale.cs" />
      <Compile Include="Assets\Global Scripts\Tooltip.cs" />
      <Compile Include="Assets\Global Scripts\TurnOnObjectTrigger.cs" />
