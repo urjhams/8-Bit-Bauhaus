@@ -107,11 +107,14 @@ public class Room3MouseControl : GlobalMouseControl
                 if (easterEggCount == 7)
                 {
                     GameObject.Find("air ship").GetComponent<Animator>().SetTrigger("Active");
+                    gameObject.GetComponent<AudioSource>().Play();
                     easterEggCount = 0;
                 }
                 else
                 {
                     GameObject.Find("air ship").GetComponent<Animator>().SetTrigger("Deactive");
+                    if (gameObject.GetComponent<AudioSource>().isPlaying)
+                        gameObject.GetComponent<AudioSource>().Stop();
                     easterEggCount++;
                 }
                 break;
