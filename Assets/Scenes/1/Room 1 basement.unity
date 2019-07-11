@@ -1116,7 +1116,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f0258a7d4819d4a07800bf151977cfd7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: df32c01cf540647b5ae51d486c796417, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3101,16 +3101,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI Camera
       objectReference: {fileID: 0}
-    - target: {fileID: 4663653653286434906, guid: c74a681450e664197aa7834fd23ab406,
-        type: 3}
-      propertyPath: orthographic size
-      value: 4.98278
-      objectReference: {fileID: 0}
-    - target: {fileID: 4663653653286434906, guid: c74a681450e664197aa7834fd23ab406,
-        type: 3}
-      propertyPath: m_Depth
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4663653653286434900, guid: c74a681450e664197aa7834fd23ab406,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3164,6 +3154,16 @@ PrefabInstance:
     - target: {fileID: 4663653653286434900, guid: c74a681450e664197aa7834fd23ab406,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4663653653286434906, guid: c74a681450e664197aa7834fd23ab406,
+        type: 3}
+      propertyPath: orthographic size
+      value: 4.98278
+      objectReference: {fileID: 0}
+    - target: {fileID: 4663653653286434906, guid: c74a681450e664197aa7834fd23ab406,
+        type: 3}
+      propertyPath: m_Depth
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
