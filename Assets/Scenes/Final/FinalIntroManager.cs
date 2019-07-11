@@ -11,10 +11,9 @@ public class FinalIntroManager : MonoBehaviour
     {
         length = player.clip.length;
     }
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && currentTime >= length - 30)
+        if (Input.GetKeyDown(KeyCode.Escape) && currentTime >= length - 50)
             SceneManager.LoadScene("Menu");
         checkOver();
     }

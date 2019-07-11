@@ -108,6 +108,8 @@ public class Room3MouseControl : GlobalMouseControl
     }
     public override void toolTipHandle()
     {
+        if (Helper.inDetail)
+            return;
         if (base.currentHover.Equals("way back") && GameManager.Room3.goal)
             Tooltip.showTooltip_Static("Get back to my apartment");
         else

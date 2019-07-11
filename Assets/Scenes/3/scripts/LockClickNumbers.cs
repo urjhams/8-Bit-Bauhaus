@@ -8,7 +8,10 @@ public class LockClickNumbers : GlobalMouseControl
     public Sprite sprite_Locker_open;
     public Sprite sprite_Locker_Closeup_open;
     public Sprite[] sprite_Numbers;
-
+    public override void Start()
+    {
+        base.Start();        
+    }
     public override void OnMouseDown()
     {
         base.OnMouseDown();
