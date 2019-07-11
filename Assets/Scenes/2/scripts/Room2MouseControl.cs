@@ -97,7 +97,7 @@ public class Room2MouseControl : GlobalMouseControl
                         detailInteraction(
                             "InteractContainer_gs",
                             "Sophia:",
-                            "\"Ok, behind the statue...\"");
+                            "\"Behind the statue...\"");
                     }
                     break;
                 case "goethe_schiller_from behind":
@@ -195,7 +195,7 @@ public class Room2MouseControl : GlobalMouseControl
                             if (Tx.name == "Text_worker name")
                                 Tx.text = "Worker:";
                             if (Tx.name == "Text_worker content")
-                                Tx.text = "\"Excellent! Here you have the screwdriver.\"";
+                                Tx.text = "\"Great job! Here you are.\"";
                         }
                     }
                 }

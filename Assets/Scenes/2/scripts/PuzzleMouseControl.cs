@@ -4,6 +4,8 @@ public class PuzzleMouseControl : MonoBehaviour
 {
     private void OnMouseDown()
     {
+        if (GameManager.Room2.gotScrewDriver)
+            return;
         gameObject.transform.parent.gameObject.GetComponent<AudioSource>().Play();
         if (gameObject.name.StartsWith("straight") || gameObject.name.StartsWith("curved") || gameObject.name.StartsWith("special"))
         {
