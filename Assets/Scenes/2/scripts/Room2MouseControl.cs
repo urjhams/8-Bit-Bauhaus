@@ -51,6 +51,7 @@ public class Room2MouseControl : GlobalMouseControl
                                 "InteractContainer_worker",
                                 "Sophia:",
                                 "\"Excuse me, could I borrow a screwdriver?\"");
+                            dialogCanvas.transform.Find("dialog_worker close").GetComponentInChildren<Text>().text = "Next";
                             Helper.DialogState = 0;
                         }
                         else
@@ -225,6 +226,7 @@ public class Room2MouseControl : GlobalMouseControl
                                 if (Tx.name == "Text_worker content")
                                     Tx.text = "\"A screwdriver? Do you even know how to use that? I do not care ... you could actually help me with something. The pipes in the hole there have to be reconnected.\"";
                             }
+                            dialogCanvas.transform.Find("dialog_worker close").GetComponentInChildren<Text>().text = "Close";
                         }
                         Helper.DialogState = 1;
                         setClose = false;

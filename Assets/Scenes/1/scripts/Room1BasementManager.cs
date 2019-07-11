@@ -10,7 +10,17 @@ public class Room1BasementManager : CursorHandle
     public VideoPlayer player;
     double length;
     double currentTime;
-    // Start is called before the first frame update
+
+    void Awake()
+    {
+        if (!GameManager.Room3.goal)
+        {
+            GameObject.Find("ambient daylight").GetComponent<AudioSource>().playOnAwake = true;
+        } else
+        {
+            GameObject.Find("ambient night").GetComponent<AudioSource>().playOnAwake = true;
+        }
+    }
     void Start()
     {
         Helper.setMouseStatus(MouseStatus.Free);
