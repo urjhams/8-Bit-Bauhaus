@@ -11,7 +11,6 @@ public class PuzzleControl : MonoBehaviour
         ResetPuzzle();
     }
 
-    // Update is called once per frame
     void Update()
     {
 

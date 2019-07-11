@@ -77,6 +77,7 @@ public class GameManager
         Room2.puzzleGiven = false;
         Room2.scewDriverCutScene = true;
         Room2.goal = false;
+        PuzzleControl.position = new int[] { 0, 1, 2, 2, 0, 1, 1, 3, 2, 1, 0, 0, 1, 1, 0, 3, 1, 0, 0, 2, 1, 0, 3, 0, 1, 1 };
 
         Room3.puzzleSoved = false;
         Room3.goal = false;
