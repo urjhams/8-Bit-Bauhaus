@@ -173,7 +173,7 @@ public class Room1MouseControl : GlobalMouseControl
                         ladder.SetActive(true);
                     startDialogView(
                     "Sophia",
-                    "I just hear somthing on the roof top door, should I check it?"
+                    "I just hear something on the roof top door, should I check it?"
                     );
                 }
             }
