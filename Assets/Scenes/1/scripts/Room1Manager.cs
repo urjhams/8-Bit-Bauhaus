@@ -5,6 +5,7 @@ public class Room1Manager : CursorHandle
     public GameObject lastPeice;
     public GameObject[] fadeInGroup;
     [SerializeField] public Text dialogBox;
+    private bool boxUnlocked = false;
     void Start()
     {
         Helper.setMouseStatus(MouseStatus.Free);
@@ -48,6 +49,17 @@ public class Room1Manager : CursorHandle
             if (GameManager.Room1.addedPeice.Count >= 11)
             {
                 dialogBox.text = "Wow the box is unlocked!";
+                if (Helper.inDetail)
+                {
+                    if (!boxUnlocked)
+                    {
+                        try
+                        {
+                            GameObject.Find("puzzle box").GetComponent<AudioSource>().Play();
+                        } catch {}
+                        boxUnlocked = true;
+                    }
+                }
             }
         }
         if (!Helper.inDetail && GameManager.Room1.goal && GameManager.Room1.addedPeice.Count >= 11)

@@ -4,9 +4,11 @@ public class Helper
 {
     public static MouseStatus mouseStatus = MouseStatus.Free;
     public static bool inDetail = false;
+    // ---------------- global variable used in 2nd room
     public static bool Scene2BaseOK = false;
     public static bool PipelinePuzzleOK = false;
     public static int DialogState = 0;
+    // ---------------------------------------------------
     public static void setMouseStatus(MouseStatus status)
     {
         mouseStatus = status;

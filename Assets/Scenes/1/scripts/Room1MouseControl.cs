@@ -79,6 +79,8 @@ public class Room1MouseControl : GlobalMouseControl
                     "Hmm... this picture look nice...");
                 break;
             case "bowl with box_discover":
+                if (GameManager.Room1.goal && GameManager.Room1.addedPeice.Count >= 11)
+                    return;
                 detailInteraction(
                     "InteractContainer_bowl",
                     "Sophia",

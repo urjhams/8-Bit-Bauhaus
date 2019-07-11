@@ -82,5 +82,8 @@ public class GameManager
         Room3.goal = false;
 
         Helper.inDetail = false;
+        Helper.Scene2BaseOK = false;
+        Helper.PipelinePuzzleOK = false;
+        Helper.DialogState = 0;
     }
 }
