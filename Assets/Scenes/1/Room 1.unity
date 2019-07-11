@@ -6327,11 +6327,6 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 1336323591
       objectReference: {fileID: 0}
-    - target: {fileID: 626041585766825938, guid: 07751ca0f33a146b2b98c07aebc4a9fe,
-        type: 3}
-      propertyPath: uiCamera
-      value: 
-      objectReference: {fileID: 1324083623}
     - target: {fileID: 626041585272396427, guid: 07751ca0f33a146b2b98c07aebc4a9fe,
         type: 3}
       propertyPath: m_UiScaleMode
@@ -6357,6 +6352,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 626041585766825938, guid: 07751ca0f33a146b2b98c07aebc4a9fe,
+        type: 3}
+      propertyPath: uiCamera
+      value: 
+      objectReference: {fileID: 1324083623}
     - target: {fileID: 626041585304707272, guid: 07751ca0f33a146b2b98c07aebc4a9fe,
         type: 3}
       propertyPath: m_PreserveAspect
@@ -6385,11 +6385,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4663653653286434906, guid: c74a681450e664197aa7834fd23ab406,
-        type: 3}
-      propertyPath: orthographic size
-      value: 4.970826
       objectReference: {fileID: 0}
     - target: {fileID: 4663653653286434900, guid: c74a681450e664197aa7834fd23ab406,
         type: 3}
@@ -6445,6 +6440,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4663653653286434906, guid: c74a681450e664197aa7834fd23ab406,
+        type: 3}
+      propertyPath: orthographic size
+      value: 4.970826
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c74a681450e664197aa7834fd23ab406, type: 3}
