@@ -1591,7 +1591,7 @@ ScriptsOnlyBuild:
     className: Room2MouseControl
   - hash:
       serializedVersion: 2
-      Hash: 78ab97351d7163429c127f7c04532807
+      Hash: 8532e800e710227285e36f861a21445d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Room1Manager

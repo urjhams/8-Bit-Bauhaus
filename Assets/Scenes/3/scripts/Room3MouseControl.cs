@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Room3MouseControl : GlobalMouseControl
 {
+    private int easterEggCount = 0;
     private GameObject key;
     public override void Start()
     {
@@ -100,6 +101,19 @@ public class Room3MouseControl : GlobalMouseControl
                         "InteractContainer_roomPlate",
                         "Sophia:",
                         ".....");
+                break;
+            case "table":
+                if (easterEggCount == 7)
+                {
+                    gameObject.GetComponent<AudioSource>().Play();
+                    easterEggCount = 0;
+                }
+                else
+                {
+                    if (gameObject.GetComponent<AudioSource>().isPlaying)
+                        gameObject.GetComponent<AudioSource>().Stop();
+                    easterEggCount++;
+                }
                 break;
             default:
                 break;
