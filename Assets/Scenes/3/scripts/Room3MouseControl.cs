@@ -103,6 +103,7 @@ public class Room3MouseControl : GlobalMouseControl
                         ".....");
                 break;
             case "table":
+                GameObject.Find("environment").GetComponent<AudioSource>().Play();
                 if (easterEggCount == 7)
                 {
                     GameObject.Find("musician").GetComponent<SpriteRenderer>().enabled = true;
