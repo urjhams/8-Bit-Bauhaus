@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 public class Room1Manager : CursorHandle
 {
+    public Canvas dialogCanvas;
     public GameObject lastPeice;
     public GameObject[] fadeInGroup;
     [SerializeField] public Text dialogBox;
@@ -16,6 +17,13 @@ public class Room1Manager : CursorHandle
             GameObject.Find("outside_dark").SetActive(GameManager.Room3.goal);
         }
         catch { }
+        if (!GameManager.Room1.statuesDone)
+        {
+            dialogBox.text = "So here is the former room my grandma used to stay...";
+            dialogCanvas.transform.Find("Text name").gameObject.GetComponent<Text>().text = "Sophia";
+            dialogCanvas.enabled = true;
+            Helper.inDetail = true;
+        }
     }
     protected override void Update()
     {
@@ -56,7 +64,8 @@ public class Room1Manager : CursorHandle
                         try
                         {
                             GameObject.Find("puzzle box").GetComponent<AudioSource>().Play();
-                        } catch {}
+                        }
+                        catch { }
                         boxUnlocked = true;
                     }
                 }

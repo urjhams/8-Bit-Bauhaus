@@ -13,7 +13,7 @@ public class FinalIntroManager : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && currentTime >= length - 50)
+        if (Input.GetKeyDown(KeyCode.Escape) && currentTime >= length - (length - 10))
             SceneManager.LoadScene("Menu");
         checkOver();
     }

@@ -327,6 +327,49 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 329
       Script: {instanceID: 0}
+    Assets/Scenes/2/Room 2 Second End.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 111
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9366}
+    - Class: 114
+      Script: {instanceID: 9378}
+    - Class: 114
+      Script: {instanceID: 9386}
+    - Class: 114
+      Script: {instanceID: 10724}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 328
+      Script: {instanceID: 0}
+    - Class: 329
+      Script: {instanceID: 0}
     Assets/Scenes/2/Room 2.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -1905,7 +1948,8 @@ ScriptsOnlyBuild:
   - Assets/Scenes/1/Room 1 End.unity
   - Assets/Scenes/2/Room 2.unity
   - Assets/Scenes/2/Room 2 End.unity
+  - Assets/Scenes/2/Room 2 Second End.unity
   - Assets/Scenes/3/Room 3.unity
   - Assets/Scenes/3/Room 3 End.unity
   - Assets/Scenes/Final/Final End.unity
-  playerPath: /Users/quandinh/Desktop/The Last Gift.app
+  playerPath: /Users/quandinh/Desktop/LastGift.app

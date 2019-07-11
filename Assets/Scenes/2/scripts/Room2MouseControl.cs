@@ -105,7 +105,7 @@ public class Room2MouseControl : GlobalMouseControl
                     detailInteraction(
                         "InteractContainer_gs_base",
                         "Sophia:",
-                        "\"There is something behind this shield. I probably need a screwdriver!\"");
+                        (GameManager.Room2.gotScrewDriver) ? "Ok, now I should use the screwdriver..." : "\"There is something behind this shield. I probably need a screwdriver!\"");
                     dialog = GameObject.Find("dialog canvas");
                     if (dialog != null)
                     {
@@ -230,7 +230,7 @@ public class Room2MouseControl : GlobalMouseControl
                                 if (Tx.name == "Text_worker name")
                                     Tx.text = "Worker:";
                                 if (Tx.name == "Text_worker content")
-                                    Tx.text = "\"A screwdriver? Well I'm currently using it, I can give you after I connect this pipe, It could be quicker if you help me. Take a look into the hole.\"";
+                                    Tx.text = "\"A screwdriver? Well I'm currently using it, I can give you after I connect this pipe, It could be quicker if you help me. Let's take a look into the hole.\"";
                             }
                             dialogCanvas.transform.Find("dialog_worker close").GetComponentInChildren<Text>().text = "Close";
                         }
