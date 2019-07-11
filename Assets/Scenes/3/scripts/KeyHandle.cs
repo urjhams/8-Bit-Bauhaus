@@ -1,4 +1,5 @@
-﻿using UnityEngine.EventSystems;
+﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class KeyHandle : DragHandle
 {
@@ -7,6 +8,10 @@ public class KeyHandle : DragHandle
         #region  IEndDragHAndler implementation
         if (GameManager.currentOverGameObjectName.Equals("detail_finalBox_discover"))
         {
+            try 
+            {
+                GameObject.Find("detail_finalBox_discover").GetComponent<AudioSource>().Play();
+            } catch {}
             base.destroyObject("key");
             Destroy(gameObject);
             GameManager.Room1Basement.goal = true;

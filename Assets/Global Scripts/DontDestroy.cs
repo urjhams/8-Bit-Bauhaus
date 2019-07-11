@@ -32,13 +32,6 @@ public class DontDestroy : MonoBehaviour
                     Destroy(gameObject);
                 break;
         }
-        if (!SceneManager.GetActiveScene().name.Equals("Room 1"))
-        {
-            if (!SceneManager.GetActiveScene().name.Equals("Room 1 basement"))
-            {
-                
-            }
-        }
         if (SceneManager.GetActiveScene().name.Equals("Final End") || SceneManager.GetActiveScene().name.Equals("Menu"))
         {
             Destroy(gameObject);
