@@ -226,7 +226,7 @@ public class Room2MouseControl : GlobalMouseControl
                                 if (Tx.name == "Text_worker name")
                                     Tx.text = "Worker:";
                                 if (Tx.name == "Text_worker content")
-                                    Tx.text = "\"A screwdriver? Well I'm currently using it, I can give you after I connect this pipe, It could be quicker if you help me.\"";
+                                    Tx.text = "\"A screwdriver? Well I'm currently using it, I can give you after I connect this pipe, It could be quicker if you help me. Take a look into the hole.\"";
                             }
                             dialogCanvas.transform.Find("dialog_worker close").GetComponentInChildren<Text>().text = "Close";
                         }
