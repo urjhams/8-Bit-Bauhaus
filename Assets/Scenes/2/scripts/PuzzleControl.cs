@@ -4,7 +4,6 @@ using UnityEngine;
 public class PuzzleControl : MonoBehaviour
 {
     public static int[] position = { 0, 1, 2, 2, 0, 1, 1, 3, 2, 1, 0, 0, 1, 1, 0, 3, 1, 0, 0, 2, 1, 0, 3, 0, 1, 1 };
-
     // Start is called before the first frame update
     void Start()
     {

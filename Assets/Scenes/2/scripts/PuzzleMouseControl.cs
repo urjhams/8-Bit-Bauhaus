@@ -33,7 +33,7 @@ public class PuzzleMouseControl : MonoBehaviour
                                 pos = 0;
                             }
                         }
-                        else if (gameObject.transform.localEulerAngles.z == 90)
+                        else if (gameObject.transform.localEulerAngles.z >= 90 && gameObject.transform.localEulerAngles.z < 100)
                         {
                             if (gameObject.name.StartsWith("straight"))
                             {
@@ -72,7 +72,8 @@ public class PuzzleMouseControl : MonoBehaviour
                         {
                             code += PuzzleControl.position[n];
                         }
-                        if (code == "0030111231113110113011")
+                        print(code);
+                        if (code == "0031111231113110113111")
                         {
                             GameObject puzzleOK = GameObject.Find("end_piecesok");
                             if (puzzleOK != null)
