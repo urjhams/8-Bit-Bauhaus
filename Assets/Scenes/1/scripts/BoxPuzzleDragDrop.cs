@@ -22,14 +22,39 @@ public class BoxPuzzleDragDrop : DragDrop
     protected override void Update()
     {
         base.Update();
-        if (selected && !locked)
-            setLayerOrder(4);
+        if (selected)
+        {
+            if (!locked)
+                setLayerOrder(10);
+        }
+        else
+        {
+            bool correct = false;
+            foreach (var element in GameManager.Room1.addedPeice)
+            {
+                if (element.Equals(name))
+                    correct = true;
+            }
+            if (!correct)
+            {
+                setLayerOrder(4);
+                locked = false;
+            }
+        }
+
         if (Input.GetMouseButtonUp(0))
         {
             if (containerCollider.bounds.Contains(gameObject.GetComponent<Collider2D>().bounds.min) &&
             containerCollider.bounds.Contains(gameObject.GetComponent<Collider2D>().bounds.max))
             {
-                GameManager.Room1.boxPeices.Add(Tuple.Create(name, transform.position));
+                bool exist = false;
+                foreach (var item in GameManager.Room1.boxPeices)
+                {
+                    if (item.Item1.Equals(name))
+                        exist = true;
+                }
+                if (!exist)
+                    GameManager.Room1.boxPeices.Add(Tuple.Create(name, transform.position));
                 setLayerOrder(2);
             }
             else
@@ -76,17 +101,21 @@ public class BoxPuzzleDragDrop : DragDrop
     }
     private void RemoveFromBox(string name)
     {
-        try {
+        try
+        {
             foreach (var item in GameManager.Room1.boxPeices)
             {
-                if (item.Item1.Equals(name)) {
+                if (item.Item1.Equals(name))
+                {
                     GameManager.Room1.boxPeices.Remove(item);
                 }
             }
-        } catch {}
+        }
+        catch { }
     }
 
-    public override void clickingSound() {
+    public override void clickingSound()
+    {
         try
         {
             GameObject.Find("Background").GetComponent<AudioSource>().Play();
