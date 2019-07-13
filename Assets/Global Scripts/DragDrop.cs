@@ -34,7 +34,7 @@ public class DragDrop : MonoBehaviour
             selected = !selected;
             GameManager.Room1.addedPeice.Add(gameObject.name);
             correctingPuzzle(name);
-        }
+        } 
     }
     private void correctingPuzzle(string name)
     {

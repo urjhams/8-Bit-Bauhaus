@@ -29,6 +29,7 @@ public class Room2Manager : CursorHandle
         }
         PlayScewDriverCutScene();
         mainObject.SetActive(!Helper.inDetail);
+        checkInAPersprective();
     }
     private void PlayScewDriverCutScene()
     {
@@ -49,5 +50,34 @@ public class Room2Manager : CursorHandle
             mainObject.SetActive(true);
         else
             mainObject.SetActive(false);
+    }
+
+    private void checkInAPersprective()
+    {
+        try
+        {
+            GameObject interact = GameObject.FindGameObjectWithTag("Room 2 main interact");
+            if (GameObject.Find("InteractContainer_gs") != null)
+            {
+                interact.SetActive(false);
+                return;
+            }
+            if (GameObject.Find("InteractContainer_gs_base") != null)
+            {
+                interact.SetActive(false);
+                return;
+            }
+            if (GameObject.Find("InteractContainer_worker") != null)
+            {
+                interact.SetActive(false);
+                return;
+            }
+            if (GameObject.Find("InteractContainer_puzzle") != null)
+            {
+                interact.SetActive(false);
+                return;
+            }
+            interact.SetActive(true);
+        } catch {}
     }
 }

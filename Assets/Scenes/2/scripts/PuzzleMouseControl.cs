@@ -72,7 +72,6 @@ public class PuzzleMouseControl : MonoBehaviour
                         {
                             code += PuzzleControl.position[n];
                         }
-                        print(code);
                         if (code == "0031111231113110113111")
                         {
                             GameObject puzzleOK = GameObject.Find("end_piecesok");

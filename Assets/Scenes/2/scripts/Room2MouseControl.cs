@@ -149,10 +149,12 @@ public class Room2MouseControl : GlobalMouseControl
     {
         if (base.currentHover.Equals("other_stuff") && !GameManager.Room2.gotScrewDriver && Helper.Scene2BaseOK && Helper.DialogState != 0)
         {
-            try {
+            try
+            {
                 if (GameObject.Find("InteractContainer_puzzle").activeSelf)
                     return;
-            } catch{}
+            }
+            catch { }
             Tooltip.showTooltip_Static("Take a look");
         }
         else

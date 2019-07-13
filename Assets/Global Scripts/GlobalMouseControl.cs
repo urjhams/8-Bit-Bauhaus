@@ -44,7 +44,6 @@ public class GlobalMouseControl : GlobalEffectControl
         if (IsMouseOverUI())
             Helper.setMouseStatus(MouseStatus.Free);
         currentHover = col.name;
-        print(col.name);
         this.toolTipHandle();
     }
 
